@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Be My Valentine 💖</title>
+<style>
+  body {
+    margin: 0;
+    font-family: 'Arial', sans-serif;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    height: 100vh;
+    background: radial-gradient(circle at center, #ff9a9e, #fad0c4);
+    overflow: hidden;
+    color: white;
+    text-align: center;
+  }
+
+  h1 {
+    font-size: 3em;
+    margin-bottom: 10px;
+    text-shadow: 2px 2px 5px #ff6b6b;
+  }
+
+  p {
+    font-size: 1.5em;
+    margin-bottom: 30px;
+  }
+
+  button {
+    padding: 15px 35px;
+    font-size: 1.5em;
+    border: none;
+    border-radius: 15px;
+    background-color: #ff6b6b;
+    cursor: pointer;
+    color: white;
+    transition: transform 0.2s, background 0.3s;
+  }
+
+  button:hover {
+    transform: scale(1.2);
+    background-color: #ff3b3b;
+  }
+
+  .heart {
+    position: absolute;
+    font-size: 24px;
+    animation: floatUp 6s linear infinite;
+    pointer-events: none;
+  }
+
+  @keyframes floatUp {
+    0% { transform: translateY(100vh) rotate(0deg); opacity: 1; }
+    100% { transform: translateY(-10vh) rotate(360deg); opacity: 0; }
+  }
+</style>
+</head>
+<body>
+<h1>Will You Be My Valentine?</h1>
+<p>Click the heart if your answer is YES!</p>
+<button id="heartButton">❤️</button>
+
+<script>
+// Confetti effect
+function createConfetti() {
+  const confettiCount = 100;
+  for (let i = 0; i < confettiCount; i++) {
+    const confetti = document.createElement('div');
+    confetti.textContent = '💖';
+    confetti.style.position = 'absolute';
+    confetti.style.fontSize = Math.random() * 20 + 10 + 'px';
+    confetti.style.left = Math.random() * window.innerWidth + 'px';
+    confetti.style.top = Math.random() * window.innerHeight + 'px';
+    confetti.style.opacity = Math.random();
+    confetti.style.transform = `rotate(${Math.random() * 360}deg)`;
+    document.body.appendChild(confetti);
+
+    setTimeout(() => {
+      confetti.remove();
+    }, 3000);
+  }
+}
+
+// Floating hearts background
+function spawnHeart() {
+  const heart = document.createElement('div');
+  heart.className = 'heart';
+  heart.style.left = Math.random() * window.innerWidth + 'px';
+  heart.style.fontSize = Math.random() * 30 + 20 + 'px';
+  heart.style.animationDuration = 4 + Math.random() * 3 + 's';
+  heart.textContent = '💖';
+  document.body.appendChild(heart);
+  setTimeout(() => heart.remove(), 7000);
+}
+setInterval(spawnHeart, 500);
+
+// Button click event
+document.getElementById('heartButton').addEventListener('click', () => {
+  createConfetti();
+  document.body.innerHTML = `
+    <h1>Yay! 💕</h1>
+    <p>I'm thrilled you said YES!</p>
+    <p>Let's make this Valentine's unforgettable!</p>
+  `;
+});
+</script>
+</body>
+</html>
