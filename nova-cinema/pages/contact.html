@@ -1,0 +1,434 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Nova Cinema | Contact Us</title>
+  <meta name="description" content="Contact Nova Cinema — address, phone, hours, a treasure map to find us, group bookings and FAQs.">
+  <meta name="theme-color" content="#050916">
+  <link rel="icon" href="../images/favicon.svg" type="image/svg+xml">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Outfit:wght@300;400;500;600;700;800&family=Rye&display=swap">
+  <link rel="stylesheet" href="../css/style.css">
+  <script>document.documentElement.classList.add('js');</script>
+  <script src="../js/data.js" defer></script>
+  <script src="../js/main.js" defer></script>
+  <script src="../js/contact.js" defer></script>
+</head>
+
+<body data-root="../" data-page="contact">
+
+  <a class="skip-link" href="#main">Skip to content</a>
+  <div class="page-curtain" aria-hidden="true"><span></span><span></span></div>
+  <div class="scroll-progress" aria-hidden="true"></div>
+
+  <!-- ========== HEADER ========== -->
+  <header class="site-header">
+    <div class="container header-inner">
+      <a class="brand" href="../index.html" aria-label="Nova Cinema — home">
+        <svg class="brand-mark" viewBox="0 0 48 48" aria-hidden="true">
+          <g class="reel">
+            <circle cx="24" cy="27" r="16" fill="#0a1330" stroke="currentColor" stroke-width="3"/>
+            <circle cx="24" cy="27" r="2.6" fill="currentColor"/>
+            <g fill="currentColor"><circle cx="24" cy="18.5" r="3.2"/><circle cx="32.1" cy="24.4" r="3.2"/><circle cx="29" cy="33.9" r="3.2"/><circle cx="19" cy="33.9" r="3.2"/><circle cx="15.9" cy="24.4" r="3.2"/></g>
+          </g>
+          <g transform="rotate(-12 24 11)">
+            <ellipse cx="24" cy="12.5" rx="17" ry="4.3" fill="#ffc83d" stroke="#8a5a00" stroke-width=".8"/>
+            <path d="M15.5 12 C15.5 2.5 32.5 2.5 32.5 12 Z" fill="#ffd45e" stroke="#8a5a00" stroke-width=".8"/>
+            <path d="M15.7 9.4 C21 10.8 27 10.8 32.3 9.4 L32.5 12 C27 13.5 21 13.5 15.5 12 Z" fill="#ff4458"/>
+          </g>
+        </svg>
+        <span class="brand-name">Nova<small>Cinema</small></span>
+      </a>
+
+      <nav class="main-nav" id="primary-nav" aria-label="Primary">
+        <ul class="nav-list">
+          <li style="--i:0"><a class="nav-link" href="../index.html"><span class="nav-num">01</span>Home</a></li>
+          <li style="--i:1"><a class="nav-link" href="movies.html"><span class="nav-num">02</span>Movies</a></li>
+          <li style="--i:2"><a class="nav-link" href="schedule.html"><span class="nav-num">03</span>Schedule</a></li>
+          <li style="--i:3"><a class="nav-link" href="contact.html" aria-current="page"><span class="nav-num">04</span>Contact</a></li>
+        </ul>
+        <div class="nav-extra">
+          <span>1 Grand Line Avenue, Nova City</span>
+          <a href="tel:+15550123456">(555) 012-3456</a>
+          <a href="mailto:novacinema@gmail.com">novacinema@gmail.com</a>
+        </div>
+      </nav>
+
+      <div class="header-actions">
+        <button type="button" class="btn btn--gold btn--sm header-cta" data-book>
+          <span aria-hidden="true">🎟️</span><span class="label-short">Tickets</span><span class="label-long">Book tickets</span>
+        </button>
+        <button type="button" class="nav-toggle" aria-controls="primary-nav" aria-expanded="false" aria-label="Open menu">
+          <span></span><span></span><span></span>
+        </button>
+      </div>
+    </div>
+  </header>
+
+  <!-- ========== MAIN CONTENT ========== -->
+  <main id="main">
+
+    <!-- ========== PAGE HERO ========== -->
+    <section class="page-hero" style="--hero-accent:#35c2e0" aria-labelledby="page-title">
+      <div class="page-hero-bg">
+        <img src="../images/nova-cinema-logo1.jpg" data-fallback="" alt="" width="1200" height="600">
+      </div>
+      <div class="page-hero-grain" aria-hidden="true"></div>
+
+      <div class="container page-hero-content contact-hero-grid">
+        <div>
+          <ol class="breadcrumb">
+            <li><a href="../index.html">Home</a></li>
+            <li><span aria-current="page">Contact</span></li>
+          </ol>
+          <p class="eyebrow">Contact us</p>
+          <h1 class="page-hero-title" id="page-title">
+            <span class="line"><span style="--i:0">Send us a</span></span>
+            <span class="line"><span style="--i:1" class="text-shimmer">Den Den Mushi</span></span>
+          </h1>
+          <p class="page-hero-lead">Got a question about showtimes, a booking issue, or just want to tell us how much you cried during One Piece Film: Red? Reach out below. Our crew checks messages daily and will get back to you as fast as the New World currents allow.</p>
+          <div class="page-hero-actions">
+            <a class="btn btn--gold btn--lg" href="#form">Write to us</a>
+            <a class="btn btn--ghost btn--lg" href="tel:+15550123456">📞 Call the crew</a>
+          </div>
+        </div>
+
+        <div>
+          <button type="button" class="den-den" data-den-den aria-label="Ring the Den Den Mushi">
+            <span class="den-bubble" aria-live="polite">Puru puru puru…</span>
+            <svg viewBox="0 0 240 200" aria-hidden="true">
+              <ellipse cx="120" cy="188" rx="96" ry="8" fill="rgba(0,0,0,.35)"/>
+              <g class="snail">
+                <path d="M18 168 Q16 140 52 136 L190 136 Q226 140 224 166 Q222 182 200 182 L36 182 Q20 182 18 168 Z" fill="#c3df98" stroke="#4d6b2a" stroke-width="3"/>
+                <circle cx="148" cy="100" r="52" fill="#f2a65a" stroke="#8a4b17" stroke-width="3"/>
+                <circle cx="150" cy="102" r="37" fill="#f8c27a" stroke="#8a4b17" stroke-width="2.5"/>
+                <circle cx="152" cy="104" r="23" fill="#f2a65a" stroke="#8a4b17" stroke-width="2.5"/>
+                <circle cx="154" cy="105" r="10" fill="#f8c27a" stroke="#8a4b17" stroke-width="2.5"/>
+                <g fill="#fff4d6" stroke="#8a4b17" stroke-width="1.5"><circle cx="118" cy="142" r="4"/><circle cx="132" cy="146" r="4"/><circle cx="146" cy="148" r="4"/></g>
+                <ellipse cx="56" cy="120" rx="30" ry="33" fill="#c9e4a0" stroke="#4d6b2a" stroke-width="3"/>
+                <g stroke="#4d6b2a" stroke-width="6" stroke-linecap="round"><line x1="46" y1="92" x2="38" y2="62"/><line x1="66" y1="92" x2="74" y2="62"/></g>
+                <g class="eye-l"><circle cx="38" cy="54" r="11" fill="#fff" stroke="#4d6b2a" stroke-width="3"/><circle cx="40" cy="55" r="4.5" fill="#111"/></g>
+                <g class="eye-r"><circle cx="74" cy="54" r="11" fill="#fff" stroke="#4d6b2a" stroke-width="3"/><circle cx="76" cy="55" r="4.5" fill="#111"/></g>
+                <circle cx="40" cy="122" r="5" fill="#ff9aa2" opacity=".7"/><circle cx="72" cy="122" r="5" fill="#ff9aa2" opacity=".7"/>
+                <path d="M44 128 Q56 140 68 128" fill="none" stroke="#4d6b2a" stroke-width="3" stroke-linecap="round"/>
+                <path d="M188 60 C206 70 190 80 208 90 C224 100 208 112 222 124 C230 132 220 140 214 140" fill="none" stroke="#1f1f1f" stroke-width="3" stroke-linecap="round"/>
+                <g class="receiver">
+                  <rect x="112" y="38" width="72" height="12" rx="6" fill="#1f1f1f"/>
+                  <rect x="102" y="33" width="24" height="22" rx="9" fill="#1f1f1f"/>
+                  <rect x="170" y="33" width="24" height="22" rx="9" fill="#1f1f1f"/>
+                  <rect x="118" y="40" width="30" height="3" rx="1.5" fill="#555"/>
+                </g>
+              </g>
+            </svg>
+          </button>
+          <p class="den-hint">Tap the snail to give us a ring</p>
+        </div>
+      </div>
+      <div class="wave wave--front" aria-hidden="true"></div>
+    </section>
+
+    <!-- ========== CONTACT NOVA CINEMA ========== -->
+    <section class="section section--tight" id="contact" aria-labelledby="contact-title">
+      <div class="container">
+        <h2 class="sr-only" id="contact-title">How to reach Nova Cinema</h2>
+        <ul class="info-grid">
+          <li class="info-card spotlight reveal" style="--i:0;--accent:#ff4458">
+            <span class="info-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M20 10c0 6-8 12-8 12s-8-6-8-12a8 8 0 0 1 16 0z"/><circle cx="12" cy="10" r="3"/></svg></span>
+            <div><h3>Address</h3><a href="#map">1 Grand Line Avenue, Nova City</a></div>
+          </li>
+          <li class="info-card spotlight reveal" style="--i:1;--accent:#ffc83d">
+            <span class="info-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M22 16.9v3a2 2 0 0 1-2.2 2 19.8 19.8 0 0 1-8.6-3.1 19.5 19.5 0 0 1-6-6A19.8 19.8 0 0 1 2.1 4.2 2 2 0 0 1 4.1 2h3a2 2 0 0 1 2 1.7c.1.9.4 1.8.7 2.7a2 2 0 0 1-.5 2.1L8 9.8a16 16 0 0 0 6 6l1.3-1.3a2 2 0 0 1 2.1-.4c.9.3 1.8.6 2.7.7a2 2 0 0 1 1.7 2z"/></svg></span>
+            <div><h3>Call the crew</h3><a href="tel:+15550123456">(555) 012-3456</a></div>
+          </li>
+          <li class="info-card spotlight reveal" style="--i:2;--accent:#35c2e0">
+            <span class="info-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="2" y="4" width="20" height="16" rx="2"/><path d="m22 7-10 6L2 7"/></svg></span>
+            <div><h3>Email us</h3><a href="mailto:novacinema@gmail.com">novacinema@gmail.com</a></div>
+          </li>
+          <li class="info-card spotlight reveal" style="--i:3;--accent:#3ee08f">
+            <span class="info-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="12" cy="12" r="10"/><path d="M12 6v6l4 2"/></svg></span>
+            <div>
+              <h3>Hours</h3>
+              <ul class="hours-list" data-hours>
+                <li data-days="1,2,3,4"><span>Monday – Thursday</span><span>10 AM – 11 PM</span></li>
+                <li data-days="5,6"><span>Friday &amp; Saturday</span><span>10 AM – 1 AM</span></li>
+                <li data-days="0"><span>Sunday</span><span>11 AM – 10 PM</span></li>
+              </ul>
+              <p class="open-badge" data-open-badge></p>
+            </div>
+          </li>
+        </ul>
+      </div>
+    </section>
+
+    <!-- ========== CONTACT FORM ========== -->
+    <section class="section section--tight" id="form" aria-labelledby="form-title">
+      <div class="container contact-layout">
+        <div class="form-card reveal reveal--left">
+          <figure class="form-banner art-bottle">
+            <img src="../images/nova-cinema-logo2.jpg" data-fallback="" alt="Nova Cinema logo featuring a pirate flag emblem" width="800" height="200">
+            <span class="shade" aria-hidden="true"></span>
+          </figure>
+
+          <div class="form-inner">
+            <h2 class="sr-only" id="form-title">Message form</h2>
+            <form class="contact-form" action="#" method="get" data-contact-form>
+              <fieldset>
+                <legend>Leave a message in a bottle</legend>
+                <p class="form-intro">Fill out the form below and send it off — we'll write back before the next tide.</p>
+
+                <div class="form-grid">
+                  <div class="field">
+                    <input type="text" id="name" name="name" placeholder="Jane Doe" autocomplete="name" required minlength="2" aria-describedby="name-error">
+                    <label for="name">Name</label>
+                    <p class="field-error" id="name-error"></p>
+                  </div>
+
+                  <div class="field">
+                    <input type="email" id="email" name="email" placeholder="janedoe@gmail.com" autocomplete="email" required aria-describedby="email-error">
+                    <label for="email">Email</label>
+                    <p class="field-error" id="email-error"></p>
+                  </div>
+
+                  <div class="field">
+                    <input type="tel" id="phone-number" name="phone-number" placeholder="(555) 123-4567" autocomplete="tel" inputmode="tel" minlength="10" maxlength="15" required aria-describedby="phone-error">
+                    <label for="phone-number">Phone number</label>
+                    <p class="field-error" id="phone-error"></p>
+                  </div>
+
+                  <div class="field field--select">
+                    <select id="movie" name="movie" required aria-describedby="movie-error">
+                      <option value="" disabled selected>Select a movie</option>
+                      <option value="movie-red">One Piece Film: Red</option>
+                      <option value="movie-gold">One Piece Film: Gold</option>
+                      <option value="movie-strong-world">One Piece Film: Strong World</option>
+                      <option value="movie-stampede">One Piece: Stampede</option>
+                      <option value="movie-z">One Piece Film: Z</option>
+                      <option value="movie-alabasta">One Piece: Adventures in Alabasta</option>
+                    </select>
+                    <label for="movie">Preferred movie</label>
+                    <p class="field-error" id="movie-error"></p>
+                  </div>
+
+                  <div class="group-wrap" data-guests>
+                    <div class="stepper">
+                      <button type="button" data-step="-1" aria-label="One less guest">−</button>
+                      <div class="field">
+                        <input type="number" id="number-of-guest" name="number-of-guest" min="1" max="30" placeholder="1 – 30" inputmode="numeric" required aria-describedby="guests-error">
+                        <label for="number-of-guest">Group size</label>
+                      </div>
+                      <button type="button" data-step="1" aria-label="One more guest">+</button>
+                    </div>
+                    <p class="field-error" id="guests-error"></p>
+                  </div>
+
+                  <fieldset class="choice-group" data-method aria-describedby="method-error">
+                    <legend>How should we reach you?</legend>
+                    <div class="choices">
+                      <div class="choice"><input type="radio" id="phone-call" name="contact-method" value="phone-call" required><label for="phone-call">Phone call</label></div>
+                      <div class="choice"><input type="radio" id="contact-by-email" name="contact-method" value="email"><label for="contact-by-email">Email</label></div>
+                      <div class="choice"><input type="radio" id="either-is-fine" name="contact-method" value="either-is-fine"><label for="either-is-fine">Either is fine</label></div>
+                    </div>
+                    <p class="field-error" id="method-error"></p>
+                  </fieldset>
+
+                  <label class="switch span-2" for="newsletter-signup">
+                    <input type="checkbox" id="newsletter-signup" name="newsletter-signup" value="newsletter-signup">
+                    <span class="switch-track" aria-hidden="true"></span>
+                    <span class="switch-text"><strong>Keep me posted</strong> on new releases and showtimes.</span>
+                  </label>
+
+                  <div class="field span-2">
+                    <textarea id="message" name="message" rows="4" maxlength="500" placeholder="Tell us what's on your mind — questions or feedback." aria-describedby="message-hint"></textarea>
+                    <label for="message">Drop a message</label>
+                    <p class="field-hint" id="message-hint"><span>Optional — questions, feedback or booking issues</span><span data-char-count>0 / 500</span></p>
+                  </div>
+                </div>
+
+                <div class="form-actions">
+                  <button type="submit" class="btn btn--gold btn--lg">Send it off 🍾</button>
+                  <button type="reset" class="btn btn--ghost btn--lg">Start over</button>
+                </div>
+              </fieldset>
+            </form>
+          </div>
+
+          <div class="form-success" hidden data-form-success tabindex="-1">
+            <div class="bottle-scene" aria-hidden="true"><span class="bottle">🍾</span><span class="sea"></span></div>
+            <h3>Message away!</h3>
+            <p data-success-text>Your bottle is riding the currents to our crew.</p>
+            <button type="button" class="btn btn--gold" data-send-another>Send another message</button>
+          </div>
+        </div>
+
+        <div class="side-stack">
+          <div class="map-card reveal reveal--right" id="map">
+            <svg viewBox="0 0 400 260" role="img" aria-labelledby="map-title map-desc">
+              <title id="map-title">Treasure map to Nova Cinema</title>
+              <desc id="map-desc">Nova Cinema sits on Grand Line Avenue in Nova City, a short walk from the bus stop, with the Baratie parking lot next door.</desc>
+              <defs>
+                <pattern id="sea-waves" width="28" height="16" patternUnits="userSpaceOnUse"><path d="M2 10 q5 -6 10 0 t10 0" fill="none" stroke="#5f9790" stroke-width="1.3" opacity=".6"/></pattern>
+                <radialGradient id="map-vignette" cx="50%" cy="50%" r="70%"><stop offset="60%" stop-color="#000" stop-opacity="0"/><stop offset="100%" stop-color="#5a3415" stop-opacity=".45"/></radialGradient>
+              </defs>
+              <rect width="400" height="260" fill="#a9cdc4"/>
+              <rect width="400" height="260" fill="url(#sea-waves)"/>
+              <path d="M150 28 C222 8 334 26 364 78 C394 130 374 202 302 230 C232 254 150 242 118 200 C88 160 98 58 150 28 Z" fill="#efdcae" stroke="#8a6a3a" stroke-width="2.5"/>
+              <path d="M40 210 C52 196 76 196 88 210 C76 222 52 222 40 210 Z" fill="#efdcae" stroke="#8a6a3a" stroke-width="2"/>
+              <path d="M124 150 C200 138 280 150 368 136" fill="none" stroke="#c9a66b" stroke-width="12" stroke-linecap="round"/>
+              <path d="M124 150 C200 138 280 150 368 136" fill="none" stroke="#fff6dc" stroke-width="1.5" stroke-dasharray="6 6"/>
+              <text x="210" y="168" font-family="Outfit, sans-serif" font-size="9" font-weight="700" letter-spacing="2" fill="#7a5a2a">GRAND LINE AVE</text>
+              <text x="190" y="66" font-family="Rye, serif" font-size="15" fill="#5a3415">NOVA CITY</text>
+              <path class="map-route" d="M160 196 C190 186 214 176 236 160 S 270 132 282 118" fill="none" stroke="#b5102c" stroke-width="3" stroke-linecap="round"/>
+              <text x="146" y="210" font-size="16">🚌</text>
+              <g transform="translate(318 178)"><rect x="-11" y="-11" width="22" height="22" rx="4" fill="#1d4ed8"/><text x="0" y="5" text-anchor="middle" font-family="Outfit, sans-serif" font-weight="800" font-size="14" fill="#fff">P</text></g>
+              <text x="300" y="206" font-family="Outfit, sans-serif" font-size="8" font-weight="700" fill="#7a5a2a">BARATIE LOT</text>
+              <circle class="map-ring" cx="282" cy="118" r="16" fill="none" stroke="#b5102c" stroke-width="2"/>
+              <g class="map-x" stroke="#b5102c" stroke-width="6" stroke-linecap="round"><line x1="272" y1="108" x2="292" y2="128"/><line x1="292" y1="108" x2="272" y2="128"/></g>
+              <text x="282" y="96" text-anchor="middle" font-family="Rye, serif" font-size="13" fill="#2c1a0b">Nova Cinema</text>
+              <g class="map-compass" transform="translate(58 62)">
+                <circle r="26" fill="#f6e7c4" stroke="#8a6a3a" stroke-width="2"/>
+                <path d="M0 -22 L5 0 L0 22 L-5 0 Z" fill="#b5102c"/>
+                <path d="M-22 0 L0 -5 L22 0 L0 5 Z" fill="#5a3415"/>
+                <text y="-28" text-anchor="middle" font-family="Rye, serif" font-size="10" fill="#2c1a0b">N</text>
+              </g>
+              <text class="map-boat" x="40" y="150" font-size="20">⛵</text>
+              <rect width="400" height="260" fill="url(#map-vignette)"/>
+            </svg>
+            <div class="map-caption">
+              <strong>X marks the spot</strong>
+              <small>1 Grand Line Avenue, Nova City</small>
+            </div>
+          </div>
+
+          <div class="reveal reveal--right">
+            <h3 class="section-title" style="font-size:2rem;margin-bottom:1rem">Getting here</h3>
+            <ul class="getting-here">
+              <li><span aria-hidden="true">🚌</span><span><strong>Bus lines 7 &amp; 22</strong>Stop right outside on Grand Line Avenue.</span></li>
+              <li><span aria-hidden="true">🅿️</span><span><strong>Baratie Lot parking</strong>Free for 4 hours with any ticket.</span></li>
+              <li><span aria-hidden="true">♿</span><span><strong>Step-free access</strong>Every hall has wheelchair spaces and companion seats.</span></li>
+              <li><span aria-hidden="true">🚲</span><span><strong>Bike racks</strong>Covered racks beside the main entrance.</span></li>
+            </ul>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ========== FAQ ========== -->
+    <section class="section section--tight" id="faq" aria-labelledby="faq-title">
+      <div class="container" style="max-width:900px">
+        <div class="section-head section-head--center reveal">
+          <p class="eyebrow">Before you set sail</p>
+          <h2 class="section-title" id="faq-title">Frequently asked questions</h2>
+        </div>
+        <div class="accordion reveal">
+          <details class="acc-item">
+            <summary>Can I bring my own snacks?<span class="acc-icon" aria-hidden="true"></span></summary>
+            <div class="acc-panel"><div class="acc-content"><p>We'd love you to try the galley, but small outside snacks are fine. Please leave full meals — and any Sea King meat — at home.</p></div></div>
+          </details>
+          <details class="acc-item">
+            <summary>Is cosplay allowed?<span class="acc-icon" aria-hidden="true"></span></summary>
+            <div class="acc-panel"><div class="acc-content"><p>Absolutely! Costumes are encouraged at every One Piece screening. Props must be soft or foam, and big hats come off once the lights go down so everyone can see.</p></div></div>
+          </details>
+          <details class="acc-item">
+            <summary>Can I change or cancel my booking?<span class="acc-icon" aria-hidden="true"></span></summary>
+            <div class="acc-panel"><div class="acc-content"><p>Yes — up to 2 hours before showtime. Cancel from <a class="inline-link" href="schedule.html#my-tickets">My tickets</a> on the schedule page, or call the crew on (555) 012-3456.</p></div></div>
+          </details>
+          <details class="acc-item">
+            <summary>How do group bookings work?<span class="acc-icon" aria-hidden="true"></span></summary>
+            <div class="acc-panel"><div class="acc-content"><p>You can book up to 10 seats online, and booking 10 together unlocks our 15% crew discount. For groups of up to 30, use the form above and we'll reserve a block of seats for you.</p></div></div>
+          </details>
+          <details class="acc-item">
+            <summary>Is Nova Cinema accessible?<span class="acc-icon" aria-hidden="true"></span></summary>
+            <div class="acc-panel"><div class="acc-content"><p>Every hall has step-free access, wheelchair spaces, companion seats and assisted-listening headsets. Let us know in your message if you need anything else.</p></div></div>
+          </details>
+          <details class="acc-item">
+            <summary>Are the films kid-friendly?<span class="acc-icon" aria-hidden="true"></span></summary>
+            <div class="acc-panel"><div class="acc-content"><p>One Piece films are action-packed adventures with some intense battles. Younger Nakama are welcome with an adult — Adventures in Alabasta and Strong World are family favorites.</p></div></div>
+          </details>
+        </div>
+      </div>
+    </section>
+
+  </main>
+
+  <!-- ========== FOOTER ========== -->
+  <footer class="site-footer">
+    <div class="footer-wave" aria-hidden="true"></div>
+    <div class="container footer-grid">
+      <div class="footer-brand">
+        <a class="brand" href="../index.html" aria-label="Nova Cinema — home">
+          <svg class="brand-mark" viewBox="0 0 48 48" aria-hidden="true">
+            <g class="reel">
+              <circle cx="24" cy="27" r="16" fill="#0a1330" stroke="currentColor" stroke-width="3"/>
+              <circle cx="24" cy="27" r="2.6" fill="currentColor"/>
+              <g fill="currentColor"><circle cx="24" cy="18.5" r="3.2"/><circle cx="32.1" cy="24.4" r="3.2"/><circle cx="29" cy="33.9" r="3.2"/><circle cx="19" cy="33.9" r="3.2"/><circle cx="15.9" cy="24.4" r="3.2"/></g>
+            </g>
+            <g transform="rotate(-12 24 11)">
+              <ellipse cx="24" cy="12.5" rx="17" ry="4.3" fill="#ffc83d" stroke="#8a5a00" stroke-width=".8"/>
+              <path d="M15.5 12 C15.5 2.5 32.5 2.5 32.5 12 Z" fill="#ffd45e" stroke="#8a5a00" stroke-width=".8"/>
+              <path d="M15.7 9.4 C21 10.8 27 10.8 32.3 9.4 L32.5 12 C27 13.5 21 13.5 15.5 12 Z" fill="#ff4458"/>
+            </g>
+          </svg>
+          <span class="brand-name">Nova<small>Cinema</small></span>
+        </a>
+        <h3 class="footer-tagline">No adventure's complete <span>without popcorn.</span></h3>
+        <p>The one true screen for every One Piece fan chasing the next great adventure.</p>
+        <ul class="socials">
+          <li><a href="https://discord.com" target="_blank" rel="noopener" aria-label="Nova Cinema on Discord"><svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M19.5 5.5A16 16 0 0 0 15.6 4.3l-.5 1a14.7 14.7 0 0 0-6.2 0l-.5-1A16 16 0 0 0 4.5 5.5C2 9.3 1.4 13 1.7 16.6A16 16 0 0 0 6.6 19l1-1.6a10 10 0 0 1-1.6-.8l.4-.3a11.4 11.4 0 0 0 11.2 0l.4.3c-.5.3-1 .6-1.6.8l1 1.6a16 16 0 0 0 4.9-2.4c.4-4.2-.6-7.9-2.8-11.1zM8.7 14.4c-1 0-1.8-.9-1.8-2s.8-2 1.8-2 1.8.9 1.8 2-.8 2-1.8 2zm6.6 0c-1 0-1.8-.9-1.8-2s.8-2 1.8-2 1.8.9 1.8 2-.8 2-1.8 2z"/></svg></a></li>
+          <li><a href="https://www.facebook.com" target="_blank" rel="noopener" aria-label="Nova Cinema on Facebook"><svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M14 8.6V7c0-.8.5-1 .9-1H17V2.1L14 2c-3.4 0-4.2 2.5-4.2 4.1v2.5H7.5v4H10V22h4v-9.4h3.1l.4-4H14z"/></svg></a></li>
+          <li><a href="https://www.instagram.com" target="_blank" rel="noopener" aria-label="Nova Cinema on Instagram"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><rect x="3" y="3" width="18" height="18" rx="5"/><circle cx="12" cy="12" r="4"/><circle cx="17.5" cy="6.5" r="1" fill="currentColor" stroke="none"/></svg></a></li>
+          <li><a href="https://www.tiktok.com" target="_blank" rel="noopener" aria-label="Nova Cinema on TikTok"><svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M16.5 3c.4 2.3 1.9 3.9 4 4.2v3.2c-1.5 0-2.9-.4-4-1.2v6.3a5.6 5.6 0 1 1-5.6-5.6c.3 0 .6 0 .9.1v3.3a2.4 2.4 0 1 0 1.6 2.2V3h3.1z"/></svg></a></li>
+        </ul>
+      </div>
+
+      <nav class="footer-col" aria-label="Footer">
+        <h3>Explore</h3>
+        <ul class="footer-links">
+          <li><a href="../index.html">Home</a></li>
+          <li><a href="movies.html">Movies</a></li>
+          <li><a href="schedule.html">Schedule</a></li>
+          <li><a href="contact.html">Contact</a></li>
+          <li><a href="schedule.html#my-tickets">My tickets</a></li>
+        </ul>
+      </nav>
+
+      <div class="footer-col">
+        <h3>Visit</h3>
+        <address>1 Grand Line Avenue<br>Nova City</address>
+        <ul class="footer-links" style="margin-top:.8rem">
+          <li>Mon – Thu · 10 AM – 11 PM</li>
+          <li>Fri – Sat · 10 AM – 1 AM</li>
+          <li>Sun · 11 AM – 10 PM</li>
+        </ul>
+      </div>
+
+      <div class="footer-col">
+        <h3>Join the crew</h3>
+        <p>New releases and showtimes, straight to your inbox.</p>
+        <form class="mini-form" data-newsletter action="#" method="post">
+          <label class="sr-only" for="newsletter-email">Email address</label>
+          <input type="email" id="newsletter-email" name="email" placeholder="you@example.com" autocomplete="email" required>
+          <button type="submit" class="btn btn--gold btn--sm">Join</button>
+        </form>
+        <p class="form-msg" aria-live="polite"></p>
+        <div class="footer-contact">
+          <a href="tel:+15550123456"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M22 16.9v3a2 2 0 0 1-2.2 2 19.8 19.8 0 0 1-8.6-3.1 19.5 19.5 0 0 1-6-6A19.8 19.8 0 0 1 2.1 4.2 2 2 0 0 1 4.1 2h3a2 2 0 0 1 2 1.7c.1.9.4 1.8.7 2.7a2 2 0 0 1-.5 2.1L8 9.8a16 16 0 0 0 6 6l1.3-1.3a2 2 0 0 1 2.1-.4c.9.3 1.8.6 2.7.7a2 2 0 0 1 1.7 2z"/></svg>Call the crew</a>
+          <a href="mailto:novacinema@gmail.com"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="2" y="4" width="20" height="16" rx="2"/><path d="m22 7-10 6L2 7"/></svg>Email us</a>
+        </div>
+      </div>
+    </div>
+
+    <div class="container footer-bottom">
+      <p>© 2026 Nova Cinema. All rights reserved.</p>
+      <p class="fine">A fan-made cinema experience. One Piece © Eiichiro Oda / Shueisha, Toei Animation. Trailers and music videos are embedded from YouTube.</p>
+    </div>
+  </footer>
+
+  <button type="button" class="to-top" aria-label="Back to top">
+    <svg class="ring" viewBox="0 0 52 52" aria-hidden="true"><circle class="bg" cx="26" cy="26" r="23"/><circle class="fg" cx="26" cy="26" r="23"/></svg>
+    <svg class="arrow" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.6" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="m18 15-6-6-6 6"/></svg>
+  </button>
+
+</body>
+</html>
