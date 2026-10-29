@@ -1,0 +1,251 @@
+/* ==========================================================================
+   Layout: page shell, sidebar, top bar, drawer, banners, page header
+   Mobile first: phone < 768px, tablet 768–1199px, desktop >= 1200px.
+   ========================================================================== */
+
+/* App frame ---------------------------------------------------------------- */
+.app {
+  min-height: 100vh;
+  min-height: 100dvh;
+}
+
+.app-column {
+  display: flex;
+  flex-direction: column;
+  min-width: 0;
+  min-height: 100vh;
+  min-height: 100dvh;
+}
+
+.app-main {
+  flex: 1;
+  padding: var(--space-4) var(--space-4) var(--space-7);
+}
+.app-main:focus-visible { outline-offset: -4px; }
+
+.page {
+  width: 100%;
+  max-width: var(--content-max);
+  margin-inline: auto;
+}
+
+/* Page header ------------------------------------------------------------- */
+.page-header {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: flex-end;
+  justify-content: space-between;
+  gap: var(--space-3) var(--space-5);
+  margin-bottom: var(--space-5);
+}
+.page-header__titles { min-width: 0; }
+.page-header__description { margin-top: var(--space-1); color: var(--text-muted); }
+.page-header__actions { display: flex; flex-wrap: wrap; gap: var(--space-2); }
+
+/* Banners (demo mode, offline) --------------------------------------------- */
+.banners:empty { display: none; }
+.banner {
+  display: flex;
+  align-items: flex-start;
+  gap: var(--space-2);
+  padding: var(--space-2) var(--space-4);
+  border-bottom: 1px solid var(--border);
+  font: var(--text-small);
+  color: var(--text);
+}
+.banner svg { width: 18px; height: 18px; margin-top: 1px; }
+.banner--demo { background: var(--primary-soft); }
+.banner--demo svg { color: var(--primary); }
+.banner--offline { background: var(--warning-soft); }
+.banner--offline svg { color: var(--warning); }
+.banner strong { font-weight: 600; }
+
+/* Top bar (phones only) ---------------------------------------------------- */
+.topbar {
+  position: sticky;
+  top: 0;
+  z-index: var(--z-topbar);
+  display: flex;
+  align-items: center;
+  gap: var(--space-2);
+  height: var(--topbar-height);
+  padding: 0 var(--space-2);
+  background: var(--surface-sidebar);
+  border-bottom: 1px solid var(--border);
+}
+.topbar__logo { width: 32px; height: 32px; border-radius: 6px; }
+.topbar__title {
+  flex: 1;
+  min-width: 0;
+  overflow: hidden;
+  font: var(--text-card-title);
+  white-space: nowrap;
+  text-overflow: ellipsis;
+}
+
+/* Sidebar ------------------------------------------------------------------ */
+.sidebar { display: none; }
+
+.sidebar__inner {
+  display: flex;
+  flex-direction: column;
+  height: 100%;
+  padding: var(--space-4) var(--space-3);
+  gap: var(--space-5);
+}
+
+.brand {
+  display: flex;
+  align-items: center;
+  gap: var(--space-3);
+  min-height: var(--control-height-touch);
+  padding: 0 var(--space-1);
+  color: var(--text);
+  text-decoration: none;
+}
+.brand__logo { width: 36px; height: 36px; border-radius: 8px; }
+.brand__text { display: flex; flex-direction: column; min-width: 0; line-height: 1.2; }
+.brand__name { font: var(--text-card-title); }
+.brand__org { font: var(--text-label); color: var(--text-muted); }
+
+.nav__list { display: flex; flex-direction: column; gap: 2px; }
+.nav-link {
+  position: relative;
+  display: flex;
+  align-items: center;
+  gap: var(--space-3);
+  min-height: var(--control-height-touch);
+  padding: 0 var(--space-3);
+  border-radius: var(--radius-control);
+  color: var(--text-muted);
+  font: 500 0.9375rem/1.2 var(--font-ui);
+  text-decoration: none;
+  transition: background-color var(--dur-fast) var(--ease-out), color var(--dur-fast) var(--ease-out);
+}
+.nav-link svg { width: 20px; height: 20px; }
+.nav-link:hover { background: var(--surface-raised); color: var(--text); text-decoration: none; }
+.nav-link[aria-current="page"] { background: var(--primary-soft); color: var(--text); font-weight: 600; }
+.nav-link[aria-current="page"] svg { color: var(--primary); }
+.nav-link__indicator {
+  position: absolute;
+  left: calc(var(--space-3) * -1);
+  top: 8px;
+  bottom: 8px;
+  width: 3px;
+  border-radius: 0 3px 3px 0;
+  background: var(--primary);
+}
+
+.sidebar__footer {
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-3);
+  margin-top: auto;
+  padding-top: var(--space-4);
+  border-top: 1px solid var(--border);
+}
+
+.user-chip {
+  display: flex;
+  align-items: center;
+  gap: var(--space-3);
+  min-width: 0;
+  padding: 0 var(--space-1);
+}
+.avatar {
+  display: grid;
+  place-items: center;
+  width: 32px;
+  height: 32px;
+  flex: none;
+  border-radius: 50%;
+  background: var(--surface-raised);
+  border: 1px solid var(--border-strong);
+  font: var(--text-tiny);
+  color: var(--text);
+}
+.user-chip__text { display: flex; flex-direction: column; min-width: 0; line-height: 1.3; }
+.user-chip__name, .user-chip__email { overflow: hidden; white-space: nowrap; text-overflow: ellipsis; }
+.user-chip__name { font: 600 0.875rem/1.3 var(--font-ui); }
+.user-chip__email { font: var(--text-label); color: var(--text-muted); }
+
+.sidebar__head { display: flex; align-items: center; justify-content: space-between; gap: var(--space-2); }
+.sidebar__head .sidebar__toggle { display: none; }
+.sidebar__footer .btn { justify-content: flex-start; }
+
+/* Drawer (phones) ------------------------------------------------------------ */
+.drawer {
+  width: min(320px, 86vw);
+  max-width: none;
+  height: 100dvh;
+  max-height: none;
+  margin: 0;
+  padding: 0;
+  border: 0;
+  border-right: 1px solid var(--border);
+  background: var(--surface-sidebar);
+  color: var(--text);
+}
+.drawer::backdrop { background: var(--scrim); }
+.drawer .sidebar__inner { padding-top: var(--space-3); }
+.drawer__head { display: flex; align-items: center; justify-content: space-between; gap: var(--space-2); }
+
+/* Tablet and up: sidebar column -------------------------------------------- */
+@media (min-width: 768px) {
+  .app {
+    display: grid;
+    grid-template-columns: var(--sidebar-width) minmax(0, 1fr);
+  }
+
+  .topbar { display: none; }
+
+  .sidebar {
+    position: sticky;
+    top: 0;
+    z-index: var(--z-sidebar);
+    display: block;
+    height: 100vh;
+    height: 100dvh;
+    overflow-y: auto;
+    overflow-x: hidden;
+    background: var(--surface-sidebar);
+    border-right: 1px solid var(--border);
+  }
+
+  .app-main { padding: var(--space-5) var(--space-5) var(--space-7); }
+}
+
+/* Tablet only: collapsed to icons unless the admin expands it -------------- */
+@media (min-width: 768px) and (max-width: 1199.98px) {
+  .app:not(.is-sidebar-expanded) { grid-template-columns: var(--sidebar-collapsed) minmax(0, 1fr); }
+  .sidebar__head .sidebar__toggle { display: inline-flex; }
+
+  /* Icons only; labels stay in the DOM for screen readers and tooltips */
+  .app:not(.is-sidebar-expanded) .sidebar__inner { padding-inline: var(--space-2); align-items: center; }
+  .app:not(.is-sidebar-expanded) .brand__text,
+  .app:not(.is-sidebar-expanded) .nav-link__label,
+  .app:not(.is-sidebar-expanded) .user-chip__text,
+  .app:not(.is-sidebar-expanded) .collapsible-label {
+    position: absolute;
+    width: 1px;
+    height: 1px;
+    overflow: hidden;
+    clip: rect(0 0 0 0);
+    white-space: nowrap;
+  }
+  .app:not(.is-sidebar-expanded) .nav-link { justify-content: center; width: 48px; padding: 0; }
+  .app:not(.is-sidebar-expanded) .nav-link__indicator { left: -8px; }
+  .app:not(.is-sidebar-expanded) .brand,
+  .app:not(.is-sidebar-expanded) .user-chip { justify-content: center; padding: 0; }
+  .app:not(.is-sidebar-expanded) .sidebar__footer { align-items: center; width: 100%; }
+  .app:not(.is-sidebar-expanded) .sidebar__footer .btn { width: 48px; padding: 0; }
+  .app:not(.is-sidebar-expanded) .theme-switch { flex-direction: column; }
+  .app:not(.is-sidebar-expanded) .theme-switch__option { padding: 0; width: 38px; }
+  .app:not(.is-sidebar-expanded) .sidebar__head { flex-direction: column; }
+  .app:not(.is-sidebar-expanded) .sidebar__footer .btn { justify-content: center; }
+}
+
+/* Desktop ---------------------------------------------------------------- */
+@media (min-width: 1200px) {
+  .app-main { padding: var(--space-6) var(--space-6) var(--space-7); }
+}

@@ -1,0 +1,63 @@
+<!doctype html>
+<html lang="en" data-theme="dark">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Quizzes · JCI Uniben Quiz Admin</title>
+  <meta name="robots" content="noindex, nofollow">
+  <meta name="color-scheme" content="dark light">
+  <!-- Theme before first paint: identical copy of js/theme-init.js -->
+  <script>(function(){try{var t=localStorage.getItem('jci-admin-theme');if(t!=='dark'&&t!=='light'){t=window.matchMedia&&window.matchMedia('(prefers-color-scheme: light)').matches?'light':'dark'}document.documentElement.setAttribute('data-theme',t)}catch(e){document.documentElement.setAttribute('data-theme','dark')}})();</script>
+  <link rel="icon" href="assets/favicon.svg" type="image/svg+xml">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&amp;display=swap">
+  <link rel="stylesheet" href="css/tokens.css">
+  <link rel="stylesheet" href="css/base.css">
+  <link rel="stylesheet" href="css/layout.css">
+  <link rel="stylesheet" href="css/components.css">
+  <link rel="stylesheet" href="css/motion.css">
+  <link rel="stylesheet" href="css/pages.css">
+  <script type="module" src="js/pages/stage-placeholder.js" blocking="render"></script>
+</head>
+<body class="app" data-page="quizzes" data-title="Quizzes">
+  <a class="skip-link" href="#main">Skip to main content</a>
+  <div class="sidebar" data-sidebar></div>
+  <div class="app-column">
+    <header class="topbar" data-topbar></header>
+    <div class="banners" data-banners></div>
+    <main id="main" class="app-main" tabindex="-1">
+      <div class="page">
+        <header class="page-header">
+          <div class="page-header__titles">
+            <h1>Quizzes</h1>
+            <p class="page-header__description">Create, publish and manage quizzes.</p>
+          </div>
+        </header>
+        <div class="stack" role="status" data-page-loading>
+          <span class="sr-only">Loading…</span>
+          <div class="skeleton skeleton--block" aria-hidden="true"></div>
+          <div class="skeleton skeleton--line" style="width:70%" aria-hidden="true"></div>
+          <div class="skeleton skeleton--line" style="width:52%" aria-hidden="true"></div>
+        </div>
+        <!-- TEMPORARY: replaced when this page is built (see README "Build stages") -->
+        <div data-page-content hidden>
+          <section class="card stage-note" aria-labelledby="stage-title">
+            <div class="card__header">
+              <h2 id="stage-title">The quiz list arrives in Stage 2</h2>
+              <p class="card__description">Next up in the build.</p>
+            </div>
+            <p>When it's ready, this page will let you:</p>
+            <ul class="stage-note__list">
+              <li>Search, filter and sort every quiz, with pages of 10, 20 or 50</li>
+              <li>Create a new quiz from a title</li>
+              <li>Edit, preview, duplicate, publish, archive or delete from each row (only the actions allowed for that quiz)</li>
+              <li>See each quiz’s status, availability, questions, marks and attempts at a glance</li>
+            </ul>
+          </section>
+        </div>
+      </div>
+    </main>
+  </div>
+</body>
+</html>

@@ -1,0 +1,180 @@
+/* ==========================================================================
+   Motion (section 39). Only transform and opacity move; colors may fade on
+   hover; clip-path is used only for the theme reveal. Everything collapses to
+   instant changes under prefers-reduced-motion (bottom of this file).
+   ========================================================================== */
+
+@keyframes spin { to { transform: rotate(360deg); } }
+@keyframes shimmer { from { transform: translateX(-100%); } to { transform: translateX(100%); } }
+@keyframes shake {
+  0%, 100% { transform: translateX(0); }
+  25% { transform: translateX(-2px); }
+  75% { transform: translateX(2px); }
+}
+@keyframes pop { 0%, 100% { transform: scale(1); } 50% { transform: scale(1.06); } }
+@keyframes fade-up { from { opacity: 0; transform: translateY(8px); } to { opacity: 1; transform: none; } }
+@keyframes fade-in { from { opacity: 0; } to { opacity: 1; } }
+@keyframes draw { to { stroke-dashoffset: 0; } }
+@keyframes toast-in { from { opacity: 0; transform: translateY(12px) scale(0.98); } to { opacity: 1; transform: none; } }
+@keyframes toast-out { to { opacity: 0; transform: translateY(8px) scale(0.98); } }
+@keyframes toast-timer { from { transform: scaleX(1); } to { transform: scaleX(0); } }
+@keyframes vt-out { to { opacity: 0; } }
+@keyframes vt-in { from { opacity: 0; transform: translateY(6px); } }
+@keyframes theme-reveal {
+  from { clip-path: circle(0 at var(--reveal-x, 50%) var(--reveal-y, 50%)); }
+  to { clip-path: circle(var(--reveal-r, 150%) at var(--reveal-x, 50%) var(--reveal-y, 50%)); }
+}
+
+/* Fields: one small shake on a validation error */
+.is-shaking { animation: shake 240ms var(--ease-out); }
+
+/* Content that replaces a skeleton fades in at the same size */
+.fade-in { animation: fade-in var(--dur-base) var(--ease-out) both; }
+.fade-up { animation: fade-up var(--dur-base) var(--ease-out) both; }
+
+/* Self-drawing check mark (save status, success states) */
+.check-draw path {
+  stroke-dasharray: 24;
+  stroke-dashoffset: 24;
+  animation: draw var(--dur-slow) var(--ease-out) forwards;
+}
+
+/* Skeleton shimmer */
+.skeleton::after {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(90deg, transparent, var(--skeleton-shine), transparent);
+  transform: translateX(-100%);
+  animation: shimmer 1.4s var(--ease-move) infinite;
+}
+
+/* Dialogs: backdrop fades; panel fades, rises 8px and scales 0.98 -> 1 ----- */
+.dialog {
+  opacity: 0;
+  transform: translateY(8px) scale(0.98);
+  transition:
+    opacity calc(var(--dur-slow) * 0.7) var(--ease-in),
+    transform calc(var(--dur-slow) * 0.7) var(--ease-in),
+    overlay calc(var(--dur-slow) * 0.7) allow-discrete,
+    display calc(var(--dur-slow) * 0.7) allow-discrete;
+}
+.dialog[open] {
+  opacity: 1;
+  transform: none;
+  transition:
+    opacity var(--dur-slow) var(--ease-out),
+    transform var(--dur-slow) var(--ease-out),
+    overlay var(--dur-slow) allow-discrete,
+    display var(--dur-slow) allow-discrete;
+}
+@starting-style {
+  .dialog[open] { opacity: 0; transform: translateY(8px) scale(0.98); }
+}
+.dialog::backdrop,
+.drawer::backdrop {
+  opacity: 0;
+  transition:
+    opacity var(--dur-slow) var(--ease-out),
+    overlay var(--dur-slow) allow-discrete,
+    display var(--dur-slow) allow-discrete;
+}
+.dialog[open]::backdrop,
+.drawer[open]::backdrop { opacity: 1; }
+@starting-style {
+  .dialog[open]::backdrop,
+  .drawer[open]::backdrop { opacity: 0; }
+}
+
+@media (max-width: 767.98px) {
+  /* Phones: dialogs slide up as sheets */
+  .dialog { transform: translateY(100%); }
+  .dialog[open] { transform: none; }
+  @starting-style {
+    .dialog[open] { transform: translateY(100%); }
+  }
+}
+
+/* Mobile drawer slides in from the left */
+.drawer {
+  transform: translateX(-100%);
+  transition:
+    transform calc(var(--dur-slow) * 0.7) var(--ease-in),
+    overlay calc(var(--dur-slow) * 0.7) allow-discrete,
+    display calc(var(--dur-slow) * 0.7) allow-discrete;
+}
+.drawer[open] {
+  transform: none;
+  transition:
+    transform var(--dur-slow) var(--ease-out),
+    overlay var(--dur-slow) allow-discrete,
+    display var(--dur-slow) allow-discrete;
+}
+@starting-style {
+  .drawer[open] { transform: translateX(-100%); }
+}
+
+/* Toasts ----------------------------------------------------------------------- */
+.toast { animation: toast-in var(--dur-base) var(--ease-out); }
+.toast.is-leaving { animation: toast-out calc(var(--dur-base) * 0.7) var(--ease-in) forwards; }
+.toast__timer { animation: toast-timer var(--toast-duration, 5000ms) linear forwards; }
+.toast.is-paused .toast__timer { animation-play-state: paused; }
+
+/* Settings choice cards: the radio dot scales up from 0 */
+.choice-card__dot::after { transition: transform var(--dur-fast) var(--ease-spring); }
+
+/* Page changes: cross-document View Transitions ------------------------------ */
+@media (prefers-reduced-motion: no-preference) {
+  @view-transition { navigation: auto; }
+}
+.sidebar { view-transition-name: sidebar; }
+.topbar { view-transition-name: topbar; }
+.app-main { view-transition-name: main; }
+.nav-link__indicator { view-transition-name: nav-indicator; }
+
+/* Shell stays perfectly still; main content crossfades and rises slightly */
+::view-transition-group(sidebar),
+::view-transition-group(topbar) { animation-duration: 0s; }
+::view-transition-old(sidebar),
+::view-transition-new(sidebar),
+::view-transition-old(topbar),
+::view-transition-new(topbar) { animation-duration: var(--dur-fast); }
+::view-transition-old(main) { animation: vt-out calc(var(--dur-slow) * 0.6) var(--ease-in) both; }
+::view-transition-new(main) { animation: vt-in var(--dur-slow) var(--ease-out) both; }
+::view-transition-group(nav-indicator) { animation-duration: var(--dur-slow); animation-timing-function: var(--ease-move); }
+
+/* Theme switch: circular reveal from the toggle ------------------------------- */
+.is-theme-transition * { view-transition-name: none !important; }
+.is-theme-transition::view-transition-old(root) { animation: none; }
+.is-theme-transition::view-transition-new(root) {
+  animation: theme-reveal var(--dur-theme) var(--ease-out);
+  mix-blend-mode: normal;
+}
+/* Fallback when View Transitions aren't supported: a quick color crossfade */
+.is-theme-fade,
+.is-theme-fade *,
+.is-theme-fade *::before,
+.is-theme-fade *::after {
+  transition:
+    background-color 200ms var(--ease-out),
+    color 200ms var(--ease-out),
+    border-color 200ms var(--ease-out),
+    fill 200ms var(--ease-out) !important;
+}
+
+/* Reduced motion: no movement, scaling, shimmer, stagger or page transitions */
+@media (prefers-reduced-motion: reduce) {
+  *, *::before, *::after {
+    animation-duration: 1ms !important;
+    animation-iteration-count: 1 !important;
+    animation-delay: 0s !important;
+    transition-duration: 1ms !important;
+    scroll-behavior: auto !important;
+  }
+  .skeleton::after { display: none; }
+  .spinner { animation: none; border-right-color: currentColor; opacity: 0.6; }
+  .btn:hover:not(:disabled),
+  .btn:active:not(:disabled) { transform: none; }
+  .toast__timer { display: none; }
+  .check-draw path { stroke-dashoffset: 0; }
+}

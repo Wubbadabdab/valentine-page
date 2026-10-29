@@ -1,0 +1,39 @@
+<!doctype html>
+<html lang="en" data-theme="dark">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>No access · JCI Uniben Quiz Admin</title>
+  <meta name="robots" content="noindex, nofollow">
+  <meta name="color-scheme" content="dark light">
+  <!-- Theme before first paint: identical copy of js/theme-init.js -->
+  <script>(function(){try{var t=localStorage.getItem('jci-admin-theme');if(t!=='dark'&&t!=='light'){t=window.matchMedia&&window.matchMedia('(prefers-color-scheme: light)').matches?'light':'dark'}document.documentElement.setAttribute('data-theme',t)}catch(e){document.documentElement.setAttribute('data-theme','dark')}})();</script>
+  <link rel="icon" href="assets/favicon.svg" type="image/svg+xml">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&amp;display=swap">
+  <link rel="stylesheet" href="css/tokens.css">
+  <link rel="stylesheet" href="css/base.css">
+  <link rel="stylesheet" href="css/layout.css">
+  <link rel="stylesheet" href="css/components.css">
+  <link rel="stylesheet" href="css/motion.css">
+  <link rel="stylesheet" href="css/pages.css">
+  <script type="module" src="js/pages/no-access.js"></script>
+</head>
+<body>
+  <a class="skip-link" href="#main">Skip to main content</a>
+  <div class="banners" data-banners></div>
+  <main id="main" class="error-page" tabindex="-1">
+    <div class="card error-page__card">
+      <img class="error-page__logo" src="assets/logo.svg" alt="JCI Uniben" width="48" height="48">
+      <p class="error-page__code">Error 403</p>
+      <h1 class="error-page__title">You don’t have access to this page</h1>
+      <p class="error-page__text">Your account is signed in, but it doesn’t have permission to view this part of the admin site. If you think this is a mistake, ask a JCI Uniben administrator to check your account.</p>
+      <div class="error-page__actions">
+        <a class="btn btn--primary" href="dashboard.html">Go to the dashboard</a>
+        <button type="button" class="btn" data-sign-out><span class="btn__label">Sign in with a different account</span></button>
+      </div>
+    </div>
+  </main>
+</body>
+</html>
