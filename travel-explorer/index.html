@@ -1,0 +1,338 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Travel Explorer — Discover the world, one destination at a time</title>
+  <meta name="description" content="Travel Explorer is your guide to discovering the world: honest destination guides, practical tips and special resorts across Asia, Europe, Africa, the Americas and Oceania.">
+  <meta name="theme-color" content="#0F1B2D">
+  <!-- OPEN GRAPH: once the site is live, change og:image to a full URL (https://your-domain/images/ui/og-image.jpg) -->
+  <meta property="og:type" content="website">
+  <meta property="og:site_name" content="Travel Explorer">
+  <meta property="og:title" content="Travel Explorer — Discover the world, one destination at a time">
+  <meta property="og:description" content="Travel Explorer is your guide to discovering the world: honest destination guides, practical tips and special resorts across Asia, Europe, Africa, the Americas and Oceania.">
+  <meta property="og:image" content="images/ui/og-image.jpg">
+  <meta name="twitter:card" content="summary_large_image">
+  <link rel="icon" href="images/ui/favicon.svg" type="image/svg+xml">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght@0,9..144,300..700;1,9..144,300..600&family=Inter:wght@400;500;600;700&display=swap">
+  <link rel="stylesheet" href="css/style.css">
+  <script>document.documentElement.classList.add('js');</script>
+  <script src="js/data.js" defer></script>
+  <script src="js/main.js" defer></script>
+</head>
+
+<body data-page="home">
+  <a class="skip-link" href="#main">Skip to content</a>
+  <div class="progress" aria-hidden="true"></div>
+
+  <!-- ========== HEADER ========== -->
+  <header class="site-header" data-header>
+    <div class="container header-inner">
+      <a class="logo" href="index.html" aria-label="Travel Explorer — home"><svg class="logo-mark" viewBox="0 0 32 32" aria-hidden="true"><circle cx="16" cy="16" r="14.5" fill="none" stroke="currentColor" stroke-width="1.5"/><circle cx="16" cy="16" r="10" fill="none" stroke="currentColor" stroke-width=".75" opacity=".45"/><path d="M16 4.5 19.2 16 16 27.5 12.8 16z" fill="currentColor" opacity=".35"/><path d="M16 4.5 19.2 16h-6.4z" fill="#D9643F"/><circle cx="16" cy="16" r="1.8" fill="currentColor"/></svg><span class="logo-text">Travel <em>Explorer</em></span></a>
+      <nav class="nav" aria-label="Main">
+        <ul class="nav-list">
+          <li><a class="nav-link" href="index.html" aria-current="page">Home</a></li>
+          <li><a class="nav-link" href="destinations.html">Destinations</a></li>
+          <li><a class="nav-link" href="resorts.html">Resorts</a></li>
+          <li><a class="nav-link" href="about.html">About</a></li>
+          <li><a class="nav-link" href="contact.html">Contact</a></li>
+        </ul>
+      </nav>
+      <div class="header-actions">
+        <button type="button" class="saved-btn" data-saved-open aria-label="Saved trips (0 saved)"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linejoin="round" aria-hidden="true"><path d="M12 20.5s-7.5-4.6-9.3-9.4C1.6 8 3.4 4.5 7 4.5c2 0 3.6 1.1 5 3 1.4-1.9 3-3 5-3 3.6 0 5.4 3.5 4.3 6.6-1.8 4.8-9.3 9.4-9.3 9.4z"/></svg><span class="saved-count" data-saved-count hidden>0</span></button>
+        <a class="btn btn--accent btn--sm header-cta" href="contact.html?subject=Trip%20planning#contact-form">Plan a trip</a>
+        <button type="button" class="menu-toggle" aria-expanded="false" aria-controls="mobile-menu" aria-label="Open menu"><span class="bars"></span></button>
+      </div>
+    </div>
+  </header>
+
+  <!-- Mobile menu (full screen) -->
+  <div class="mobile-menu" id="mobile-menu">
+    <nav aria-label="Mobile">
+      <ul>
+      <li style="--i:0"><a class="m-link" href="index.html" aria-current="page"><span>01</span>Home</a></li>
+      <li style="--i:1"><a class="m-link" href="destinations.html"><span>02</span>Destinations</a></li>
+      <li style="--i:2"><a class="m-link" href="resorts.html"><span>03</span>Resorts</a></li>
+      <li style="--i:3"><a class="m-link" href="about.html"><span>04</span>About</a></li>
+      <li style="--i:4"><a class="m-link" href="contact.html"><span>05</span>Contact</a></li>
+      </ul>
+      <div class="m-extra" style="--i:5">
+        <a class="btn btn--accent" href="contact.html?subject=Trip%20planning#contact-form">Plan a trip <svg class="arrow" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 12h14M13 6l6 6-6 6"/></svg></a>
+        <p><a href="mailto:travelexplorer@gmail.com">travelexplorer@gmail.com</a></p>
+        <p><a href="tel:+2348125377305">+234 812 537 7305</a></p>
+      </div>
+    </nav>
+  </div>
+
+  <!-- ========== MAIN CONTENT ========== -->
+  <main id="main">
+    <!-- ========== HERO (full-screen video) ========== -->
+    <section class="hero hero--home" aria-labelledby="hero-title">
+      <div class="hero-bg" data-parallax>
+        <!-- IMAGE: images/ui/home-hero.jpg (1920×1080) — shown before the video loads, and as the video poster -->
+        <div class="media media--hero" style="--ph-angle:140deg;--ph-x:83%;--ph-y:90%">
+          <img src="images/ui/home-hero.jpg" sizes="100vw" alt="Traveler standing on a cliff above a winding coastline at sunrise" width="1920" height="1080" fetchpriority="high" decoding="async">
+          <span class="ph" aria-hidden="true"><span class="ph-name">Travel Explorer</span><span class="ph-sub"></span></span>
+        </div>
+        <!-- VIDEO: videos/home-hero.mp4 — muted, looping background (skipped with reduced motion or data saver) -->
+        <video class="hero-video" data-bg-video muted loop playsinline preload="none" poster="images/ui/home-hero.jpg" aria-hidden="true" tabindex="-1">
+          <source src="videos/home-hero.mp4" type="video/mp4">
+        </video>
+      </div>
+      <div class="hero-overlay"></div>
+      <div class="container hero-inner on-dark">
+        <p class="eyebrow eyebrow--light hero-anim" style="--d:0">Welcome to Travel Explorer</p>
+        <h1 class="hero-title hero-anim" id="hero-title" style="--d:1">Your guide to discovering the world, <em>one destination at a time.</em></h1>
+        <p class="hero-lead hero-anim" style="--d:2">Whether you’re planning your next big adventure or just dreaming about where to go, Travel Explorer helps you find inspiration, practical tips, and honest guides for travelers everywhere.</p>
+        <div class="hero-actions hero-anim" style="--d:3">
+          <a class="btn btn--accent btn--lg" href="destinations.html">Explore destinations <svg class="arrow" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 12h14M13 6l6 6-6 6"/></svg></a>
+          <a class="btn btn--ghost btn--lg" href="resorts.html">See special resorts</a>
+        </div>
+        <form class="search hero-anim" style="--d:4" action="destinations.html" method="get" role="search">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" aria-hidden="true"><circle cx="11" cy="11" r="7"/><path d="m20 20-3.5-3.5"/></svg>
+          <label class="sr-only" for="hero-search">Search destinations</label>
+          <input id="hero-search" type="search" name="q" placeholder="Search destinations…" autocomplete="off">
+          <button type="submit" class="btn btn--accent btn--sm">Search</button>
+        </form>
+      </div>
+      <a class="scroll-cue" href="#stats" aria-label="Scroll to content"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M12 5v14M6 13l6 6 6-6"/></svg></a>
+    </section>
+
+    <!-- ========== STATS (counted from js/data.js) ========== -->
+    <section class="stats" id="stats" aria-label="Travel Explorer in numbers">
+      <div class="container">
+        <ul class="stats-card reveal">
+          <li class="stat"><span class="stat-num" data-stat="destinations">24</span><span class="stat-label">Destinations</span></li>
+          <li class="stat"><span class="stat-num" data-stat="resorts">12</span><span class="stat-label">Special resorts</span></li>
+          <li class="stat"><span class="stat-num" data-stat="regions">5</span><span class="stat-label">World regions</span></li>
+          <li class="stat"><span class="stat-num" data-stat="styles">7</span><span class="stat-label">Travel styles</span></li>
+        </ul>
+      </div>
+    </section>
+
+    <!-- ========== INTRO + FEATURED DESTINATIONS ========== -->
+    <section class="section" aria-labelledby="featured-title">
+      <div class="container">
+        <div class="intro reveal" style="margin-bottom:var(--s-6)">
+          <div>
+            <p class="eyebrow">Featured destinations</p>
+            <h2 class="h2" id="featured-title">Four places we can’t stop talking about</h2>
+          </div>
+          <div>
+            <p>From hidden gems to iconic landmarks, we bring you real stories and useful information to make your trip planning easier. Start exploring destinations, read our latest travel guides, and get ready for your next journey.</p>
+            <a class="text-link" href="destinations.html">Explore more destinations <svg class="arrow" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 12h14M13 6l6 6-6 6"/></svg></a>
+          </div>
+        </div>
+        <ul class="featured-grid" data-featured></ul>
+      </div>
+    </section>
+
+    <!-- Slow marquee of every destination name -->
+    <div class="marquee" aria-label="All destinations">
+      <div class="marquee-track" data-marquee></div>
+    </div>
+
+    <!-- ========== BROWSE BY TRAVEL STYLE ========== -->
+    <section class="section" aria-labelledby="styles-title">
+      <div class="container">
+        <div class="section-head reveal">
+          <div>
+            <p class="eyebrow">Browse by travel style</p>
+            <h2 class="h2" id="styles-title">What kind of trip are you dreaming of?</h2>
+          </div>
+          <p class="lead">Pick a style to see every destination that suits it.</p>
+        </div>
+        <!-- IMAGES: images/ui/style-adventure.jpg, style-culture.jpg, style-beach.jpg, style-nature.jpg, style-city.jpg, style-food.jpg (600×800) -->
+        <ul class="style-grid" data-styles></ul>
+      </div>
+    </section>
+
+    <!-- ========== SPECIAL RESORTS CAROUSEL ========== -->
+    <section class="section section--white" aria-labelledby="resorts-title">
+      <div class="container">
+        <div class="section-head reveal">
+          <div>
+            <p class="eyebrow">Special resorts</p>
+            <h2 class="h2" id="resorts-title">Once-in-a-lifetime stays</h2>
+            <p class="lead">From overwater villas to desert hideaways — places that are worth the journey on their own.</p>
+          </div>
+          <div class="carousel-nav">
+            <button type="button" class="icon-btn" data-carousel-prev aria-label="Previous resorts"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="m15 18-6-6 6-6"/></svg></button>
+            <button type="button" class="icon-btn" data-carousel-next aria-label="Next resorts"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="m9 18 6-6-6-6"/></svg></button>
+          </div>
+        </div>
+        <div class="carousel" data-carousel role="region" aria-roledescription="carousel" aria-label="Special resorts">
+          <ul class="carousel-track" data-resort-track tabindex="0" aria-label="Special resorts — scroll sideways"></ul>
+          <div class="carousel-progress" aria-hidden="true"><span></span></div>
+        </div>
+        <p style="margin-top:var(--s-4)"><a class="text-link" href="resorts.html">See all special resorts <svg class="arrow" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 12h14M13 6l6 6-6 6"/></svg></a></p>
+      </div>
+    </section>
+
+    <!-- ========== IMAGE STRIP ========== -->
+    <section class="section section--tight" aria-label="Postcards from our destinations">
+      <div class="container">
+        <ul class="image-strip" data-image-strip></ul>
+      </div>
+    </section>
+
+    <!-- ========== WHY TRAVEL WITH US ========== -->
+    <section class="section" aria-labelledby="why-title">
+      <div class="container">
+        <div class="section-head section-head--center reveal">
+          <p class="eyebrow">Why travel with us</p>
+          <h2 class="h2" id="why-title">Inspiration you can actually plan with</h2>
+        </div>
+        <ul class="why-grid">
+          <li class="why-card reveal" style="--stagger:0">
+            <span class="icon-circle"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="12" cy="12" r="10"/><path d="m16.2 7.8-2.1 6.3-6.3 2.1 2.1-6.3z"/></svg></span>
+            <h3>Honest, hand-picked guides</h3>
+            <p>Every destination is chosen and written with care, so you get the real picture — the highlights and the practical details.</p>
+          </li>
+          <li class="why-card reveal" style="--stagger:1">
+            <span class="icon-circle"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="3" y="4" width="18" height="18" rx="2"/><path d="M16 2v4M8 2v4M3 10h18"/></svg></span>
+            <h3>Practical tips that save time</h3>
+            <p>Best times to visit, budget levels and must-do experiences, gathered in one place so planning is faster.</p>
+          </li>
+          <li class="why-card reveal" style="--stagger:2">
+            <span class="icon-circle"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M2 3h6a4 4 0 0 1 4 4v14a3 3 0 0 0-3-3H2zM22 3h-6a4 4 0 0 0-4 4v14a3 3 0 0 1 3-3h7z"/></svg></span>
+            <h3>Real stories, not sales pitches</h3>
+            <p>We share what makes a place special and what to know before you go — without the hype.</p>
+          </li>
+          <li class="why-card reveal" style="--stagger:3">
+            <span class="icon-circle"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M21 15a2 2 0 0 1-2 2H7l-4 4V5a2 2 0 0 1 2-2h14a2 2 0 0 1 2 2z"/></svg></span>
+            <h3>Help when you need it</h3>
+            <p>Have a question or want help planning? Send us a message and we’ll reply within a couple of days.</p>
+          </li>
+        </ul>
+      </div>
+    </section>
+
+    <!-- ========== TRAVEL TIPS ========== -->
+    <section class="section section--ink" aria-labelledby="tips-title">
+      <div class="container">
+        <div class="section-head reveal">
+          <div>
+            <p class="eyebrow">Travel tips</p>
+            <h2 class="h2" id="tips-title">Small habits, better trips</h2>
+          </div>
+          <p class="lead">A few lessons that make almost any journey smoother.</p>
+        </div>
+        <ol class="tips-grid">
+          <li class="tip reveal" style="--stagger:0"><span class="tip-num" aria-hidden="true">01</span><div><h3>Travel in shoulder season</h3><p>Late spring and early autumn often bring better prices, softer light and fewer crowds.</p></div></li>
+          <li class="tip reveal" style="--stagger:1"><span class="tip-num" aria-hidden="true">02</span><div><h3>Book the hard-to-get things first</h3><p>Permits, popular tours and special stays can sell out — lock them in before the rest of your plans.</p></div></li>
+          <li class="tip reveal" style="--stagger:2"><span class="tip-num" aria-hidden="true">03</span><div><h3>Pack light, layer smart</h3><p>A few versatile layers handle changing weather and make moving between places easier.</p></div></li>
+          <li class="tip reveal" style="--stagger:0"><span class="tip-num" aria-hidden="true">04</span><div><h3>Learn a few local phrases</h3><p>Hello, please and thank you go a long way and open the door to warmer conversations.</p></div></li>
+          <li class="tip reveal" style="--stagger:1"><span class="tip-num" aria-hidden="true">05</span><div><h3>Respect local customs</h3><p>Dress modestly at religious sites, ask before photographing people and follow local etiquette.</p></div></li>
+          <li class="tip reveal" style="--stagger:2"><span class="tip-num" aria-hidden="true">06</span><div><h3>Sort out travel insurance</h3><p>It’s the least exciting part of planning — and the one you’ll be most glad you did.</p></div></li>
+        </ol>
+      </div>
+    </section>
+
+    <!-- ========== TESTIMONIALS (sample content — edit in js/data.js) ========== -->
+    <section class="section" aria-labelledby="t-title">
+      <div class="container">
+        <div class="section-head section-head--center reveal">
+          <p class="eyebrow">From fellow travelers</p>
+          <h2 class="h2" id="t-title">What readers say</h2>
+        </div>
+        <div class="testimonials reveal" data-testimonials role="region" aria-roledescription="carousel" aria-label="Reader reviews">
+          <div class="t-viewport"><div class="t-track"></div></div>
+          <div class="t-controls">
+            <button type="button" class="icon-btn" data-t-prev aria-label="Previous review"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="m15 18-6-6 6-6"/></svg></button>
+            <div class="dots"></div>
+            <button type="button" class="icon-btn" data-t-next aria-label="Next review"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="m9 18 6-6-6-6"/></svg></button>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ========== NEWSLETTER CTA ========== -->
+    <section class="section section--tight" aria-labelledby="news-title">
+      <div class="container">
+        <div class="newsletter-cta reveal on-dark">
+          <div>
+            <p class="eyebrow eyebrow--light">Newsletter</p>
+            <h2 class="h2" id="news-title">Get new guides and travel tips in your inbox</h2>
+          </div>
+          <div>
+            <p>Fresh destinations, seasonal ideas and practical advice — a few times a month, never spam.</p>
+            <form class="inline-form" data-newsletter action="#" method="post" style="margin-top:var(--s-3)">
+              <label class="sr-only" for="cta-email">Email address</label>
+              <input type="email" id="cta-email" name="email" placeholder="you@example.com" autocomplete="email" required>
+              <button type="submit" class="btn btn--accent">Subscribe <svg class="arrow" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 12h14M13 6l6 6-6 6"/></svg></button>
+            </form>
+            <p class="form-note" data-newsletter-note aria-live="polite"></p>
+          </div>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <!-- ========== FOOTER ========== -->
+  <footer class="site-footer">
+    <div class="container">
+      <div class="footer-grid">
+        <div class="footer-brand">
+          <a class="logo" href="index.html" aria-label="Travel Explorer — home"><svg class="logo-mark" viewBox="0 0 32 32" aria-hidden="true"><circle cx="16" cy="16" r="14.5" fill="none" stroke="currentColor" stroke-width="1.5"/><circle cx="16" cy="16" r="10" fill="none" stroke="currentColor" stroke-width=".75" opacity=".45"/><path d="M16 4.5 19.2 16 16 27.5 12.8 16z" fill="currentColor" opacity=".35"/><path d="M16 4.5 19.2 16h-6.4z" fill="#D9643F"/><circle cx="16" cy="16" r="1.8" fill="currentColor"/></svg><span class="logo-text">Travel <em>Explorer</em></span></a>
+          <p>Your guide to discovering the world, one destination at a time.</p>
+          <!-- SOCIAL LINKS: replace each href with your own profile URL -->
+          <ul class="socials">
+            <li><a href="https://www.instagram.com/" target="_blank" rel="noopener" aria-label="Travel Explorer on Instagram (opens in a new tab)"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><rect x="3" y="3" width="18" height="18" rx="5"/><circle cx="12" cy="12" r="4"/><circle cx="17.5" cy="6.5" r="1" fill="currentColor" stroke="none"/></svg></a></li>
+            <li><a href="https://www.facebook.com/" target="_blank" rel="noopener" aria-label="Travel Explorer on Facebook (opens in a new tab)"><svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M14 8.6V7c0-.8.5-1 .9-1H17V2.1L14 2c-3.4 0-4.2 2.5-4.2 4.1v2.5H7.5v4H10V22h4v-9.4h3.1l.4-4H14z"/></svg></a></li>
+            <li><a href="https://www.tiktok.com/" target="_blank" rel="noopener" aria-label="Travel Explorer on TikTok (opens in a new tab)"><svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M16.5 3c.4 2.3 1.9 3.9 4 4.2v3.2c-1.5 0-2.9-.4-4-1.2v6.3a5.6 5.6 0 1 1-5.6-5.6c.3 0 .6 0 .9.1v3.3a2.4 2.4 0 1 0 1.6 2.2V3h3.1z"/></svg></a></li>
+            <li><a href="https://www.youtube.com/" target="_blank" rel="noopener" aria-label="Travel Explorer on YouTube (opens in a new tab)"><svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M21.6 7.2a2.5 2.5 0 0 0-1.8-1.8C18.2 5 12 5 12 5s-6.2 0-7.8.4A2.5 2.5 0 0 0 2.4 7.2 26 26 0 0 0 2 12a26 26 0 0 0 .4 4.8 2.5 2.5 0 0 0 1.8 1.8C5.8 19 12 19 12 19s6.2 0 7.8-.4a2.5 2.5 0 0 0 1.8-1.8A26 26 0 0 0 22 12a26 26 0 0 0-.4-4.8zM10 15V9l5.2 3L10 15z"/></svg></a></li>
+          </ul>
+        </div>
+        <nav class="footer-col" aria-label="Explore">
+          <h2>Explore</h2>
+          <ul class="footer-links">
+            <li><a href="destinations.html">All destinations</a></li>
+            <li><a href="resorts.html">Special resorts</a></li>
+            <li><a href="about.html">About us</a></li>
+            <li><a href="contact.html?subject=Trip%20planning#contact-form">Plan a trip</a></li>
+          </ul>
+        </nav>
+        <nav class="footer-col" aria-label="Regions">
+          <h2>Regions</h2>
+          <ul class="footer-links">
+            <li><a href="destinations.html?region=Asia">Asia</a></li>
+            <li><a href="destinations.html?region=Europe">Europe</a></li>
+            <li><a href="destinations.html?region=Africa%20%26%20Middle%20East">Africa &amp; Middle East</a></li>
+            <li><a href="destinations.html?region=Americas">Americas</a></li>
+            <li><a href="destinations.html?region=Oceania">Oceania</a></li>
+          </ul>
+        </nav>
+        <div class="footer-col">
+          <h2>Contact</h2>
+          <address class="footer-contact">
+            <a href="mailto:travelexplorer@gmail.com"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="2" y="4" width="20" height="16" rx="2"/><path d="m22 7-10 6L2 7"/></svg>travelexplorer@gmail.com</a>
+            <a href="tel:+2348125377305"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M22 16.9v3a2 2 0 0 1-2.2 2 19.8 19.8 0 0 1-8.6-3.1 19.5 19.5 0 0 1-6-6A19.8 19.8 0 0 1 2.1 4.2 2 2 0 0 1 4.1 2h3a2 2 0 0 1 2 1.7c.1.9.4 1.8.7 2.7a2 2 0 0 1-.5 2.1L8 9.8a16 16 0 0 0 6 6l1.3-1.3a2 2 0 0 1 2.1-.4c.9.3 1.8.6 2.7.7a2 2 0 0 1 1.7 2z"/></svg>+234 812 537 7305</a>
+          </address>
+        </div>
+        <div class="footer-news">
+          <h2>Newsletter</h2>
+          <p>New guides and practical travel tips, a few times a month.</p>
+          <form class="inline-form" data-newsletter action="#" method="post">
+            <label class="sr-only" for="footer-email">Email address</label>
+            <input type="email" id="footer-email" name="email" placeholder="you@example.com" autocomplete="email" required>
+            <button type="submit" class="btn btn--accent">Subscribe</button>
+          </form>
+          <p class="form-note" data-newsletter-note aria-live="polite"></p>
+        </div>
+      </div>
+      <div class="footer-bottom">
+        <p>© 2026 Travel Explorer. All rights reserved.</p>
+        <p>Made for curious travelers everywhere.</p>
+      </div>
+    </div>
+  </footer>
+
+  <button type="button" class="to-top" aria-label="Back to top">
+    <svg class="ring" viewBox="0 0 52 52" aria-hidden="true"><circle class="track" cx="26" cy="26" r="23"/><circle class="bar" cx="26" cy="26" r="23"/></svg>
+    <svg class="arrow" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="m18 15-6-6-6 6"/></svg>
+  </button>
+</body>
+</html>

@@ -1,0 +1,179 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Special resorts | Travel Explorer</title>
+  <meta name="description" content="Once-in-a-lifetime stays around the world, from Soneva Jani in the Maldives to Amangiri in Utah — filter by who they suit and where they are.">
+  <meta name="theme-color" content="#0F1B2D">
+  <!-- OPEN GRAPH: once the site is live, change og:image to a full URL (https://your-domain/images/ui/og-image.jpg) -->
+  <meta property="og:type" content="website">
+  <meta property="og:site_name" content="Travel Explorer">
+  <meta property="og:title" content="Special resorts | Travel Explorer">
+  <meta property="og:description" content="Once-in-a-lifetime stays around the world, from Soneva Jani in the Maldives to Amangiri in Utah — filter by who they suit and where they are.">
+  <meta property="og:image" content="images/ui/og-image.jpg">
+  <meta name="twitter:card" content="summary_large_image">
+  <link rel="icon" href="images/ui/favicon.svg" type="image/svg+xml">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght@0,9..144,300..700;1,9..144,300..600&family=Inter:wght@400;500;600;700&display=swap">
+  <link rel="stylesheet" href="css/style.css">
+  <script>document.documentElement.classList.add('js');</script>
+  <script src="js/data.js" defer></script>
+  <script src="js/main.js" defer></script>
+</head>
+
+<body data-page="resorts">
+  <a class="skip-link" href="#main">Skip to content</a>
+  <div class="progress" aria-hidden="true"></div>
+
+  <!-- ========== HEADER ========== -->
+  <header class="site-header" data-header>
+    <div class="container header-inner">
+      <a class="logo" href="index.html" aria-label="Travel Explorer — home"><svg class="logo-mark" viewBox="0 0 32 32" aria-hidden="true"><circle cx="16" cy="16" r="14.5" fill="none" stroke="currentColor" stroke-width="1.5"/><circle cx="16" cy="16" r="10" fill="none" stroke="currentColor" stroke-width=".75" opacity=".45"/><path d="M16 4.5 19.2 16 16 27.5 12.8 16z" fill="currentColor" opacity=".35"/><path d="M16 4.5 19.2 16h-6.4z" fill="#D9643F"/><circle cx="16" cy="16" r="1.8" fill="currentColor"/></svg><span class="logo-text">Travel <em>Explorer</em></span></a>
+      <nav class="nav" aria-label="Main">
+        <ul class="nav-list">
+          <li><a class="nav-link" href="index.html">Home</a></li>
+          <li><a class="nav-link" href="destinations.html">Destinations</a></li>
+          <li><a class="nav-link" href="resorts.html" aria-current="page">Resorts</a></li>
+          <li><a class="nav-link" href="about.html">About</a></li>
+          <li><a class="nav-link" href="contact.html">Contact</a></li>
+        </ul>
+      </nav>
+      <div class="header-actions">
+        <button type="button" class="saved-btn" data-saved-open aria-label="Saved trips (0 saved)"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linejoin="round" aria-hidden="true"><path d="M12 20.5s-7.5-4.6-9.3-9.4C1.6 8 3.4 4.5 7 4.5c2 0 3.6 1.1 5 3 1.4-1.9 3-3 5-3 3.6 0 5.4 3.5 4.3 6.6-1.8 4.8-9.3 9.4-9.3 9.4z"/></svg><span class="saved-count" data-saved-count hidden>0</span></button>
+        <a class="btn btn--accent btn--sm header-cta" href="contact.html?subject=Trip%20planning#contact-form">Plan a trip</a>
+        <button type="button" class="menu-toggle" aria-expanded="false" aria-controls="mobile-menu" aria-label="Open menu"><span class="bars"></span></button>
+      </div>
+    </div>
+  </header>
+
+  <!-- Mobile menu (full screen) -->
+  <div class="mobile-menu" id="mobile-menu">
+    <nav aria-label="Mobile">
+      <ul>
+      <li style="--i:0"><a class="m-link" href="index.html"><span>01</span>Home</a></li>
+      <li style="--i:1"><a class="m-link" href="destinations.html"><span>02</span>Destinations</a></li>
+      <li style="--i:2"><a class="m-link" href="resorts.html" aria-current="page"><span>03</span>Resorts</a></li>
+      <li style="--i:3"><a class="m-link" href="about.html"><span>04</span>About</a></li>
+      <li style="--i:4"><a class="m-link" href="contact.html"><span>05</span>Contact</a></li>
+      </ul>
+      <div class="m-extra" style="--i:5">
+        <a class="btn btn--accent" href="contact.html?subject=Trip%20planning#contact-form">Plan a trip <svg class="arrow" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 12h14M13 6l6 6-6 6"/></svg></a>
+        <p><a href="mailto:travelexplorer@gmail.com">travelexplorer@gmail.com</a></p>
+        <p><a href="tel:+2348125377305">+234 812 537 7305</a></p>
+      </div>
+    </nav>
+  </div>
+
+  <!-- ========== MAIN CONTENT ========== -->
+  <main id="main">
+    <section class="page-hero" aria-labelledby="page-title">
+      <div class="hero-bg" data-parallax>
+        <!-- IMAGE: images/ui/resorts-hero.jpg (1920×1080) -->
+        <div class="media media--hero" style="--ph-angle:137deg;--ph-x:15%;--ph-y:85%">
+          <img src="images/ui/resorts-hero.jpg" sizes="100vw" alt="Overwater villas on a calm turquoise lagoon at sunset" width="1920" height="1080" fetchpriority="high" decoding="async">
+          <span class="ph" aria-hidden="true"><span class="ph-name"></span><span class="ph-sub"></span></span>
+        </div>
+      </div>
+      <div class="hero-overlay"></div>
+      <div class="container hero-inner on-dark">
+        <ol class="breadcrumb hero-anim" style="--d:0">
+          <li><a href="index.html">Home</a></li>
+          <li><span aria-current="page">Special resorts</span></li>
+        </ol>
+        <p class="eyebrow eyebrow--light hero-anim" style="--d:1">Where to stay</p>
+        <h1 class="hero-title hero-anim" id="page-title" style="--d:2">Special <em>resorts</em></h1>
+        <p class="hero-lead hero-anim" style="--d:3">Once-in-a-lifetime stays chosen for their setting, character and sense of place — from overwater villas to desert hideaways.</p>
+      </div>
+    </section>
+
+    <section class="section section--tight" aria-labelledby="grid-title">
+      <div class="container">
+        <h2 class="sr-only" id="grid-title">Browse special resorts</h2>
+        <div class="filters reveal">
+          <div class="filter-group" role="group" aria-labelledby="f-for"><span class="filter-label" id="f-for">Ideal for</span><div class="chip-row" data-filter="for"></div></div>
+          <div class="filter-group" role="group" aria-labelledby="f-region"><span class="filter-label" id="f-region">Region</span><div class="chip-row" data-filter="region"></div></div>
+          <div class="filters-foot">
+            <p class="result-count" data-count-text aria-live="polite">Loading resorts…</p>
+            <button type="button" class="link-btn" data-reset>Reset filters</button>
+          </div>
+        </div>
+        <ul class="card-grid" data-resort-grid style="--min:300px"></ul>
+        <div class="empty" data-empty hidden>
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M9 18 3 21V6l6-3 6 3 6-3v15l-6 3-6-3z"/><path d="M9 3v15M15 6v15"/></svg>
+          <h2 class="h3">No resorts match those filters</h2>
+          <p>Try a different search or fewer filters — or reset everything and start exploring again.</p>
+          <button type="button" class="btn btn--dark" data-reset>Reset filters</button>
+        </div>
+        <p class="helper-text" style="margin-top:var(--s-4)">We show a price tier only. Rates change with the season, so please check current prices directly with each resort.</p>
+        <noscript><p>Please turn on JavaScript to browse the resorts.</p></noscript>
+      </div>
+    </section>
+  </main>
+
+  <!-- ========== FOOTER ========== -->
+  <footer class="site-footer">
+    <div class="container">
+      <div class="footer-grid">
+        <div class="footer-brand">
+          <a class="logo" href="index.html" aria-label="Travel Explorer — home"><svg class="logo-mark" viewBox="0 0 32 32" aria-hidden="true"><circle cx="16" cy="16" r="14.5" fill="none" stroke="currentColor" stroke-width="1.5"/><circle cx="16" cy="16" r="10" fill="none" stroke="currentColor" stroke-width=".75" opacity=".45"/><path d="M16 4.5 19.2 16 16 27.5 12.8 16z" fill="currentColor" opacity=".35"/><path d="M16 4.5 19.2 16h-6.4z" fill="#D9643F"/><circle cx="16" cy="16" r="1.8" fill="currentColor"/></svg><span class="logo-text">Travel <em>Explorer</em></span></a>
+          <p>Your guide to discovering the world, one destination at a time.</p>
+          <!-- SOCIAL LINKS: replace each href with your own profile URL -->
+          <ul class="socials">
+            <li><a href="https://www.instagram.com/" target="_blank" rel="noopener" aria-label="Travel Explorer on Instagram (opens in a new tab)"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><rect x="3" y="3" width="18" height="18" rx="5"/><circle cx="12" cy="12" r="4"/><circle cx="17.5" cy="6.5" r="1" fill="currentColor" stroke="none"/></svg></a></li>
+            <li><a href="https://www.facebook.com/" target="_blank" rel="noopener" aria-label="Travel Explorer on Facebook (opens in a new tab)"><svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M14 8.6V7c0-.8.5-1 .9-1H17V2.1L14 2c-3.4 0-4.2 2.5-4.2 4.1v2.5H7.5v4H10V22h4v-9.4h3.1l.4-4H14z"/></svg></a></li>
+            <li><a href="https://www.tiktok.com/" target="_blank" rel="noopener" aria-label="Travel Explorer on TikTok (opens in a new tab)"><svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M16.5 3c.4 2.3 1.9 3.9 4 4.2v3.2c-1.5 0-2.9-.4-4-1.2v6.3a5.6 5.6 0 1 1-5.6-5.6c.3 0 .6 0 .9.1v3.3a2.4 2.4 0 1 0 1.6 2.2V3h3.1z"/></svg></a></li>
+            <li><a href="https://www.youtube.com/" target="_blank" rel="noopener" aria-label="Travel Explorer on YouTube (opens in a new tab)"><svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M21.6 7.2a2.5 2.5 0 0 0-1.8-1.8C18.2 5 12 5 12 5s-6.2 0-7.8.4A2.5 2.5 0 0 0 2.4 7.2 26 26 0 0 0 2 12a26 26 0 0 0 .4 4.8 2.5 2.5 0 0 0 1.8 1.8C5.8 19 12 19 12 19s6.2 0 7.8-.4a2.5 2.5 0 0 0 1.8-1.8A26 26 0 0 0 22 12a26 26 0 0 0-.4-4.8zM10 15V9l5.2 3L10 15z"/></svg></a></li>
+          </ul>
+        </div>
+        <nav class="footer-col" aria-label="Explore">
+          <h2>Explore</h2>
+          <ul class="footer-links">
+            <li><a href="destinations.html">All destinations</a></li>
+            <li><a href="resorts.html">Special resorts</a></li>
+            <li><a href="about.html">About us</a></li>
+            <li><a href="contact.html?subject=Trip%20planning#contact-form">Plan a trip</a></li>
+          </ul>
+        </nav>
+        <nav class="footer-col" aria-label="Regions">
+          <h2>Regions</h2>
+          <ul class="footer-links">
+            <li><a href="destinations.html?region=Asia">Asia</a></li>
+            <li><a href="destinations.html?region=Europe">Europe</a></li>
+            <li><a href="destinations.html?region=Africa%20%26%20Middle%20East">Africa &amp; Middle East</a></li>
+            <li><a href="destinations.html?region=Americas">Americas</a></li>
+            <li><a href="destinations.html?region=Oceania">Oceania</a></li>
+          </ul>
+        </nav>
+        <div class="footer-col">
+          <h2>Contact</h2>
+          <address class="footer-contact">
+            <a href="mailto:travelexplorer@gmail.com"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="2" y="4" width="20" height="16" rx="2"/><path d="m22 7-10 6L2 7"/></svg>travelexplorer@gmail.com</a>
+            <a href="tel:+2348125377305"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M22 16.9v3a2 2 0 0 1-2.2 2 19.8 19.8 0 0 1-8.6-3.1 19.5 19.5 0 0 1-6-6A19.8 19.8 0 0 1 2.1 4.2 2 2 0 0 1 4.1 2h3a2 2 0 0 1 2 1.7c.1.9.4 1.8.7 2.7a2 2 0 0 1-.5 2.1L8 9.8a16 16 0 0 0 6 6l1.3-1.3a2 2 0 0 1 2.1-.4c.9.3 1.8.6 2.7.7a2 2 0 0 1 1.7 2z"/></svg>+234 812 537 7305</a>
+          </address>
+        </div>
+        <div class="footer-news">
+          <h2>Newsletter</h2>
+          <p>New guides and practical travel tips, a few times a month.</p>
+          <form class="inline-form" data-newsletter action="#" method="post">
+            <label class="sr-only" for="footer-email">Email address</label>
+            <input type="email" id="footer-email" name="email" placeholder="you@example.com" autocomplete="email" required>
+            <button type="submit" class="btn btn--accent">Subscribe</button>
+          </form>
+          <p class="form-note" data-newsletter-note aria-live="polite"></p>
+        </div>
+      </div>
+      <div class="footer-bottom">
+        <p>© 2026 Travel Explorer. All rights reserved.</p>
+        <p>Made for curious travelers everywhere.</p>
+      </div>
+    </div>
+  </footer>
+
+  <button type="button" class="to-top" aria-label="Back to top">
+    <svg class="ring" viewBox="0 0 52 52" aria-hidden="true"><circle class="track" cx="26" cy="26" r="23"/><circle class="bar" cx="26" cy="26" r="23"/></svg>
+    <svg class="arrow" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="m18 15-6-6-6 6"/></svg>
+  </button>
+</body>
+</html>
