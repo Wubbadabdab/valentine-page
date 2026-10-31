@@ -1,0 +1,307 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>About us | Travel Explorer</title>
+  <meta name="description" content="Who we are, what we value and how we choose the destinations and resorts featured on Travel Explorer.">
+  <meta name="theme-color" content="#0F1B2D">
+  <!-- OPEN GRAPH: once the site is live, change og:image to a full URL (https://your-domain/images/ui/og-image.jpg) -->
+  <meta property="og:type" content="website">
+  <meta property="og:site_name" content="Travel Explorer">
+  <meta property="og:title" content="About us | Travel Explorer">
+  <meta property="og:description" content="Who we are, what we value and how we choose the destinations and resorts featured on Travel Explorer.">
+  <meta property="og:image" content="images/ui/og-image.jpg">
+  <meta name="twitter:card" content="summary_large_image">
+  <link rel="icon" href="images/ui/favicon.svg" type="image/svg+xml">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght@0,9..144,300..700;1,9..144,300..600&family=Inter:wght@400;500;600;700&display=swap">
+  <link rel="stylesheet" href="css/style.css">
+  <script>document.documentElement.classList.add('js');</script>
+  <script src="js/data.js" defer></script>
+  <script src="js/main.js" defer></script>
+</head>
+
+<body data-page="about">
+  <a class="skip-link" href="#main">Skip to content</a>
+  <div class="progress" aria-hidden="true"></div>
+
+  <!-- ========== HEADER ========== -->
+  <header class="site-header" data-header>
+    <div class="container header-inner">
+      <a class="logo" href="index.html" aria-label="Travel Explorer — home"><svg class="logo-mark" viewBox="0 0 32 32" aria-hidden="true"><circle cx="16" cy="16" r="14.5" fill="none" stroke="currentColor" stroke-width="1.5"/><circle cx="16" cy="16" r="10" fill="none" stroke="currentColor" stroke-width=".75" opacity=".45"/><path d="M16 4.5 19.2 16 16 27.5 12.8 16z" fill="currentColor" opacity=".35"/><path d="M16 4.5 19.2 16h-6.4z" fill="#D9643F"/><circle cx="16" cy="16" r="1.8" fill="currentColor"/></svg><span class="logo-text">Travel <em>Explorer</em></span></a>
+      <nav class="nav" aria-label="Main">
+        <ul class="nav-list">
+          <li><a class="nav-link" href="index.html">Home</a></li>
+          <li><a class="nav-link" href="destinations.html">Destinations</a></li>
+          <li><a class="nav-link" href="resorts.html">Resorts</a></li>
+          <li><a class="nav-link" href="about.html" aria-current="page">About</a></li>
+          <li><a class="nav-link" href="contact.html">Contact</a></li>
+        </ul>
+      </nav>
+      <div class="header-actions">
+        <button type="button" class="saved-btn" data-saved-open aria-label="Saved trips (0 saved)"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linejoin="round" aria-hidden="true"><path d="M12 20.5s-7.5-4.6-9.3-9.4C1.6 8 3.4 4.5 7 4.5c2 0 3.6 1.1 5 3 1.4-1.9 3-3 5-3 3.6 0 5.4 3.5 4.3 6.6-1.8 4.8-9.3 9.4-9.3 9.4z"/></svg><span class="saved-count" data-saved-count hidden>0</span></button>
+        <a class="btn btn--accent btn--sm header-cta" href="contact.html?subject=Trip%20planning#contact-form">Plan a trip</a>
+        <button type="button" class="menu-toggle" aria-expanded="false" aria-controls="mobile-menu" aria-label="Open menu"><span class="bars"></span></button>
+      </div>
+    </div>
+  </header>
+
+  <!-- Mobile menu (full screen) -->
+  <div class="mobile-menu" id="mobile-menu">
+    <nav aria-label="Mobile">
+      <ul>
+      <li style="--i:0"><a class="m-link" href="index.html"><span>01</span>Home</a></li>
+      <li style="--i:1"><a class="m-link" href="destinations.html"><span>02</span>Destinations</a></li>
+      <li style="--i:2"><a class="m-link" href="resorts.html"><span>03</span>Resorts</a></li>
+      <li style="--i:3"><a class="m-link" href="about.html" aria-current="page"><span>04</span>About</a></li>
+      <li style="--i:4"><a class="m-link" href="contact.html"><span>05</span>Contact</a></li>
+      </ul>
+      <div class="m-extra" style="--i:5">
+        <a class="btn btn--accent" href="contact.html?subject=Trip%20planning#contact-form">Plan a trip <svg class="arrow" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 12h14M13 6l6 6-6 6"/></svg></a>
+        <p><a href="mailto:travelexplorer@gmail.com">travelexplorer@gmail.com</a></p>
+        <p><a href="tel:+2348125377305">+234 812 537 7305</a></p>
+      </div>
+    </nav>
+  </div>
+
+  <!-- ========== MAIN CONTENT ========== -->
+  <main id="main">
+    <section class="page-hero" aria-labelledby="page-title">
+      <div class="hero-bg" data-parallax>
+        <!-- IMAGE: images/ui/about-hero.jpg (1920×1080) -->
+        <div class="media media--hero" style="--ph-angle:137deg;--ph-x:15%;--ph-y:85%">
+          <img src="images/ui/about-hero.jpg" sizes="100vw" alt="Open notebook, map and camera on a wooden table ready for trip planning" width="1920" height="1080" fetchpriority="high" decoding="async">
+          <span class="ph" aria-hidden="true"><span class="ph-name"></span><span class="ph-sub"></span></span>
+        </div>
+      </div>
+      <div class="hero-overlay"></div>
+      <div class="container hero-inner on-dark">
+        <ol class="breadcrumb hero-anim" style="--d:0">
+          <li><a href="index.html">Home</a></li>
+          <li><span aria-current="page">About</span></li>
+        </ol>
+        <p class="eyebrow eyebrow--light hero-anim" style="--d:1">Who we are</p>
+        <h1 class="hero-title hero-anim" id="page-title" style="--d:2">About <em>Travel Explorer</em></h1>
+        <p class="hero-lead hero-anim" style="--d:3">Your guide to discovering the world, one destination at a time.</p>
+      </div>
+    </section>
+
+    <section class="section" aria-labelledby="who-title">
+      <div class="container split">
+        <div class="reveal">
+          <!-- IMAGE: images/ui/about-1.jpg (900×1125) -->
+          <div class="media " style="--ph-angle:140deg;--ph-x:83%;--ph-y:90%">
+            <img src="images/ui/about-1.jpg" sizes="(min-width: 768px) 50vw, 100vw" alt="Traveler with a backpack looking out over a mountain valley" width="900" height="1125" loading="lazy" decoding="async">
+            <span class="ph" aria-hidden="true"><span class="ph-name">Travel Explorer</span><span class="ph-sub">Who we are</span></span>
+          </div>
+        </div>
+        <div class="reveal">
+          <p class="eyebrow">Who we are</p>
+          <h2 class="h2" id="who-title" style="margin-bottom:var(--s-3)">Inspiration, practical tips and honest guides</h2>
+          <p class="lead" style="margin-bottom:var(--s-2)">Whether you’re planning your next big adventure or just dreaming about where to go, Travel Explorer helps you find inspiration, practical tips, and honest guides for travelers everywhere.</p>
+          <p>From hidden gems to iconic landmarks, we bring you real stories and useful information to make your trip planning easier. Start exploring destinations, read our travel guides, and get ready for your next journey.</p>
+          <a class="text-link" href="destinations.html">Explore destinations <svg class="arrow" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 12h14M13 6l6 6-6 6"/></svg></a>
+        </div>
+      </div>
+    </section>
+
+    <section class="section section--white" aria-label="Our mission">
+      <div class="container">
+        <p class="eyebrow" style="display:flex;justify-content:center">Our mission</p>
+        <p class="mission reveal">To help every traveler find the right place, at the right time, in the right way — with honest guides and practical advice.</p>
+      </div>
+    </section>
+
+    <section class="section" aria-labelledby="values-title">
+      <div class="container">
+        <div class="section-head section-head--center reveal">
+          <p class="eyebrow">What we value</p>
+          <h2 class="h2" id="values-title">The principles behind every guide</h2>
+        </div>
+        <ul class="values-grid">
+          <li class="value-card reveal" style="--stagger:0">
+            <span class="icon-circle"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M20 6 9 17l-5-5"/></svg></span>
+            <h3>Honesty first</h3>
+            <p>We tell you what’s wonderful about a place — and what to know before you go, from crowds to costs.</p>
+          </li>
+          <li class="value-card reveal" style="--stagger:1">
+            <span class="icon-circle"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="12" cy="12" r="10"/><path d="M12 6v6l4 2"/></svg></span>
+            <h3>Slow, thoughtful travel</h3>
+            <p>We favor fewer places, more deeply experienced, over rushing between checklists.</p>
+          </li>
+          <li class="value-card reveal" style="--stagger:2">
+            <span class="icon-circle"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M12 20.5s-7.5-4.6-9.3-9.4C1.6 8 3.4 4.5 7 4.5c2 0 3.6 1.1 5 3 1.4-1.9 3-3 5-3 3.6 0 5.4 3.5 4.3 6.6-1.8 4.8-9.3 9.4-9.3 9.4z"/></svg></span>
+            <h3>Respect for places &amp; people</h3>
+            <p>Good travel leaves communities and landscapes better off. We share local etiquette and lower-impact choices.</p>
+          </li>
+          <li class="value-card reveal" style="--stagger:3">
+            <span class="icon-circle"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M2 3h6a4 4 0 0 1 4 4v14a3 3 0 0 0-3-3H2zM22 3h-6a4 4 0 0 0-4 4v14a3 3 0 0 1 3-3h7z"/></svg></span>
+            <h3>Useful over flashy</h3>
+            <p>Best times to visit, budgets and practical tips come first — so inspiration turns into a real plan.</p>
+          </li>
+        </ul>
+      </div>
+    </section>
+
+    <section class="section section--white" aria-labelledby="how-title">
+      <div class="container split split--reverse">
+        <div class="reveal">
+          <!-- IMAGE: images/ui/about-2.jpg (900×1125) -->
+          <div class="media " style="--ph-angle:136deg;--ph-x:68%;--ph-y:91%">
+            <img src="images/ui/about-2.jpg" sizes="(min-width: 768px) 50vw, 100vw" alt="Hand pointing at a destination on a paper map beside a coffee cup" width="900" height="1125" loading="lazy" decoding="async">
+            <span class="ph" aria-hidden="true"><span class="ph-name">How we choose</span><span class="ph-sub">Our process</span></span>
+          </div>
+        </div>
+        <div>
+          <div class="reveal">
+            <p class="eyebrow">How we choose destinations</p>
+            <h2 class="h2" id="how-title" style="margin-bottom:var(--s-4)">A place earns its spot</h2>
+          </div>
+          <ol class="steps">
+            <li class="step reveal" style="--stagger:0"><div><h3>It offers something distinct</h3><p>A landscape, culture, cuisine or experience you can’t quite find anywhere else.</p></div></li>
+            <li class="step reveal" style="--stagger:1"><div><h3>It works for real trips</h3><p>We look at seasons, budgets and getting around, so every guide is practical as well as inspiring.</p></div></li>
+            <li class="step reveal" style="--stagger:2"><div><h3>It suits different travelers</h3><p>We balance adventure, culture, beaches, cities and food across every region of the world.</p></div></li>
+            <li class="step reveal" style="--stagger:3"><div><h3>We keep it up to date</h3><p>Spotted something out of date? <a href="contact.html?subject=Correction#contact-form">Send us a correction</a> and we’ll review it.</p></div></li>
+          </ol>
+        </div>
+      </div>
+    </section>
+
+    <section class="section section--tight" aria-label="Postcards from our destinations">
+      <div class="container">
+        <ul class="image-strip">
+          <li>
+            <a href="destination.html?id=kyoto">
+              <div class="media " style="--ph-angle:171deg;--ph-x:67%;--ph-y:101%">
+                <img src="images/destinations/kyoto-1.jpg" sizes="(min-width: 1024px) 190px, 60vw" alt="Tunnel of vermilion torii gates along a stone path at Fushimi Inari Shrine" width="600" height="800" loading="lazy" decoding="async">
+                <span class="ph" aria-hidden="true"><span class="ph-name">Kyoto</span><span class="ph-sub">Japan</span></span>
+              </div>
+              <span class="caption">Kyoto, Japan</span>
+            </a>
+          </li>
+          <li>
+            <a href="destination.html?id=santorini">
+              <div class="media " style="--ph-angle:150deg;--ph-x:88%;--ph-y:90%">
+                <img src="images/destinations/santorini-1.jpg" sizes="(min-width: 1024px) 190px, 60vw" alt="Sailboat on the deep blue caldera beneath steep volcanic cliffs" width="600" height="800" loading="lazy" decoding="async">
+                <span class="ph" aria-hidden="true"><span class="ph-name">Santorini</span><span class="ph-sub">Greece</span></span>
+              </div>
+              <span class="caption">Santorini, Greece</span>
+            </a>
+          </li>
+          <li>
+            <a href="destination.html?id=cape-town">
+              <div class="media " style="--ph-angle:184deg;--ph-x:38%;--ph-y:90%">
+                <img src="images/destinations/cape-town-1.jpg" sizes="(min-width: 1024px) 190px, 60vw" alt="African penguins standing on large granite boulders at Boulders Beach" width="600" height="800" loading="lazy" decoding="async">
+                <span class="ph" aria-hidden="true"><span class="ph-name">Cape Town</span><span class="ph-sub">South Africa</span></span>
+              </div>
+              <span class="caption">Cape Town, South Africa</span>
+            </a>
+          </li>
+          <li>
+            <a href="destination.html?id=patagonia">
+              <div class="media " style="--ph-angle:149deg;--ph-x:16%;--ph-y:101%">
+                <img src="images/destinations/patagonia-1.jpg" sizes="(min-width: 1024px) 190px, 60vw" alt="Wall of blue ice at the front of the Perito Moreno Glacier" width="600" height="800" loading="lazy" decoding="async">
+                <span class="ph" aria-hidden="true"><span class="ph-name">Patagonia</span><span class="ph-sub">Chile &amp; Argentina</span></span>
+              </div>
+              <span class="caption">Patagonia, Chile & Argentina</span>
+            </a>
+          </li>
+          <li>
+            <a href="destination.html?id=marrakech">
+              <div class="media " style="--ph-angle:185deg;--ph-x:50%;--ph-y:90%">
+                <img src="images/destinations/marrakech-1.jpg" sizes="(min-width: 1024px) 190px, 60vw" alt="Smoke rising from food stalls in Jemaa el-Fnaa square at dusk" width="600" height="800" loading="lazy" decoding="async">
+                <span class="ph" aria-hidden="true"><span class="ph-name">Marrakech</span><span class="ph-sub">Morocco</span></span>
+              </div>
+              <span class="caption">Marrakech, Morocco</span>
+            </a>
+          </li>
+          <li>
+            <a href="destination.html?id=queenstown">
+              <div class="media " style="--ph-angle:162deg;--ph-x:65%;--ph-y:105%">
+                <img src="images/destinations/queenstown-1.jpg" sizes="(min-width: 1024px) 190px, 60vw" alt="Steep green cliffs and a waterfall rising from the water at Milford Sound" width="600" height="800" loading="lazy" decoding="async">
+                <span class="ph" aria-hidden="true"><span class="ph-name">Queenstown</span><span class="ph-sub">New Zealand</span></span>
+              </div>
+              <span class="caption">Queenstown, New Zealand</span>
+            </a>
+          </li>
+        </ul>
+      </div>
+    </section>
+
+    <section class="section section--tight" aria-labelledby="suggest-title">
+      <div class="container">
+        <div class="newsletter-cta reveal on-dark">
+          <div><p class="eyebrow eyebrow--light">Join in</p><h2 class="h2" id="suggest-title">Know a place we should cover?</h2></div>
+          <div><p>Tell us about a destination we haven’t explored yet — your ideas help make Travel Explorer better for every traveler.</p><a class="btn btn--accent btn--lg" href="contact.html?subject=Suggest%20a%20destination#contact-form">Suggest a destination <svg class="arrow" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 12h14M13 6l6 6-6 6"/></svg></a></div>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <!-- ========== FOOTER ========== -->
+  <footer class="site-footer">
+    <div class="container">
+      <div class="footer-grid">
+        <div class="footer-brand">
+          <a class="logo" href="index.html" aria-label="Travel Explorer — home"><svg class="logo-mark" viewBox="0 0 32 32" aria-hidden="true"><circle cx="16" cy="16" r="14.5" fill="none" stroke="currentColor" stroke-width="1.5"/><circle cx="16" cy="16" r="10" fill="none" stroke="currentColor" stroke-width=".75" opacity=".45"/><path d="M16 4.5 19.2 16 16 27.5 12.8 16z" fill="currentColor" opacity=".35"/><path d="M16 4.5 19.2 16h-6.4z" fill="#D9643F"/><circle cx="16" cy="16" r="1.8" fill="currentColor"/></svg><span class="logo-text">Travel <em>Explorer</em></span></a>
+          <p>Your guide to discovering the world, one destination at a time.</p>
+          <!-- SOCIAL LINKS: replace each href with your own profile URL -->
+          <ul class="socials">
+            <li><a href="https://www.instagram.com/" target="_blank" rel="noopener" aria-label="Travel Explorer on Instagram (opens in a new tab)"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><rect x="3" y="3" width="18" height="18" rx="5"/><circle cx="12" cy="12" r="4"/><circle cx="17.5" cy="6.5" r="1" fill="currentColor" stroke="none"/></svg></a></li>
+            <li><a href="https://www.facebook.com/" target="_blank" rel="noopener" aria-label="Travel Explorer on Facebook (opens in a new tab)"><svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M14 8.6V7c0-.8.5-1 .9-1H17V2.1L14 2c-3.4 0-4.2 2.5-4.2 4.1v2.5H7.5v4H10V22h4v-9.4h3.1l.4-4H14z"/></svg></a></li>
+            <li><a href="https://www.tiktok.com/" target="_blank" rel="noopener" aria-label="Travel Explorer on TikTok (opens in a new tab)"><svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M16.5 3c.4 2.3 1.9 3.9 4 4.2v3.2c-1.5 0-2.9-.4-4-1.2v6.3a5.6 5.6 0 1 1-5.6-5.6c.3 0 .6 0 .9.1v3.3a2.4 2.4 0 1 0 1.6 2.2V3h3.1z"/></svg></a></li>
+            <li><a href="https://www.youtube.com/" target="_blank" rel="noopener" aria-label="Travel Explorer on YouTube (opens in a new tab)"><svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M21.6 7.2a2.5 2.5 0 0 0-1.8-1.8C18.2 5 12 5 12 5s-6.2 0-7.8.4A2.5 2.5 0 0 0 2.4 7.2 26 26 0 0 0 2 12a26 26 0 0 0 .4 4.8 2.5 2.5 0 0 0 1.8 1.8C5.8 19 12 19 12 19s6.2 0 7.8-.4a2.5 2.5 0 0 0 1.8-1.8A26 26 0 0 0 22 12a26 26 0 0 0-.4-4.8zM10 15V9l5.2 3L10 15z"/></svg></a></li>
+          </ul>
+        </div>
+        <nav class="footer-col" aria-label="Explore">
+          <h2>Explore</h2>
+          <ul class="footer-links">
+            <li><a href="destinations.html">All destinations</a></li>
+            <li><a href="resorts.html">Special resorts</a></li>
+            <li><a href="about.html">About us</a></li>
+            <li><a href="contact.html?subject=Trip%20planning#contact-form">Plan a trip</a></li>
+          </ul>
+        </nav>
+        <nav class="footer-col" aria-label="Regions">
+          <h2>Regions</h2>
+          <ul class="footer-links">
+            <li><a href="destinations.html?region=Asia">Asia</a></li>
+            <li><a href="destinations.html?region=Europe">Europe</a></li>
+            <li><a href="destinations.html?region=Africa%20%26%20Middle%20East">Africa &amp; Middle East</a></li>
+            <li><a href="destinations.html?region=Americas">Americas</a></li>
+            <li><a href="destinations.html?region=Oceania">Oceania</a></li>
+          </ul>
+        </nav>
+        <div class="footer-col">
+          <h2>Contact</h2>
+          <address class="footer-contact">
+            <a href="mailto:travelexplorer@gmail.com"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="2" y="4" width="20" height="16" rx="2"/><path d="m22 7-10 6L2 7"/></svg>travelexplorer@gmail.com</a>
+            <a href="tel:+2348125377305"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M22 16.9v3a2 2 0 0 1-2.2 2 19.8 19.8 0 0 1-8.6-3.1 19.5 19.5 0 0 1-6-6A19.8 19.8 0 0 1 2.1 4.2 2 2 0 0 1 4.1 2h3a2 2 0 0 1 2 1.7c.1.9.4 1.8.7 2.7a2 2 0 0 1-.5 2.1L8 9.8a16 16 0 0 0 6 6l1.3-1.3a2 2 0 0 1 2.1-.4c.9.3 1.8.6 2.7.7a2 2 0 0 1 1.7 2z"/></svg>+234 812 537 7305</a>
+          </address>
+        </div>
+        <div class="footer-news">
+          <h2>Newsletter</h2>
+          <p>New guides and practical travel tips, a few times a month.</p>
+          <form class="inline-form" data-newsletter action="#" method="post">
+            <label class="sr-only" for="footer-email">Email address</label>
+            <input type="email" id="footer-email" name="email" placeholder="you@example.com" autocomplete="email" required>
+            <button type="submit" class="btn btn--accent">Subscribe</button>
+          </form>
+          <p class="form-note" data-newsletter-note aria-live="polite"></p>
+        </div>
+      </div>
+      <div class="footer-bottom">
+        <p>© 2026 Travel Explorer. All rights reserved.</p>
+        <p>Made for curious travelers everywhere.</p>
+      </div>
+    </div>
+  </footer>
+
+  <button type="button" class="to-top" aria-label="Back to top">
+    <svg class="ring" viewBox="0 0 52 52" aria-hidden="true"><circle class="track" cx="26" cy="26" r="23"/><circle class="bar" cx="26" cy="26" r="23"/></svg>
+    <svg class="arrow" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="m18 15-6-6-6 6"/></svg>
+  </button>
+</body>
+</html>

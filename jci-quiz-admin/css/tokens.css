@@ -1,0 +1,167 @@
+/* ==========================================================================
+   Design tokens — JCI Uniben Quiz Admin
+   Every color, size, radius, shadow and motion value used by the admin site
+   comes from here. Themes are applied with data-theme="dark|light" on <html>
+   (or on any element, e.g. the theme previews on the Settings page).
+   NOTE: these tokens style the ADMIN interface only. A quiz's own appearance
+   (fonts, colors chosen by the admin for students) never uses them.
+   ========================================================================== */
+
+:root {
+  /* Brand (fixed in both themes; used for the login brand panel and logo) */
+  --jci-blue: #0097D7;
+  --jci-black: #130F2D;
+  --jci-white: #FFFFFF;
+  --jci-white-muted: #C9CBD8;  /* 11:1 on JCI Black */
+
+  /* Typography */
+  --font-ui: "Inter", system-ui, -apple-system, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif;
+  --text-page-title: 600 1.5rem/1.25 var(--font-ui);      /* 24px */
+  --text-section-title: 600 1.125rem/1.35 var(--font-ui); /* 18px */
+  --text-card-title: 600 1rem/1.4 var(--font-ui);         /* 16px */
+  --text-body: 400 0.9375rem/1.55 var(--font-ui);         /* 15px */
+  --text-small: 400 0.875rem/1.5 var(--font-ui);          /* 14px: tables, metadata */
+  --text-label: 500 0.8125rem/1.4 var(--font-ui);         /* 13px */
+  --text-tiny: 600 0.75rem/1.3 var(--font-ui);            /* 12px: badges */
+
+  /* Spacing scale */
+  --space-1: 4px;
+  --space-2: 8px;
+  --space-3: 12px;
+  --space-4: 16px;
+  --space-5: 24px;
+  --space-6: 32px;
+  --space-7: 48px;
+
+  /* Radii */
+  --radius-control: 8px;
+  --radius-card: 12px;
+  --radius-dialog: 16px;
+  --radius-pill: 999px;
+
+  /* Sizes */
+  --control-height: 40px;
+  --control-height-touch: 44px;
+  --row-height: 44px;
+  --sidebar-width: 248px;
+  --sidebar-collapsed: 72px;
+  --topbar-height: 56px;
+  --content-max: 1200px;
+  --focus-width: 2px;
+  --focus-offset: 2px;
+
+  /* Layers */
+  --z-sidebar: 20;
+  --z-topbar: 30;
+  --z-menu: 60;
+  --z-toast: 100;
+
+  /* Motion (section 39) */
+  --dur-instant: 100ms;
+  --dur-fast: 160ms;
+  --dur-base: 220ms;
+  --dur-slow: 320ms;
+  --dur-theme: 450ms;
+  --ease-out: cubic-bezier(0.22, 1, 0.36, 1);
+  --ease-in: cubic-bezier(0.4, 0, 1, 1);
+  --ease-move: cubic-bezier(0.65, 0, 0.35, 1);
+  --ease-spring: var(--ease-out);
+}
+
+/* Touch screens: 44px minimum touch targets, roomier table rows */
+@media (pointer: coarse) {
+  :root {
+    --control-height: 44px;
+    --row-height: 48px;
+  }
+}
+
+@supports (transition-timing-function: linear(0, 1)) {
+  :root {
+    /* Gentle spring, about 3% overshoot */
+    --ease-spring: linear(0, 0.22 8%, 0.55 20%, 0.82 33%, 0.97 45%, 1.025 56%, 1.03 63%, 1.015 75%, 1.004 87%, 1);
+  }
+}
+
+/* ---------------------------------------------------------------- Dark Mode */
+[data-theme="dark"] {
+  color-scheme: dark;
+
+  --bg: #050409;
+  --surface-sidebar: #0A0912;
+  --surface-card: #100E1B;
+  --surface-raised: #17152A;
+  --surface-dialog: #1A1830;
+  --input-bg: #0C0B16;
+  --border: #24213A;
+  --border-strong: #34304F;
+  --text: #F5F6FA;
+  --text-muted: #A3A6B8;
+  --text-subtle: #8A8DA3;
+  --primary: #0097D7;
+  --primary-hover: #19A9E8;
+  --on-primary: #130F2D;
+  --primary-soft: rgba(0, 151, 215, 0.14);
+  --link: #0097D7;
+  --success: #34D399;
+  --warning: #FBBF24;
+  --danger: #F87171;
+
+  /* Additions (not in the brief; see README "Token additions") */
+  --input-border: #67638C;           /* 3.5:1 on --input-bg: form fields need 3:1 (WCAG 1.4.11) */
+  --on-danger: #130F2D;              /* 6.7:1 on --danger */
+  --success-soft: rgba(52, 211, 153, 0.12);
+  --warning-soft: rgba(251, 191, 36, 0.12);
+  --danger-soft: rgba(248, 113, 113, 0.12);
+  --scrim: rgba(3, 2, 8, 0.72);
+  --skeleton: #17152A;
+  --skeleton-shine: rgba(255, 255, 255, 0.05);
+  --tooltip-bg: #F5F6FA;
+  --tooltip-text: #130F2D;
+
+  /* Depth in Dark Mode comes from surface steps and borders, not shadows */
+  --shadow-sm: none;
+  --shadow-md: none;
+  --shadow-lg: none;
+}
+
+/* --------------------------------------------------------------- Light Mode */
+[data-theme="light"] {
+  color-scheme: light;
+
+  --bg: #F5F7FA;
+  --surface-sidebar: #FFFFFF;
+  --surface-card: #FFFFFF;
+  --surface-raised: #FFFFFF;
+  --surface-dialog: #FFFFFF;
+  --input-bg: #FFFFFF;
+  --border: #E2E6EE;
+  --border-strong: #C9D0DC;
+  --text: #130F2D;
+  --text-muted: #4A4F63;
+  --text-subtle: #6B7085;
+  --primary: #0097D7;
+  --primary-hover: #0088C2;
+  --on-primary: #130F2D;
+  --primary-soft: rgba(0, 151, 215, 0.10);
+  --link: #0072A3;
+  --success: #15803D;
+  --warning: #B45309;
+  --danger: #B91C1C;
+
+  /* Additions (see README "Token additions") */
+  --input-border: #80869A;           /* 3.6:1 on white */
+  --on-danger: #FFFFFF;              /* 6.5:1 on --danger */
+  --success-soft: rgba(21, 128, 61, 0.10);
+  --warning-soft: rgba(180, 83, 9, 0.10);
+  --danger-soft: rgba(185, 28, 28, 0.08);
+  --scrim: rgba(19, 15, 45, 0.45);
+  --skeleton: #EBEEF3;
+  --skeleton-shine: rgba(255, 255, 255, 0.7);
+  --tooltip-bg: #130F2D;
+  --tooltip-text: #FFFFFF;
+
+  --shadow-sm: 0 1px 2px rgba(19, 15, 45, 0.06);
+  --shadow-md: 0 2px 4px rgba(19, 15, 45, 0.05), 0 8px 24px rgba(19, 15, 45, 0.08);
+  --shadow-lg: 0 4px 8px rgba(19, 15, 45, 0.06), 0 20px 48px rgba(19, 15, 45, 0.16);
+}

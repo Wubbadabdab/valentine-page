@@ -1,0 +1,79 @@
+<!doctype html>
+<html lang="en" data-theme="dark">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Sign in · JCI Uniben Quiz Admin</title>
+  <meta name="robots" content="noindex, nofollow">
+  <meta name="color-scheme" content="dark light">
+  <!-- Theme before first paint: identical copy of js/theme-init.js -->
+  <script>(function(){try{var t=localStorage.getItem('jci-admin-theme');if(t!=='dark'&&t!=='light'){t=window.matchMedia&&window.matchMedia('(prefers-color-scheme: light)').matches?'light':'dark'}document.documentElement.setAttribute('data-theme',t)}catch(e){document.documentElement.setAttribute('data-theme','dark')}})();</script>
+  <link rel="icon" href="assets/favicon.svg" type="image/svg+xml">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&amp;display=swap">
+  <link rel="stylesheet" href="css/tokens.css">
+  <link rel="stylesheet" href="css/base.css">
+  <link rel="stylesheet" href="css/layout.css">
+  <link rel="stylesheet" href="css/components.css">
+  <link rel="stylesheet" href="css/motion.css">
+  <link rel="stylesheet" href="css/pages.css">
+  <script type="module" src="js/pages/login.js" blocking="render"></script>
+</head>
+<body class="auth-page">
+  <a class="skip-link" href="#main">Skip to main content</a>
+  <div class="banners" data-banners></div>
+  <div class="auth">
+    <div class="auth__brand">
+      <div class="auth__brand-head">
+        <img class="auth__brand-logo" src="assets/logo.svg" alt="" width="40" height="40">
+        <div>
+          <p class="auth__brand-name">Quiz Admin</p>
+          <p class="auth__brand-org">JCI Uniben</p>
+        </div>
+      </div>
+      <div class="auth__brand-body">
+        <span class="auth__brand-accent" aria-hidden="true"></span>
+        <p class="auth__brand-title">Create, publish and grade quizzes.</p>
+        <p class="auth__brand-text">The admin workspace for JCI Uniben quizzes — from building questions to reviewing results.</p>
+      </div>
+      <p class="auth__brand-foot">For JCI Uniben quiz administrators only.</p>
+    </div>
+
+    <main id="main" class="auth__main" tabindex="-1">
+      <div class="auth__toolbar" data-theme-switch></div>
+      <div class="auth__card">
+        <h1>Sign in</h1>
+        <p class="auth__intro">Use your JCI Uniben administrator account.</p>
+        <div class="stack">
+          <div data-demo-hint hidden></div>
+          <div data-error-summary hidden></div>
+          <div data-form-alert hidden></div>
+          <form class="auth__form" data-login-form novalidate>
+            <div class="field">
+              <label class="field__label" for="identifier">Email</label>
+              <div class="field__control field__control--with-valid">
+                <input class="input" id="identifier" name="identifier" type="email" autocomplete="username" inputmode="email" autocapitalize="none" spellcheck="false" required>
+                <span class="field__valid" aria-hidden="true"><svg viewBox="0 0 24 24" width="18" height="18" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><path d="M20 6 9 17l-5-5"/></svg></span>
+              </div>
+              <div class="field__message"><div></div></div>
+            </div>
+            <div class="field">
+              <label class="field__label" for="password">Password</label>
+              <div class="field__control field__control--password">
+                <input class="input" id="password" name="password" type="password" autocomplete="current-password" required>
+                <button type="button" class="password-toggle" data-password-toggle aria-pressed="false" aria-label="Show password"><svg viewBox="0 0 24 24" width="20" height="20" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><path d="M2 12s3.5-7 10-7 10 7 10 7-3.5 7-10 7S2 12 2 12z"/><circle cx="12" cy="12" r="3"/></svg></button>
+              </div>
+              <div aria-live="polite">
+                <p class="caps-warning" data-caps-warning hidden><svg viewBox="0 0 24 24" width="16" height="16" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><path d="M10.29 3.86 1.82 18a2 2 0 0 0 1.71 3h16.94a2 2 0 0 0 1.71-3L13.71 3.86a2 2 0 0 0-3.42 0z"/><path d="M12 9v4M12 17h.01"/></svg>Caps Lock is on</p>
+              </div>
+              <div class="field__message"><div></div></div>
+            </div>
+            <button type="submit" class="btn btn--primary btn--lg btn--block"><span class="btn__label">Sign in</span></button>
+          </form>
+        </div>
+      </div>
+    </main>
+  </div>
+</body>
+</html>

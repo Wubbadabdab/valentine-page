@@ -1,0 +1,394 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Nova Cinema | One Piece Movie Schedule</title>
+  <meta name="description" content="Today's One Piece Day showtimes at Nova Cinema — live status, a timeline of every hall, prices and your booked tickets.">
+  <meta name="theme-color" content="#050916">
+  <link rel="icon" href="../images/favicon.svg" type="image/svg+xml">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Outfit:wght@300;400;500;600;700;800&family=Rye&display=swap">
+  <link rel="stylesheet" href="../css/style.css">
+  <script>document.documentElement.classList.add('js');</script>
+  <script src="../js/data.js" defer></script>
+  <script src="../js/main.js" defer></script>
+  <script src="../js/schedule.js" defer></script>
+</head>
+
+<body data-root="../" data-page="schedule">
+
+  <a class="skip-link" href="#main">Skip to content</a>
+  <div class="page-curtain" aria-hidden="true"><span></span><span></span></div>
+  <div class="scroll-progress" aria-hidden="true"></div>
+
+  <!-- ========== HEADER ========== -->
+  <header class="site-header">
+    <div class="container header-inner">
+      <a class="brand" href="../index.html" aria-label="Nova Cinema — home">
+        <svg class="brand-mark" viewBox="0 0 48 48" aria-hidden="true">
+          <g class="reel">
+            <circle cx="24" cy="27" r="16" fill="#0a1330" stroke="currentColor" stroke-width="3"/>
+            <circle cx="24" cy="27" r="2.6" fill="currentColor"/>
+            <g fill="currentColor"><circle cx="24" cy="18.5" r="3.2"/><circle cx="32.1" cy="24.4" r="3.2"/><circle cx="29" cy="33.9" r="3.2"/><circle cx="19" cy="33.9" r="3.2"/><circle cx="15.9" cy="24.4" r="3.2"/></g>
+          </g>
+          <g transform="rotate(-12 24 11)">
+            <ellipse cx="24" cy="12.5" rx="17" ry="4.3" fill="#ffc83d" stroke="#8a5a00" stroke-width=".8"/>
+            <path d="M15.5 12 C15.5 2.5 32.5 2.5 32.5 12 Z" fill="#ffd45e" stroke="#8a5a00" stroke-width=".8"/>
+            <path d="M15.7 9.4 C21 10.8 27 10.8 32.3 9.4 L32.5 12 C27 13.5 21 13.5 15.5 12 Z" fill="#ff4458"/>
+          </g>
+        </svg>
+        <span class="brand-name">Nova<small>Cinema</small></span>
+      </a>
+
+      <nav class="main-nav" id="primary-nav" aria-label="Primary">
+        <ul class="nav-list">
+          <li style="--i:0"><a class="nav-link" href="../index.html"><span class="nav-num">01</span>Home</a></li>
+          <li style="--i:1"><a class="nav-link" href="movies.html"><span class="nav-num">02</span>Movies</a></li>
+          <li style="--i:2"><a class="nav-link" href="schedule.html" aria-current="page"><span class="nav-num">03</span>Schedule</a></li>
+          <li style="--i:3"><a class="nav-link" href="contact.html"><span class="nav-num">04</span>Contact</a></li>
+        </ul>
+        <div class="nav-extra">
+          <span>1 Grand Line Avenue, Nova City</span>
+          <a href="tel:+15550123456">(555) 012-3456</a>
+          <a href="mailto:novacinema@gmail.com">novacinema@gmail.com</a>
+        </div>
+      </nav>
+
+      <div class="header-actions">
+        <button type="button" class="btn btn--gold btn--sm header-cta" data-book>
+          <span aria-hidden="true">🎟️</span><span class="label-short">Tickets</span><span class="label-long">Book tickets</span>
+        </button>
+        <button type="button" class="nav-toggle" aria-controls="primary-nav" aria-expanded="false" aria-label="Open menu">
+          <span></span><span></span><span></span>
+        </button>
+      </div>
+    </div>
+  </header>
+
+  <!-- ========== MAIN CONTENT ========== -->
+  <main id="main">
+
+    <!-- ========== PAGE HERO ========== -->
+    <section class="page-hero" style="--hero-accent:#ffc83d" aria-labelledby="page-title">
+      <div class="page-hero-bg">
+        <img src="../images/nova-cinema-logo3.jpg" data-fallback="" alt="" width="1200" height="600">
+      </div>
+      <div class="page-hero-grain" aria-hidden="true"></div>
+      <div class="floating-icons" aria-hidden="true">
+        <span style="top:20%;left:70%;--size:3.2rem;--d:9s">🧭</span>
+        <span style="top:55%;left:84%;--size:2.6rem;--d:8s;--delay:-4s">⏰</span>
+        <span style="top:32%;left:90%;--size:2rem;--d:11s;--delay:-2s">🎟️</span>
+        <span style="top:68%;left:62%;--size:2.4rem;--d:10s;--delay:-6s">⚓</span>
+      </div>
+
+      <div class="container page-hero-content">
+        <ol class="breadcrumb">
+          <li><a href="../index.html">Home</a></li>
+          <li><span aria-current="page">Schedule</span></li>
+        </ol>
+        <p class="eyebrow">One Piece Day's schedule</p>
+        <h1 class="page-hero-title" id="page-title">
+          <span class="line"><span style="--i:0">Today's</span></span>
+          <span class="line"><span style="--i:1" class="text-shimmer">showtimes</span></span>
+        </h1>
+        <p class="page-hero-lead">Plot your course and pick your hour — here's when each film is setting sail today. Showtimes rotate daily, so check back often to make sure you don't miss your crew's next voyage.</p>
+
+        <div class="live-bar">
+          <div class="live-card">
+            <span class="icon" aria-hidden="true">🕰️</span>
+            <div><small>Local time</small><strong data-clock>--:--</strong></div>
+          </div>
+          <div class="live-card">
+            <span class="icon" aria-hidden="true">⛵</span>
+            <div><small data-next-label>Next departure</small><strong data-next-in>—</strong><span class="sub" data-next-film></span></div>
+          </div>
+        </div>
+      </div>
+      <div class="wave wave--front" aria-hidden="true"></div>
+    </section>
+
+    <!-- ========== MOVIE SCHEDULES ========== -->
+    <section class="section section--tight" id="showtimes" aria-labelledby="showtimes-title">
+      <div class="container">
+        <div class="section-head reveal">
+          <div>
+            <p class="eyebrow">Set sail at these times</p>
+            <h2 class="section-title" id="showtimes-title">The voyage plan</h2>
+          </div>
+          <p class="section-lead">Status updates live as the day goes on. Tap any screening to pick your seats.</p>
+        </div>
+
+        <div class="schedule-controls reveal">
+          <div class="segmented" role="group" aria-label="Schedule view" data-view-toggle>
+            <span class="segmented-indicator" aria-hidden="true"></span>
+            <button type="button" aria-pressed="true" data-view="chart">🗺️ Voyage chart</button>
+            <button type="button" aria-pressed="false" data-view="board">📋 Departure board</button>
+          </div>
+          <div class="schedule-filters">
+            <div class="chip-row" role="group" aria-label="Filter by hall" data-hall-filter>
+              <button type="button" class="chip" aria-pressed="true" data-hall="all">All halls</button>
+              <button type="button" class="chip" aria-pressed="false" data-hall="1">Hall 1</button>
+              <button type="button" class="chip" aria-pressed="false" data-hall="2">Hall 2</button>
+              <button type="button" class="chip" aria-pressed="false" data-hall="3">Hall 3</button>
+            </div>
+            <label class="select-wrap"><span class="sr-only">Filter by film</span>
+              <select class="select" data-film-filter>
+                <option value="all">All films</option>
+              </select>
+            </label>
+          </div>
+        </div>
+
+        <ul class="legend" aria-label="Status legend">
+          <li><span class="status">Scheduled</span></li>
+          <li><span class="status status--boarding">Boarding</span> starts within the hour</li>
+          <li><span class="status status--playing">Now playing</span></li>
+          <li><span class="status status--departed">Departed</span></li>
+        </ul>
+        <p class="results-count" aria-live="polite" data-results></p>
+
+        <!-- Voyage chart (timeline) -->
+        <div data-view-panel="chart">
+          <div class="timeline" tabindex="0" aria-label="Timeline of today's screenings by hall">
+            <div class="timeline-inner">
+              <div class="timeline-grid" data-timeline></div>
+            </div>
+          </div>
+          <p class="timeline-hint">Scroll sideways on small screens · the red line marks the current time.</p>
+        </div>
+
+        <!-- Departure board (the showtimes table) -->
+        <div class="board-wrap" data-view-panel="board" hidden>
+          <table class="board" id="movie-time">
+            <caption>Set sail at these times</caption>
+            <thead>
+              <tr>
+                <th scope="col">Movie</th>
+                <th scope="col">Hall</th>
+                <th scope="col">Time</th>
+                <th scope="col">Status</th>
+                <th scope="col"><span class="sr-only">Tickets</span></th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr data-showing="s1" data-movie="red" data-hall="1">
+                <th scope="row"><span class="film-cell" style="--accent:#ff3d6e"><span class="film-dot" aria-hidden="true"></span><a href="movies.html#movie-red">One Piece Film: Red</a></span></th>
+                <td class="hall-cell">Hall 1<small>Sunny Hall</small></td>
+                <td class="time-cell"><time datetime="10:00">10:00 AM</time></td>
+                <td class="status-cell"><span class="status">Scheduled</span></td>
+                <td class="book-cell"><button type="button" class="btn btn--gold btn--sm" data-book data-showing="s1">Book</button></td>
+              </tr>
+              <tr data-showing="s2" data-movie="gold" data-hall="3">
+                <th scope="row"><span class="film-cell" style="--accent:#ffc83d"><span class="film-dot" aria-hidden="true"></span><a href="movies.html#movie-gold">One Piece Film: Gold</a></span></th>
+                <td class="hall-cell">Hall 3<small>Red Force Hall</small></td>
+                <td class="time-cell"><time datetime="12:30">12:30 PM</time></td>
+                <td class="status-cell"><span class="status">Scheduled</span></td>
+                <td class="book-cell"><button type="button" class="btn btn--gold btn--sm" data-book data-showing="s2">Book</button></td>
+              </tr>
+              <tr data-showing="s3" data-movie="strong-world" data-hall="2">
+                <th scope="row"><span class="film-cell" style="--accent:#34d399"><span class="film-dot" aria-hidden="true"></span><a href="movies.html#movie-strong-world">One Piece Film: Strong World</a></span></th>
+                <td class="hall-cell">Hall 2<small>Merry Hall</small></td>
+                <td class="time-cell"><time datetime="13:00">1:00 PM</time></td>
+                <td class="status-cell"><span class="status">Scheduled</span></td>
+                <td class="book-cell"><button type="button" class="btn btn--gold btn--sm" data-book data-showing="s3">Book</button></td>
+              </tr>
+              <tr data-showing="s4" data-movie="stampede" data-hall="1">
+                <th scope="row"><span class="film-cell" style="--accent:#ff7a1a"><span class="film-dot" aria-hidden="true"></span><a href="movies.html#movie-stampede">One Piece: Stampede</a></span></th>
+                <td class="hall-cell">Hall 1<small>Sunny Hall</small></td>
+                <td class="time-cell"><time datetime="15:30">3:30 PM</time></td>
+                <td class="status-cell"><span class="status">Scheduled</span></td>
+                <td class="book-cell"><button type="button" class="btn btn--gold btn--sm" data-book data-showing="s4">Book</button></td>
+              </tr>
+              <tr data-showing="s5" data-movie="z" data-hall="2">
+                <th scope="row"><span class="film-cell" style="--accent:#8b9dff"><span class="film-dot" aria-hidden="true"></span><a href="movies.html#movie-z">One Piece Film: Z</a></span></th>
+                <td class="hall-cell">Hall 2<small>Merry Hall</small></td>
+                <td class="time-cell"><time datetime="16:00">4:00 PM</time></td>
+                <td class="status-cell"><span class="status">Scheduled</span></td>
+                <td class="book-cell"><button type="button" class="btn btn--gold btn--sm" data-book data-showing="s5">Book</button></td>
+              </tr>
+              <tr data-showing="s6" data-movie="alabasta" data-hall="2">
+                <th scope="row"><span class="film-cell" style="--accent:#f0b45a"><span class="film-dot" aria-hidden="true"></span><a href="movies.html#movie-alabasta">Adventures in Alabasta</a></span></th>
+                <td class="hall-cell">Hall 2<small>Merry Hall</small></td>
+                <td class="time-cell"><time datetime="18:00">6:00 PM</time></td>
+                <td class="status-cell"><span class="status">Scheduled</span></td>
+                <td class="book-cell"><button type="button" class="btn btn--gold btn--sm" data-book data-showing="s6">Book</button></td>
+              </tr>
+              <tr data-showing="s7" data-movie="red" data-hall="3">
+                <th scope="row"><span class="film-cell" style="--accent:#ff3d6e"><span class="film-dot" aria-hidden="true"></span><a href="movies.html#movie-red">One Piece Film: Red</a></span></th>
+                <td class="hall-cell">Hall 3<small>Red Force Hall</small></td>
+                <td class="time-cell"><time datetime="19:00">7:00 PM</time></td>
+                <td class="status-cell"><span class="status">Scheduled</span></td>
+                <td class="book-cell"><button type="button" class="btn btn--gold btn--sm" data-book data-showing="s7">Book</button></td>
+              </tr>
+              <tr data-showing="s8" data-movie="stampede" data-hall="1">
+                <th scope="row"><span class="film-cell" style="--accent:#ff7a1a"><span class="film-dot" aria-hidden="true"></span><a href="movies.html#movie-stampede">One Piece: Stampede</a></span></th>
+                <td class="hall-cell">Hall 1<small>Sunny Hall</small></td>
+                <td class="time-cell"><time datetime="21:00">9:00 PM</time></td>
+                <td class="status-cell"><span class="status">Scheduled</span></td>
+                <td class="book-cell"><button type="button" class="btn btn--gold btn--sm" data-book data-showing="s8">Book</button></td>
+              </tr>
+            </tbody>
+            <tfoot>
+              <tr>
+                <th scope="row">Total screenings today</th>
+                <td>8 screenings</td>
+                <td colspan="3">10:00 AM – 9:00 PM · 11 hours of sailing</td>
+              </tr>
+            </tfoot>
+          </table>
+        </div>
+      </div>
+    </section>
+
+    <!-- ========== HALLS ========== -->
+    <section class="section section--tight" id="halls" aria-labelledby="halls-title">
+      <div class="container">
+        <div class="section-head reveal">
+          <div>
+            <p class="eyebrow">Choose your deck</p>
+            <h2 class="section-title" id="halls-title">Three themed halls</h2>
+          </div>
+          <p class="section-lead">Each hall is named after a legendary ship — and built for a different kind of movie night.</p>
+        </div>
+        <ul class="hall-grid">
+          <li class="hall-card spotlight reveal" style="--i:0;--accent:#ffc83d">
+            <span class="hall-num" aria-hidden="true">01</span>
+            <h3>Hall 1 · The Sunny Hall</h3>
+            <p>Our flagship: a wall-to-wall laser 4K screen and Dolby Atmos that puts you in the middle of every Gear Fifth punch.</p>
+            <ul class="tag-list"><li>180 seats</li><li>Laser 4K</li><li>Dolby Atmos</li></ul>
+            <div class="hall-screen" aria-hidden="true"></div><div class="hall-seats" aria-hidden="true"></div>
+          </li>
+          <li class="hall-card spotlight reveal" style="--i:1;--accent:#35c2e0">
+            <span class="hall-num" aria-hidden="true">02</span>
+            <h3>Hall 2 · The Merry Hall</h3>
+            <p>Cozy, classic and wall-to-wall recliners — named after the ship that started it all. Bring tissues.</p>
+            <ul class="tag-list"><li>96 recliners</li><li>7.1 surround</li><li>Extra legroom</li></ul>
+            <div class="hall-screen" aria-hidden="true"></div><div class="hall-seats" aria-hidden="true"></div>
+          </li>
+          <li class="hall-card spotlight reveal" style="--i:2;--accent:#ff3d6e">
+            <span class="hall-num" aria-hidden="true">03</span>
+            <h3>Hall 3 · The Red Force Hall</h3>
+            <p>Concert-grade speakers and stage lighting, built for Uta's songs and our famous sing-along nights.</p>
+            <ul class="tag-list"><li>140 seats</li><li>Concert sound</li><li>Sing-along ready</li></ul>
+            <div class="hall-screen" aria-hidden="true"></div><div class="hall-seats" aria-hidden="true"></div>
+          </li>
+        </ul>
+      </div>
+    </section>
+
+    <!-- ========== PRICES ========== -->
+    <section class="section section--tight" id="prices" aria-labelledby="prices-title">
+      <div class="container">
+        <div class="section-head reveal">
+          <div>
+            <p class="eyebrow">Tickets</p>
+            <h2 class="section-title" id="prices-title">Fair winds, fair prices</h2>
+          </div>
+        </div>
+        <ul class="price-grid">
+          <li class="price-card reveal" style="--i:0"><span class="price">$14</span><h3>Standard seat</h3><p>Rows A–F in every hall.</p></li>
+          <li class="price-card price-card--featured reveal" style="--i:1"><span class="badge badge--accent ribbon" style="--accent:#ffc83d">Most comfy</span><span class="price">$18</span><h3>Sunny recliner</h3><p>Rows G–H. Fully reclining with extra legroom.</p></li>
+          <li class="price-card reveal" style="--i:2"><span class="price">15%</span><h3>Crew discount</h3><p>Book 10 seats together and save 15% on tickets.</p></li>
+          <li class="price-card reveal" style="--i:3"><span class="price">30</span><h3>Group voyages</h3><p>Bringing up to 30 Nakama? <a class="inline-link" href="contact.html#form">Send us a message</a>.</p></li>
+        </ul>
+      </div>
+    </section>
+
+    <!-- ========== MY TICKETS ========== -->
+    <section class="section section--tight" id="my-tickets" aria-labelledby="tickets-title">
+      <div class="container">
+        <div class="section-head reveal">
+          <div>
+            <p class="eyebrow">Your log</p>
+            <h2 class="section-title" id="tickets-title">My tickets</h2>
+          </div>
+          <p class="section-lead">Tickets you book on this device are kept here, ready to show at the door.</p>
+        </div>
+        <div data-my-tickets></div>
+      </div>
+    </section>
+
+  </main>
+
+  <!-- ========== FOOTER ========== -->
+  <footer class="site-footer">
+    <div class="footer-wave" aria-hidden="true"></div>
+    <div class="container footer-grid">
+      <div class="footer-brand">
+        <a class="brand" href="../index.html" aria-label="Nova Cinema — home">
+          <svg class="brand-mark" viewBox="0 0 48 48" aria-hidden="true">
+            <g class="reel">
+              <circle cx="24" cy="27" r="16" fill="#0a1330" stroke="currentColor" stroke-width="3"/>
+              <circle cx="24" cy="27" r="2.6" fill="currentColor"/>
+              <g fill="currentColor"><circle cx="24" cy="18.5" r="3.2"/><circle cx="32.1" cy="24.4" r="3.2"/><circle cx="29" cy="33.9" r="3.2"/><circle cx="19" cy="33.9" r="3.2"/><circle cx="15.9" cy="24.4" r="3.2"/></g>
+            </g>
+            <g transform="rotate(-12 24 11)">
+              <ellipse cx="24" cy="12.5" rx="17" ry="4.3" fill="#ffc83d" stroke="#8a5a00" stroke-width=".8"/>
+              <path d="M15.5 12 C15.5 2.5 32.5 2.5 32.5 12 Z" fill="#ffd45e" stroke="#8a5a00" stroke-width=".8"/>
+              <path d="M15.7 9.4 C21 10.8 27 10.8 32.3 9.4 L32.5 12 C27 13.5 21 13.5 15.5 12 Z" fill="#ff4458"/>
+            </g>
+          </svg>
+          <span class="brand-name">Nova<small>Cinema</small></span>
+        </a>
+        <h3 class="footer-tagline">No adventure's complete <span>without popcorn.</span></h3>
+        <p>The one true screen for every One Piece fan chasing the next great adventure.</p>
+        <ul class="socials">
+          <li><a href="https://discord.com" target="_blank" rel="noopener" aria-label="Nova Cinema on Discord"><svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M19.5 5.5A16 16 0 0 0 15.6 4.3l-.5 1a14.7 14.7 0 0 0-6.2 0l-.5-1A16 16 0 0 0 4.5 5.5C2 9.3 1.4 13 1.7 16.6A16 16 0 0 0 6.6 19l1-1.6a10 10 0 0 1-1.6-.8l.4-.3a11.4 11.4 0 0 0 11.2 0l.4.3c-.5.3-1 .6-1.6.8l1 1.6a16 16 0 0 0 4.9-2.4c.4-4.2-.6-7.9-2.8-11.1zM8.7 14.4c-1 0-1.8-.9-1.8-2s.8-2 1.8-2 1.8.9 1.8 2-.8 2-1.8 2zm6.6 0c-1 0-1.8-.9-1.8-2s.8-2 1.8-2 1.8.9 1.8 2-.8 2-1.8 2z"/></svg></a></li>
+          <li><a href="https://www.facebook.com" target="_blank" rel="noopener" aria-label="Nova Cinema on Facebook"><svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M14 8.6V7c0-.8.5-1 .9-1H17V2.1L14 2c-3.4 0-4.2 2.5-4.2 4.1v2.5H7.5v4H10V22h4v-9.4h3.1l.4-4H14z"/></svg></a></li>
+          <li><a href="https://www.instagram.com" target="_blank" rel="noopener" aria-label="Nova Cinema on Instagram"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><rect x="3" y="3" width="18" height="18" rx="5"/><circle cx="12" cy="12" r="4"/><circle cx="17.5" cy="6.5" r="1" fill="currentColor" stroke="none"/></svg></a></li>
+          <li><a href="https://www.tiktok.com" target="_blank" rel="noopener" aria-label="Nova Cinema on TikTok"><svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M16.5 3c.4 2.3 1.9 3.9 4 4.2v3.2c-1.5 0-2.9-.4-4-1.2v6.3a5.6 5.6 0 1 1-5.6-5.6c.3 0 .6 0 .9.1v3.3a2.4 2.4 0 1 0 1.6 2.2V3h3.1z"/></svg></a></li>
+        </ul>
+      </div>
+
+      <nav class="footer-col" aria-label="Footer">
+        <h3>Explore</h3>
+        <ul class="footer-links">
+          <li><a href="../index.html">Home</a></li>
+          <li><a href="movies.html">Movies</a></li>
+          <li><a href="schedule.html">Schedule</a></li>
+          <li><a href="contact.html">Contact</a></li>
+          <li><a href="schedule.html#my-tickets">My tickets</a></li>
+        </ul>
+      </nav>
+
+      <div class="footer-col">
+        <h3>Visit</h3>
+        <address>1 Grand Line Avenue<br>Nova City</address>
+        <ul class="footer-links" style="margin-top:.8rem">
+          <li>Mon – Thu · 10 AM – 11 PM</li>
+          <li>Fri – Sat · 10 AM – 1 AM</li>
+          <li>Sun · 11 AM – 10 PM</li>
+        </ul>
+      </div>
+
+      <div class="footer-col">
+        <h3>Join the crew</h3>
+        <p>New releases and showtimes, straight to your inbox.</p>
+        <form class="mini-form" data-newsletter action="#" method="post">
+          <label class="sr-only" for="newsletter-email">Email address</label>
+          <input type="email" id="newsletter-email" name="email" placeholder="you@example.com" autocomplete="email" required>
+          <button type="submit" class="btn btn--gold btn--sm">Join</button>
+        </form>
+        <p class="form-msg" aria-live="polite"></p>
+        <div class="footer-contact">
+          <a href="tel:+15550123456"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M22 16.9v3a2 2 0 0 1-2.2 2 19.8 19.8 0 0 1-8.6-3.1 19.5 19.5 0 0 1-6-6A19.8 19.8 0 0 1 2.1 4.2 2 2 0 0 1 4.1 2h3a2 2 0 0 1 2 1.7c.1.9.4 1.8.7 2.7a2 2 0 0 1-.5 2.1L8 9.8a16 16 0 0 0 6 6l1.3-1.3a2 2 0 0 1 2.1-.4c.9.3 1.8.6 2.7.7a2 2 0 0 1 1.7 2z"/></svg>Call the crew</a>
+          <a href="mailto:novacinema@gmail.com"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="2" y="4" width="20" height="16" rx="2"/><path d="m22 7-10 6L2 7"/></svg>Email us</a>
+        </div>
+      </div>
+    </div>
+
+    <div class="container footer-bottom">
+      <p>© 2026 Nova Cinema. All rights reserved.</p>
+      <p class="fine">A fan-made cinema experience. One Piece © Eiichiro Oda / Shueisha, Toei Animation. Trailers and music videos are embedded from YouTube.</p>
+    </div>
+  </footer>
+
+  <button type="button" class="to-top" aria-label="Back to top">
+    <svg class="ring" viewBox="0 0 52 52" aria-hidden="true"><circle class="bg" cx="26" cy="26" r="23"/><circle class="fg" cx="26" cy="26" r="23"/></svg>
+    <svg class="arrow" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.6" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="m18 15-6-6-6 6"/></svg>
+  </button>
+
+</body>
+</html>

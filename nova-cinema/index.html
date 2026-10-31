@@ -1,0 +1,554 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Nova Cinema | One Piece Day</title>
+  <meta name="description" content="Nova Cinema's One Piece Day — six legendary One Piece films across three halls. Trailers, live showtimes, seat booking and snacks for every Nakama.">
+  <meta name="theme-color" content="#050916">
+  <link rel="icon" href="images/favicon.svg" type="image/svg+xml">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Outfit:wght@300;400;500;600;700;800&family=Rye&display=swap">
+  <link rel="stylesheet" href="css/style.css">
+  <script>document.documentElement.classList.add('js');</script>
+  <script src="js/data.js" defer></script>
+  <script src="js/main.js" defer></script>
+  <script src="js/home.js" defer></script>
+</head>
+
+<body data-root="" data-page="home">
+
+  <a class="skip-link" href="#main">Skip to content</a>
+  <div class="page-curtain" aria-hidden="true"><span></span><span></span></div>
+  <div class="scroll-progress" aria-hidden="true"></div>
+
+  <!-- ========== HEADER ========== -->
+  <header class="site-header">
+    <div class="container header-inner">
+      <a class="brand" href="index.html" aria-label="Nova Cinema — home">
+        <svg class="brand-mark" viewBox="0 0 48 48" aria-hidden="true">
+          <g class="reel">
+            <circle cx="24" cy="27" r="16" fill="#0a1330" stroke="currentColor" stroke-width="3"/>
+            <circle cx="24" cy="27" r="2.6" fill="currentColor"/>
+            <g fill="currentColor"><circle cx="24" cy="18.5" r="3.2"/><circle cx="32.1" cy="24.4" r="3.2"/><circle cx="29" cy="33.9" r="3.2"/><circle cx="19" cy="33.9" r="3.2"/><circle cx="15.9" cy="24.4" r="3.2"/></g>
+          </g>
+          <g transform="rotate(-12 24 11)">
+            <ellipse cx="24" cy="12.5" rx="17" ry="4.3" fill="#ffc83d" stroke="#8a5a00" stroke-width=".8"/>
+            <path d="M15.5 12 C15.5 2.5 32.5 2.5 32.5 12 Z" fill="#ffd45e" stroke="#8a5a00" stroke-width=".8"/>
+            <path d="M15.7 9.4 C21 10.8 27 10.8 32.3 9.4 L32.5 12 C27 13.5 21 13.5 15.5 12 Z" fill="#ff4458"/>
+          </g>
+        </svg>
+        <span class="brand-name">Nova<small>Cinema</small></span>
+      </a>
+
+      <nav class="main-nav" id="primary-nav" aria-label="Primary">
+        <ul class="nav-list">
+          <li style="--i:0"><a class="nav-link" href="index.html" aria-current="page"><span class="nav-num">01</span>Home</a></li>
+          <li style="--i:1"><a class="nav-link" href="pages/movies.html"><span class="nav-num">02</span>Movies</a></li>
+          <li style="--i:2"><a class="nav-link" href="pages/schedule.html"><span class="nav-num">03</span>Schedule</a></li>
+          <li style="--i:3"><a class="nav-link" href="pages/contact.html"><span class="nav-num">04</span>Contact</a></li>
+        </ul>
+        <div class="nav-extra">
+          <span>1 Grand Line Avenue, Nova City</span>
+          <a href="tel:+15550123456">(555) 012-3456</a>
+          <a href="mailto:novacinema@gmail.com">novacinema@gmail.com</a>
+        </div>
+      </nav>
+
+      <div class="header-actions">
+        <button type="button" class="btn btn--gold btn--sm header-cta" data-book>
+          <span aria-hidden="true">🎟️</span><span class="label-short">Tickets</span><span class="label-long">Book tickets</span>
+        </button>
+        <button type="button" class="nav-toggle" aria-controls="primary-nav" aria-expanded="false" aria-label="Open menu">
+          <span></span><span></span><span></span>
+        </button>
+      </div>
+    </div>
+  </header>
+
+  <!-- ========== MAIN CONTENT ========== -->
+  <main id="main">
+
+    <!-- ========== HERO ========== -->
+    <section class="hero" aria-labelledby="hero-title">
+      <div class="hero-scene" aria-hidden="true">
+        <div class="sky"></div>
+        <div class="stars" data-stars data-depth="0.15"></div>
+        <span class="shooting-star"></span>
+        <div class="beams"><span></span><span></span></div>
+        <div class="moon" data-depth="0.35"></div>
+        <span class="cloud cloud--1"></span>
+        <span class="cloud cloud--2"></span>
+        <span class="cloud cloud--3"></span>
+        <div class="gulls">
+          <svg class="gull" viewBox="0 0 40 16"><path d="M2 12 Q11 2 20 10 Q29 2 38 12" fill="none" stroke="currentColor" stroke-width="2.6" stroke-linecap="round"/></svg>
+          <svg class="gull" viewBox="0 0 40 16"><path d="M2 12 Q11 2 20 10 Q29 2 38 12" fill="none" stroke="currentColor" stroke-width="2.6" stroke-linecap="round"/></svg>
+          <svg class="gull" viewBox="0 0 40 16"><path d="M2 12 Q11 2 20 10 Q29 2 38 12" fill="none" stroke="currentColor" stroke-width="2.6" stroke-linecap="round"/></svg>
+        </div>
+        <div class="wave wave--back"></div>
+        <div class="wave wave--mid"></div>
+
+        <!-- Pirate ship with a lion figurehead and a straw hat Jolly Roger -->
+        <div class="ship-wrap" data-depth="0.6">
+          <svg class="ship" viewBox="0 0 400 300">
+            <defs>
+              <linearGradient id="hull" x1="0" y1="0" x2="0" y2="1"><stop offset="0" stop-color="#9a5c2b"/><stop offset="1" stop-color="#3f230d"/></linearGradient>
+              <linearGradient id="sail" x1="0" y1="0" x2="1" y2="0"><stop offset="0" stop-color="#fffaf0"/><stop offset="1" stop-color="#e8d5ad"/></linearGradient>
+              <radialGradient id="glow"><stop offset="0" stop-color="#ffd27a" stop-opacity=".95"/><stop offset="1" stop-color="#ffd27a" stop-opacity="0"/></radialGradient>
+            </defs>
+            <g stroke="#ffffff" stroke-opacity=".28" stroke-width="1">
+              <line x1="211" y1="30" x2="62" y2="206"/><line x1="211" y1="30" x2="344" y2="200"/><line x1="119" y1="80" x2="54" y2="204"/>
+            </g>
+            <rect x="207" y="28" width="8" height="194" rx="3" fill="#5b3418"/>
+            <rect x="116" y="78" width="6" height="142" rx="3" fill="#5b3418"/>
+            <rect x="198" y="54" width="26" height="10" rx="3" fill="#6b3f1d"/>
+            <g class="flag">
+              <path d="M215 30 L260 34 L254 44 L262 56 L215 52 Z" fill="#111"/>
+              <circle cx="233" cy="43" r="5" fill="#fff"/>
+              <ellipse cx="233" cy="38.5" rx="7.5" ry="2" fill="#ffc83d"/>
+            </g>
+            <path class="sail" d="M158 78 Q211 66 264 78 Q276 132 264 188 Q211 176 158 188 Q146 132 158 78 Z" fill="url(#sail)" stroke="#c9b48a" stroke-width="2"/>
+            <g transform="translate(211 130)">
+              <g stroke="#1a1a1a" stroke-width="7" stroke-linecap="round"><line x1="-24" y1="-12" x2="24" y2="24"/><line x1="24" y1="-12" x2="-24" y2="24"/></g>
+              <circle cy="4" r="16" fill="#1a1a1a"/>
+              <rect x="-9" y="14" width="18" height="9" rx="3" fill="#1a1a1a"/>
+              <circle cx="-6" cy="4" r="4.2" fill="#f6ead0"/><circle cx="6" cy="4" r="4.2" fill="#f6ead0"/>
+              <path d="M-2 12 L0 9 L2 12 Z" fill="#f6ead0"/>
+              <ellipse cy="-9" rx="22" ry="5" fill="#ffc83d" stroke="#8a5a00"/>
+              <path d="M-12 -9 C-12 -24 12 -24 12 -9 Z" fill="#ffd45e" stroke="#8a5a00"/>
+              <path d="M-11.6 -13 C-4 -11 4 -11 11.6 -13 L12 -9 C4 -7 -4 -7 -12 -9 Z" fill="#e11d48"/>
+            </g>
+            <path class="sail" d="M90 100 Q119 93 148 100 Q155 135 148 168 Q119 161 90 168 Q83 135 90 100 Z" fill="url(#sail)" stroke="#c9b48a" stroke-width="2"/>
+            <rect x="288" y="168" width="52" height="40" rx="5" fill="#c58a4a" stroke="#6b3f1d" stroke-width="2"/>
+            <path d="M282 170 L314 152 L346 170 Z" fill="#7a4a24"/>
+            <rect class="lantern" x="298" y="178" width="12" height="12" rx="2" fill="#ffd27a"/>
+            <rect class="lantern" x="318" y="178" width="12" height="12" rx="2" fill="#ffd27a"/>
+            <path d="M50 210 C60 262 112 274 200 274 C290 274 336 260 354 203 L338 206 L70 214 Z" fill="url(#hull)" stroke="#2b1608" stroke-width="2"/>
+            <path d="M60 228 C120 238 282 238 346 220" fill="none" stroke="#d4a017" stroke-width="6" stroke-linecap="round"/>
+            <path d="M70 214 L338 206" stroke="#e6c79a" stroke-width="3"/>
+            <g fill="#2b1608" stroke="#d4a017" stroke-width="2"><circle cx="150" cy="252" r="6"/><circle cx="200" cy="255" r="6"/><circle cx="250" cy="252" r="6"/></g>
+            <circle class="lantern" cx="92" cy="198" r="16" fill="url(#glow)"/>
+            <circle cx="92" cy="198" r="4" fill="#ffe08a"/>
+            <g class="mane" fill="#f59e0b"><circle cx="67.0" cy="196.0" r="8.5"/><circle cx="64.5" cy="205.5" r="8.5"/><circle cx="57.5" cy="212.5" r="8.5"/><circle cx="48.0" cy="215.0" r="8.5"/><circle cx="38.5" cy="212.5" r="8.5"/><circle cx="31.5" cy="205.5" r="8.5"/><circle cx="29.0" cy="196.0" r="8.5"/><circle cx="31.5" cy="186.5" r="8.5"/><circle cx="38.5" cy="179.5" r="8.5"/><circle cx="48.0" cy="177.0" r="8.5"/><circle cx="57.5" cy="179.5" r="8.5"/><circle cx="64.5" cy="186.5" r="8.5"/></g>
+            <circle cx="48" cy="196" r="15" fill="#fde68a" stroke="#b45309" stroke-width="1.5"/>
+            <circle cx="43" cy="192" r="2" fill="#2b1608"/><circle cx="53" cy="192" r="2" fill="#2b1608"/>
+            <path d="M43 201 Q48 206 53 201" fill="none" stroke="#2b1608" stroke-width="2" stroke-linecap="round"/>
+          </svg>
+        </div>
+
+        <div class="wave wave--front"></div>
+        <div class="sparkles" data-sparkles></div>
+      </div>
+
+      <div class="container hero-content" data-hero-content>
+        <div class="hero-copy">
+          <p class="eyebrow eyebrow--live"><span class="live-dot" aria-hidden="true"></span>One Piece Day · Live today</p>
+          <h1 class="hero-title" id="hero-title">
+            <span class="line"><span style="--i:0">Set sail for the</span></span>
+            <span class="line"><span style="--i:1" class="text-shimmer">greatest stories</span></span>
+            <span class="line"><span style="--i:2">on the silver screen</span></span>
+          </h1>
+          <p class="hero-lead">Six legendary One Piece films, three halls and one unforgettable day. Grab your crew, find your seat — the Grand Line starts right here at Nova Cinema.</p>
+          <div class="hero-actions">
+            <button type="button" class="btn btn--gold btn--lg" data-book>
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M2 9a3 3 0 0 1 0 6v2a2 2 0 0 0 2 2h16a2 2 0 0 0 2-2v-2a3 3 0 0 1 0-6V7a2 2 0 0 0-2-2H4a2 2 0 0 0-2 2Z"/><path d="M13 5v2M13 17v2M13 11v2"/></svg>
+              Book your seat
+            </button>
+            <button type="button" class="btn btn--ghost btn--lg" data-trailer="red">
+              <svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M8 5.5v13a1 1 0 0 0 1.5.86l10.5-6.5a1 1 0 0 0 0-1.72L9.5 4.64A1 1 0 0 0 8 5.5z"/></svg>
+              Watch the Film Red trailer
+            </button>
+          </div>
+
+          <div class="next-voyage" data-next-voyage aria-live="off">
+            <div>
+              <p class="nv-label" data-nv-label>Next voyage departs in</p>
+              <p class="nv-film" data-nv-film>Checking the tides…</p>
+            </div>
+            <div class="countdown" role="timer" aria-label="Time until the next screening">
+              <span class="countdown-unit"><span class="countdown-num" data-h>00</span><small>HRS</small></span>
+              <span class="countdown-sep" aria-hidden="true">:</span>
+              <span class="countdown-unit"><span class="countdown-num" data-m>00</span><small>MIN</small></span>
+              <span class="countdown-sep" aria-hidden="true">:</span>
+              <span class="countdown-unit"><span class="countdown-num" data-s>00</span><small>SEC</small></span>
+            </div>
+            <div class="nv-action"><button type="button" class="btn btn--red btn--sm" data-book data-nv-book>Grab seats</button></div>
+          </div>
+        </div>
+      </div>
+
+      <a class="scroll-cue" href="#welcome" aria-label="Scroll to the welcome section"><span></span></a>
+    </section>
+
+    <!-- ========== MARQUEE ========== -->
+    <section class="marquee" aria-label="Films showing today">
+      <div class="marquee-track">
+        <ul class="marquee-list">
+          <li><a href="pages/movies.html#movie-red">One Piece Film: Red</a></li>
+          <li><a href="pages/movies.html#movie-gold">One Piece Film: Gold</a></li>
+          <li><a href="pages/movies.html#movie-strong-world">Strong World</a></li>
+          <li><a href="pages/movies.html#movie-stampede">Stampede</a></li>
+          <li><a href="pages/movies.html#movie-z">One Piece Film: Z</a></li>
+          <li><a href="pages/movies.html#movie-alabasta">Adventures in Alabasta</a></li>
+          <li>8 screenings · 3 halls · 1 epic day</li>
+        </ul>
+        <ul class="marquee-list" aria-hidden="true">
+          <li><a href="pages/movies.html#movie-red" tabindex="-1">One Piece Film: Red</a></li>
+          <li><a href="pages/movies.html#movie-gold" tabindex="-1">One Piece Film: Gold</a></li>
+          <li><a href="pages/movies.html#movie-strong-world" tabindex="-1">Strong World</a></li>
+          <li><a href="pages/movies.html#movie-stampede" tabindex="-1">Stampede</a></li>
+          <li><a href="pages/movies.html#movie-z" tabindex="-1">One Piece Film: Z</a></li>
+          <li><a href="pages/movies.html#movie-alabasta" tabindex="-1">Adventures in Alabasta</a></li>
+          <li>8 screenings · 3 halls · 1 epic day</li>
+        </ul>
+      </div>
+    </section>
+
+    <!-- ========== NOVA CINEMA INTRODUCTION ========== -->
+    <section id="welcome" class="section welcome" aria-labelledby="welcome-title">
+      <div class="container welcome-grid">
+        <div class="welcome-copy reveal reveal--left">
+          <p class="eyebrow">Welcome aboard</p>
+          <h2 class="section-title" id="welcome-title">Welcome aboard, <span class="text-gold">Nakama</span></h2>
+          <p>
+            Nova Cinema is the one true screen for every One Piece fan chasing the next great adventure. We have so many
+            <a class="inline-link" href="pages/movies.html">movies</a> in store for you — from East Blue to the final saga, we bring the crew's biggest battles, biggest laughs and biggest heartbreaks to the big screen. Showtimes, snacks and all.
+          </p>
+          <p>
+            Grab your crew, find your seat and set sail with us. Come prepared and ready to have the time of your life — check out the
+            <a class="inline-link" href="pages/schedule.html">schedule</a> for the day.
+          </p>
+          <ul class="stats">
+            <li class="stat"><span class="stat-num" data-count="8">8</span><span class="stat-label">Screenings today</span></li>
+            <li class="stat"><span class="stat-num" data-count="3">3</span><span class="stat-label">Themed halls</span></li>
+            <li class="stat"><span class="stat-num" data-count="15">15</span><span class="stat-label">Films in the vault</span></li>
+            <li class="stat"><span class="stat-num" data-count="100" data-suffix="%">100%</span><span class="stat-label">Nakama energy</span></li>
+          </ul>
+        </div>
+
+        <div class="welcome-media reveal reveal--right">
+          <figure class="media-frame media-frame--main art-hall">
+            <img src="images/nova-cinema-cinematic-shot.jpg" data-fallback="" alt="Cinema lobby decorated with pirate flags" width="840" height="700" loading="lazy">
+            <figcaption>Hall 1 · The Sunny Hall</figcaption>
+          </figure>
+          <figure class="media-frame media-frame--float art-lobby">
+            <img src="images/nova-cinema-logo3.jpg" data-fallback="" alt="Nova Cinema lobby" width="420" height="315" loading="lazy">
+          </figure>
+          <div class="spin-badge" aria-hidden="true">
+            <svg viewBox="0 0 200 200">
+              <defs><path id="badge-circle" d="M100,100 m-74,0 a74,74 0 1,1 148,0 a74,74 0 1,1 -148,0"/></defs>
+              <text><textPath href="#badge-circle">One Piece Day ✦ Nova Cinema ✦ Set sail ✦</textPath></text>
+            </svg>
+            <span class="spin-badge-icon">👒</span>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ========== NOW SHOWING ========== -->
+    <section class="section section--tight now-showing" id="now-showing" aria-labelledby="now-title" data-slider-root>
+      <div class="container">
+        <div class="section-head reveal">
+          <div>
+            <p class="eyebrow">Now showing</p>
+            <h2 class="section-title" id="now-title">Today's voyages</h2>
+            <p class="section-lead">Six films, each with its own trailer and theme song. Drag, swipe or use the arrows to browse the line-up.</p>
+          </div>
+          <div class="slider-controls">
+            <button type="button" class="icon-btn" data-slide="prev" aria-label="Previous films">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="m15 18-6-6 6-6"/></svg>
+            </button>
+            <button type="button" class="icon-btn" data-slide="next" aria-label="Next films">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="m9 18 6-6-6-6"/></svg>
+            </button>
+            <a class="link-arrow" href="pages/movies.html">All films <span aria-hidden="true">→</span></a>
+          </div>
+        </div>
+      </div>
+      <div class="slider" data-slider tabindex="0" aria-label="Now showing films — scroll horizontally">
+        <ul class="slider-track" data-now-showing></ul>
+      </div>
+      <div class="container"><div class="slider-progress" aria-hidden="true"><span></span></div></div>
+    </section>
+
+    <!-- ========== THE BIG SCREEN (trailers + theme songs) ========== -->
+    <section class="section theater" id="trailers" aria-labelledby="theater-title" data-theater-section>
+      <div class="container">
+        <div class="section-head section-head--center reveal">
+          <p class="eyebrow">The big screen</p>
+          <h2 class="section-title" id="theater-title">Trailers &amp; theme songs</h2>
+          <p class="section-lead">Every One Piece film has its own anthem. Pick a film, let the curtains part and press play.</p>
+        </div>
+
+        <div class="theater-stage reveal reveal--zoom" data-theater>
+          <div class="screen" id="theater-panel" role="tabpanel" tabindex="-1">
+            <div class="screen-media" data-screen-media></div>
+          </div>
+          <div class="curtain curtain--left" aria-hidden="true"></div>
+          <div class="curtain curtain--right" aria-hidden="true"></div>
+          <div class="valance" aria-hidden="true"></div>
+        </div>
+
+        <div class="theater-info" data-theater-info aria-live="polite"></div>
+        <div class="theater-tabs" role="tablist" aria-label="Choose a film" data-theater-tabs></div>
+      </div>
+    </section>
+
+    <!-- ========== WANTED POSTERS ========== -->
+    <section class="section crew" id="crew" aria-labelledby="crew-title">
+      <div class="container">
+        <div class="section-head section-head--center reveal">
+          <p class="eyebrow">Most wanted</p>
+          <h2 class="section-title" id="crew-title">The crew's bounties</h2>
+          <p class="section-lead">The whole Straw Hat crew has a price on their heads — and a favorite seat at Nova. Flip a poster to read their movie-night notes.</p>
+        </div>
+        <ul class="wanted-grid" data-crew></ul>
+        <p class="wanted-hint">Tap or click a poster to flip it.</p>
+      </div>
+    </section>
+
+    <!-- ========== THE NOVA EXPERIENCE ========== -->
+    <section class="section section--tight experience" aria-labelledby="exp-title">
+      <div class="container">
+        <div class="section-head reveal">
+          <div>
+            <p class="eyebrow">The Nova experience</p>
+            <h2 class="section-title" id="exp-title">Built for the big moments</h2>
+          </div>
+          <p class="section-lead">Every hall is tuned for the scenes you've been waiting years to see on a giant screen.</p>
+        </div>
+        <ul class="feature-grid">
+          <li class="feature spotlight reveal" style="--i:0;--accent:#ffc83d">
+            <span class="feature-num" aria-hidden="true">01</span>
+            <div class="feature-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="2" y="6" width="14" height="12" rx="2"/><path d="m16 10 6-3v10l-6-3"/></svg></div>
+            <h3>Laser 4K projection</h3>
+            <p>Every frame as sharp as Zoro's three swords — razor-crisp laser projection in the Sunny Hall.</p>
+          </li>
+          <li class="feature spotlight reveal" style="--i:1;--accent:#ff4458">
+            <span class="feature-num" aria-hidden="true">02</span>
+            <div class="feature-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M11 5 6 9H2v6h4l5 4V5z"/><path d="M15.5 8.5a5 5 0 0 1 0 7"/><path d="M19 5a10 10 0 0 1 0 14"/></svg></div>
+            <h3>Dolby Atmos sound</h3>
+            <p>Feel Conqueror's Haki rumble through your seat with sound that moves all around the hall.</p>
+          </li>
+          <li class="feature spotlight reveal" style="--i:2;--accent:#35c2e0">
+            <span class="feature-num" aria-hidden="true">03</span>
+            <div class="feature-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 11V7a3 3 0 0 1 3-3h8a3 3 0 0 1 3 3v4"/><path d="M3 11a2 2 0 0 1 2 2v2h14v-2a2 2 0 1 1 4 0v5H1v-5a2 2 0 0 1 2-2z"/><path d="M5 18v2M19 18v2"/></svg></div>
+            <h3>Sunny recliners</h3>
+            <p>Fully reclining seats fill Hall 2 and the back rows of every hall. Nap during the credits at your own risk.</p>
+          </li>
+          <li class="feature spotlight reveal" style="--i:3;--accent:#3ee08f">
+            <span class="feature-num" aria-hidden="true">04</span>
+            <div class="feature-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="m12 2 3 6.5 7 .9-5.1 4.8 1.3 6.9L12 17.8l-6.2 3.3 1.3-6.9L2 9.4l7-.9z"/></svg></div>
+            <h3>Cosplay welcome</h3>
+            <p>Come as your favorite pirate, Marine or Revolutionary. Costumes encouraged — real swords stay at home.</p>
+          </li>
+        </ul>
+      </div>
+    </section>
+
+    <!-- ========== THE GALLEY (snacks) ========== -->
+    <section class="section galley" id="galley" aria-labelledby="galley-title">
+      <div class="container">
+        <div class="section-head reveal">
+          <div>
+            <p class="eyebrow">The galley</p>
+            <h2 class="section-title" id="galley-title">No adventure's complete without popcorn</h2>
+          </div>
+          <p class="section-lead">Pre-order your treats now — they'll be added to your next booking and waiting at your seat.</p>
+        </div>
+        <ul class="galley-grid" data-snacks></ul>
+        <div class="cart-bar reveal" data-cart-bar aria-live="polite"></div>
+      </div>
+    </section>
+
+    <!-- ========== SPECIAL EVENTS ========== -->
+    <section class="section section--tight events" id="events" aria-labelledby="events-title">
+      <div class="container">
+        <div class="section-head reveal">
+          <div>
+            <p class="eyebrow">Special voyages</p>
+            <h2 class="section-title" id="events-title">Coming up at Nova</h2>
+          </div>
+          <p class="section-lead">One Piece Day is only the beginning. Save these dates straight to your calendar.</p>
+        </div>
+        <ul class="event-grid">
+          <li class="event spotlight reveal" style="--i:0;--accent:#ff3d6e">
+            <div class="event-top">
+              <div class="event-date"><small>NOV</small><strong>06</strong></div>
+              <div><p class="eyebrow eyebrow--plain" style="margin:0">Friday</p></div>
+              <span class="event-emoji" aria-hidden="true">🎤</span>
+            </div>
+            <h3>Uta's Sing-Along Night</h3>
+            <p>Film Red with on-screen lyrics, glow sticks at the door and a whole hall singing "New Genesis" together.</p>
+            <p class="event-meta"><span>🕖 7:00 PM</span><span>📍 Hall 3 · Red Force</span></p>
+            <button type="button" class="btn btn--outline btn--sm" data-ics data-title="Uta's Sing-Along Night" data-start="2026-11-06T19:00" data-end="2026-11-06T21:15" data-desc="One Piece Film: Red sing-along screening at Nova Cinema, Hall 3.">📅 Add to calendar</button>
+          </li>
+          <li class="event spotlight reveal" style="--i:1;--accent:#ffc83d">
+            <div class="event-top">
+              <div class="event-date"><small>NOV</small><strong>14</strong></div>
+              <div><p class="eyebrow eyebrow--plain" style="margin:0">Saturday</p></div>
+              <span class="event-emoji" aria-hidden="true">🏴‍☠️</span>
+            </div>
+            <h3>Pirates' Festival Marathon</h3>
+            <p>All six One Piece Day films back to back. Free refills for survivors and a commemorative straw hat at the final credits.</p>
+            <p class="event-meta"><span>🕙 10:00 AM – 11:30 PM</span><span>📍 Hall 1 · Sunny</span></p>
+            <button type="button" class="btn btn--outline btn--sm" data-ics data-title="Pirates' Festival Marathon" data-start="2026-11-14T10:00" data-end="2026-11-14T23:30" data-desc="All six One Piece Day films back to back at Nova Cinema, Hall 1.">📅 Add to calendar</button>
+          </li>
+          <li class="event spotlight reveal" style="--i:2;--accent:#35c2e0">
+            <div class="event-top">
+              <div class="event-date"><small>NOV</small><strong>21</strong></div>
+              <div><p class="eyebrow eyebrow--plain" style="margin:0">Saturday</p></div>
+              <span class="event-emoji" aria-hidden="true">👒</span>
+            </div>
+            <h3>Grand Line Cosplay Contest</h3>
+            <p>Strut the red carpet as your favorite pirate, Marine or Revolutionary. The winners take home a year of free popcorn.</p>
+            <p class="event-meta"><span>🕑 2:00 PM</span><span>📍 Main lobby</span></p>
+            <button type="button" class="btn btn--outline btn--sm" data-ics data-title="Grand Line Cosplay Contest" data-start="2026-11-21T14:00" data-end="2026-11-21T17:00" data-desc="One Piece cosplay contest in the Nova Cinema lobby.">📅 Add to calendar</button>
+          </li>
+        </ul>
+      </div>
+    </section>
+
+    <!-- ========== REVIEWS ========== -->
+    <section class="section section--tight" aria-labelledby="reviews-title">
+      <div class="container">
+        <div class="section-head section-head--center reveal">
+          <p class="eyebrow">Word from the crew</p>
+          <h2 class="section-title" id="reviews-title">Nakama reviews</h2>
+        </div>
+        <div class="reviews reveal" data-reviews aria-roledescription="carousel" aria-label="Guest reviews">
+          <div class="reviews-viewport">
+            <div class="reviews-track">
+              <figure class="review" aria-roledescription="slide" aria-label="1 of 4">
+                <div class="review-stars" aria-label="5 out of 5 stars">★★★★★</div>
+                <blockquote>The sing-along screening of Film Red had the whole hall in tears — and then dancing. Best night out I've had all year.</blockquote>
+                <figcaption class="review-author"><span class="review-avatar" aria-hidden="true">🎤</span><span><strong>Maya R.</strong><span>Nakama since East Blue</span></span></figcaption>
+              </figure>
+              <figure class="review" aria-roledescription="slide" aria-label="2 of 4">
+                <div class="review-stars" aria-label="5 out of 5 stars">★★★★★</div>
+                <blockquote>Recliners, Atmos and a drumstick the size of my arm. Luffy would move in here permanently.</blockquote>
+                <figcaption class="review-author"><span class="review-avatar" aria-hidden="true">🍖</span><span><strong>Dev P.</strong><span>Meat enthusiast</span></span></figcaption>
+              </figure>
+              <figure class="review" aria-roledescription="slide" aria-label="3 of 4">
+                <div class="review-stars" aria-label="5 out of 5 stars">★★★★★</div>
+                <blockquote>I brought my kids to Alabasta and now they've started the anime from episode one. Send help (and tissues).</blockquote>
+                <figcaption class="review-author"><span class="review-avatar" aria-hidden="true">🐪</span><span><strong>Hannah K.</strong><span>Proud parent</span></span></figcaption>
+              </figure>
+              <figure class="review" aria-roledescription="slide" aria-label="4 of 4">
+                <div class="review-stars" aria-label="5 out of 5 stars">★★★★★</div>
+                <blockquote>Watching the Stampede finale on that laser screen felt like standing in the middle of the battle. Goosebumps the whole way.</blockquote>
+                <figcaption class="review-author"><span class="review-avatar" aria-hidden="true">🏴‍☠️</span><span><strong>Jordan T.</strong><span>Cosplay regular</span></span></figcaption>
+              </figure>
+            </div>
+          </div>
+          <div class="reviews-nav">
+            <button type="button" class="icon-btn" data-review="prev" aria-label="Previous review">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="m15 18-6-6 6-6"/></svg>
+            </button>
+            <div class="dots" data-dots></div>
+            <button type="button" class="icon-btn" data-review="next" aria-label="Next review">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="m9 18 6-6-6-6"/></svg>
+            </button>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ========== CALL TO ACTION ========== -->
+    <section class="section section--tight" aria-labelledby="cta-title">
+      <div class="container">
+        <div class="cta-band reveal reveal--zoom">
+          <span class="cta-hat" aria-hidden="true">👒</span>
+          <h2 id="cta-title">Your seat is waiting, Nakama</h2>
+          <p>Eight screenings, three halls and one unforgettable day. Book now before the tide turns and the best seats sail away.</p>
+          <div class="actions">
+            <button type="button" class="btn btn--gold btn--lg" data-book>Book tickets</button>
+            <a class="btn btn--ghost btn--lg" href="pages/schedule.html">See the schedule</a>
+          </div>
+        </div>
+      </div>
+    </section>
+
+  </main>
+
+  <!-- ========== FOOTER ========== -->
+  <footer class="site-footer">
+    <div class="footer-wave" aria-hidden="true"></div>
+    <div class="container footer-grid">
+      <div class="footer-brand">
+        <a class="brand" href="index.html" aria-label="Nova Cinema — home">
+          <svg class="brand-mark" viewBox="0 0 48 48" aria-hidden="true">
+            <g class="reel">
+              <circle cx="24" cy="27" r="16" fill="#0a1330" stroke="currentColor" stroke-width="3"/>
+              <circle cx="24" cy="27" r="2.6" fill="currentColor"/>
+              <g fill="currentColor"><circle cx="24" cy="18.5" r="3.2"/><circle cx="32.1" cy="24.4" r="3.2"/><circle cx="29" cy="33.9" r="3.2"/><circle cx="19" cy="33.9" r="3.2"/><circle cx="15.9" cy="24.4" r="3.2"/></g>
+            </g>
+            <g transform="rotate(-12 24 11)">
+              <ellipse cx="24" cy="12.5" rx="17" ry="4.3" fill="#ffc83d" stroke="#8a5a00" stroke-width=".8"/>
+              <path d="M15.5 12 C15.5 2.5 32.5 2.5 32.5 12 Z" fill="#ffd45e" stroke="#8a5a00" stroke-width=".8"/>
+              <path d="M15.7 9.4 C21 10.8 27 10.8 32.3 9.4 L32.5 12 C27 13.5 21 13.5 15.5 12 Z" fill="#ff4458"/>
+            </g>
+          </svg>
+          <span class="brand-name">Nova<small>Cinema</small></span>
+        </a>
+        <h3 class="footer-tagline">No adventure's complete <span>without popcorn.</span></h3>
+        <p>The one true screen for every One Piece fan chasing the next great adventure.</p>
+        <ul class="socials">
+          <li><a href="https://discord.com" target="_blank" rel="noopener" aria-label="Nova Cinema on Discord"><svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M19.5 5.5A16 16 0 0 0 15.6 4.3l-.5 1a14.7 14.7 0 0 0-6.2 0l-.5-1A16 16 0 0 0 4.5 5.5C2 9.3 1.4 13 1.7 16.6A16 16 0 0 0 6.6 19l1-1.6a10 10 0 0 1-1.6-.8l.4-.3a11.4 11.4 0 0 0 11.2 0l.4.3c-.5.3-1 .6-1.6.8l1 1.6a16 16 0 0 0 4.9-2.4c.4-4.2-.6-7.9-2.8-11.1zM8.7 14.4c-1 0-1.8-.9-1.8-2s.8-2 1.8-2 1.8.9 1.8 2-.8 2-1.8 2zm6.6 0c-1 0-1.8-.9-1.8-2s.8-2 1.8-2 1.8.9 1.8 2-.8 2-1.8 2z"/></svg></a></li>
+          <li><a href="https://www.facebook.com" target="_blank" rel="noopener" aria-label="Nova Cinema on Facebook"><svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M14 8.6V7c0-.8.5-1 .9-1H17V2.1L14 2c-3.4 0-4.2 2.5-4.2 4.1v2.5H7.5v4H10V22h4v-9.4h3.1l.4-4H14z"/></svg></a></li>
+          <li><a href="https://www.instagram.com" target="_blank" rel="noopener" aria-label="Nova Cinema on Instagram"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><rect x="3" y="3" width="18" height="18" rx="5"/><circle cx="12" cy="12" r="4"/><circle cx="17.5" cy="6.5" r="1" fill="currentColor" stroke="none"/></svg></a></li>
+          <li><a href="https://www.tiktok.com" target="_blank" rel="noopener" aria-label="Nova Cinema on TikTok"><svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M16.5 3c.4 2.3 1.9 3.9 4 4.2v3.2c-1.5 0-2.9-.4-4-1.2v6.3a5.6 5.6 0 1 1-5.6-5.6c.3 0 .6 0 .9.1v3.3a2.4 2.4 0 1 0 1.6 2.2V3h3.1z"/></svg></a></li>
+        </ul>
+      </div>
+
+      <nav class="footer-col" aria-label="Footer">
+        <h3>Explore</h3>
+        <ul class="footer-links">
+          <li><a href="index.html">Home</a></li>
+          <li><a href="pages/movies.html">Movies</a></li>
+          <li><a href="pages/schedule.html">Schedule</a></li>
+          <li><a href="pages/contact.html">Contact</a></li>
+          <li><a href="pages/schedule.html#my-tickets">My tickets</a></li>
+        </ul>
+      </nav>
+
+      <div class="footer-col">
+        <h3>Visit</h3>
+        <address>1 Grand Line Avenue<br>Nova City</address>
+        <ul class="footer-links" style="margin-top:.8rem">
+          <li>Mon – Thu · 10 AM – 11 PM</li>
+          <li>Fri – Sat · 10 AM – 1 AM</li>
+          <li>Sun · 11 AM – 10 PM</li>
+        </ul>
+      </div>
+
+      <div class="footer-col">
+        <h3>Join the crew</h3>
+        <p>New releases and showtimes, straight to your inbox.</p>
+        <form class="mini-form" data-newsletter action="#" method="post">
+          <label class="sr-only" for="newsletter-email">Email address</label>
+          <input type="email" id="newsletter-email" name="email" placeholder="you@example.com" autocomplete="email" required>
+          <button type="submit" class="btn btn--gold btn--sm">Join</button>
+        </form>
+        <p class="form-msg" aria-live="polite"></p>
+        <div class="footer-contact">
+          <a href="tel:+15550123456"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M22 16.9v3a2 2 0 0 1-2.2 2 19.8 19.8 0 0 1-8.6-3.1 19.5 19.5 0 0 1-6-6A19.8 19.8 0 0 1 2.1 4.2 2 2 0 0 1 4.1 2h3a2 2 0 0 1 2 1.7c.1.9.4 1.8.7 2.7a2 2 0 0 1-.5 2.1L8 9.8a16 16 0 0 0 6 6l1.3-1.3a2 2 0 0 1 2.1-.4c.9.3 1.8.6 2.7.7a2 2 0 0 1 1.7 2z"/></svg>Call the crew</a>
+          <a href="mailto:novacinema@gmail.com"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="2" y="4" width="20" height="16" rx="2"/><path d="m22 7-10 6L2 7"/></svg>Email us</a>
+        </div>
+      </div>
+    </div>
+
+    <div class="container footer-bottom">
+      <p>© 2026 Nova Cinema. All rights reserved.</p>
+      <p class="fine">A fan-made cinema experience. One Piece © Eiichiro Oda / Shueisha, Toei Animation. Trailers and music videos are embedded from YouTube.</p>
+    </div>
+  </footer>
+
+  <button type="button" class="to-top" aria-label="Back to top">
+    <svg class="ring" viewBox="0 0 52 52" aria-hidden="true"><circle class="bg" cx="26" cy="26" r="23"/><circle class="fg" cx="26" cy="26" r="23"/></svg>
+    <svg class="arrow" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.6" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="m18 15-6-6-6 6"/></svg>
+  </button>
+
+</body>
+</html>
