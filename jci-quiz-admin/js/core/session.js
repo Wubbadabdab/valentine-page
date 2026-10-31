@@ -54,8 +54,7 @@ export async function requireSession() {
     return await api.getMe();
   } catch (error) {
     if (error instanceof ApiError && error.status === 401) {
-      skipNextPageTransition();
-      window.location.replace(loginUrl(currentLocation()));
+      redirectToLogin();
       return null;
     }
     if (error instanceof ApiError && error.status === 403) {
@@ -65,6 +64,16 @@ export async function requireSession() {
     }
     throw error;
   }
+}
+
+/**
+ * The session ended while the admin was on a page with nothing unsaved:
+ * go to the login page, then come back here after signing in.
+ * (Pages with unsaved work open a sign-in dialog instead — Stage 3.)
+ */
+export function redirectToLogin() {
+  skipNextPageTransition();
+  window.location.replace(loginUrl(currentLocation()));
 }
 
 /**

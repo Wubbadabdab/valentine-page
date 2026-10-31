@@ -84,8 +84,8 @@ test('theme: a saved choice wins; otherwise follow the device', () => {
 test('theme: every page has the same inline theme script as js/theme-init.js', async () => {
   const master = (await (await fetch('js/theme-init.js')).text()).split('\n').find((line) => line.startsWith('(function'));
   assert(master, 'master line found');
-  const pages = ['index.html', 'login.html', 'dashboard.html', 'quizzes.html', 'question-bank.html', 'results.html',
-    'settings.html', 'no-access.html', '404.html', 'tests.html'];
+  const pages = ['index.html', 'login.html', 'dashboard.html', 'quizzes.html', 'quiz-edit.html', 'quiz-preview.html',
+    'question-bank.html', 'results.html', 'settings.html', 'no-access.html', '404.html', 'tests.html'];
   for (const page of pages) {
     const html = await (await fetch(page)).text();
     assert(html.includes(`<script>${master}</script>`), `${page} has a different or missing theme script`);

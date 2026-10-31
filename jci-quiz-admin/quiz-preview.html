@@ -1,0 +1,54 @@
+<!doctype html>
+<html lang="en" data-theme="dark">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Preview · JCI Uniben Quiz Admin</title>
+  <meta name="robots" content="noindex, nofollow">
+  <meta name="color-scheme" content="dark light">
+  <!-- Theme before first paint: identical copy of js/theme-init.js -->
+  <script>(function(){try{var t=localStorage.getItem('jci-admin-theme');if(t!=='dark'&&t!=='light'){t=window.matchMedia&&window.matchMedia('(prefers-color-scheme: light)').matches?'light':'dark'}document.documentElement.setAttribute('data-theme',t)}catch(e){document.documentElement.setAttribute('data-theme','dark')}})();</script>
+  <link rel="icon" href="assets/favicon.svg" type="image/svg+xml">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&amp;display=swap">
+  <link rel="stylesheet" href="css/tokens.css">
+  <link rel="stylesheet" href="css/base.css">
+  <link rel="stylesheet" href="css/layout.css">
+  <link rel="stylesheet" href="css/components.css">
+  <link rel="stylesheet" href="css/motion.css">
+  <link rel="stylesheet" href="css/pages.css">
+  <script type="module" src="js/pages/quiz-placeholder.js" blocking="render"></script>
+</head>
+<body class="app" data-page="quizzes" data-title="Preview" data-variant="preview">
+  <a class="skip-link" href="#main">Skip to main content</a>
+  <div class="sidebar" data-sidebar></div>
+  <div class="app-column">
+    <header class="topbar" data-topbar></header>
+    <div class="banners" data-banners></div>
+    <main id="main" class="app-main" tabindex="-1">
+      <div class="page">
+        <nav class="breadcrumbs" aria-label="Breadcrumb">
+          <ol data-breadcrumbs>
+            <li><a href="quizzes.html">Quizzes</a></li>
+          </ol>
+        </nav>
+        <header class="page-header">
+          <div class="page-header__titles">
+            <h1 data-quiz-title>Preview</h1>
+            <div class="page-header__badges" data-quiz-badges></div>
+          </div>
+          <div class="page-header__actions" data-quiz-actions></div>
+        </header>
+        <div class="stack" role="status" data-page-loading>
+          <span class="sr-only">Loading…</span>
+          <div class="skeleton skeleton--block" aria-hidden="true"></div>
+          <div class="skeleton skeleton--line" style="width:70%" aria-hidden="true"></div>
+          <div class="skeleton skeleton--line" style="width:52%" aria-hidden="true"></div>
+        </div>
+        <div class="quiz-overview" data-page-content data-quiz-body hidden></div>
+      </div>
+    </main>
+  </div>
+</body>
+</html>

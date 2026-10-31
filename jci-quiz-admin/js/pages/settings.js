@@ -1,6 +1,7 @@
 // @ts-check
 /**
- * Settings (settings.html): Dark Mode / Light Mode, rows per page, account.
+ * Settings (settings.html): Dark Mode / Light Mode, rows per page, account,
+ * and (demo mode only) resetting the demo data.
  * Theme and rows per page are preferences saved on this device only.
  */
 import { CONFIG } from '../config.js';
@@ -9,6 +10,9 @@ import { getPref, setPref } from '../core/storage.js';
 import { getTheme, setTheme, onThemeChange } from '../core/theme.js';
 import { bootPage, handleSignOut } from '../components/shell.js';
 import { toast } from '../components/toast.js';
+import { confirmDialog } from '../components/dialog.js';
+import { isDemoMode } from '../api/index.js';
+import { resetDemoData } from '../api/mock/mock-store.js';
 
 bootPage({
   page: 'settings',
@@ -50,3 +54,23 @@ rows.addEventListener('change', () => {
 // Account ----------------------------------------------------------------------
 const signOutButton = /** @type {HTMLButtonElement} */ (qs('[data-sign-out]'));
 signOutButton.addEventListener('click', () => handleSignOut(signOutButton));
+
+// Demo data (demo mode only) --------------------------------------------------------
+const demoCard = qs('[data-demo-data]');
+const resetButton = /** @type {HTMLButtonElement | null} */ (qs('[data-reset-demo]'));
+if (isDemoMode && demoCard && resetButton) {
+  demoCard.hidden = false;
+  resetButton.addEventListener('click', async () => {
+    const confirmed = await confirmDialog({
+      title: 'Reset demo data?',
+      message: [
+        'This brings back the 12 sample quizzes and removes any demo changes you made, including quizzes you created, published, archived or deleted.',
+        'It only affects demo data in this browser. Nothing on a real server is touched.'
+      ],
+      confirmLabel: 'Reset demo data'
+    });
+    if (!confirmed) return;
+    resetDemoData();
+    toast({ type: 'success', message: 'Demo data reset. The 12 sample quizzes are back.' });
+  });
+}

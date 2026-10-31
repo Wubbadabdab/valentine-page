@@ -6,6 +6,7 @@
 import { runAll } from './harness.js';
 import './core.test.js';
 import './api.test.js';
+import './list.test.js';
 
 const list = /** @type {HTMLElement} */ (document.querySelector('[data-test-results]'));
 const summary = /** @type {HTMLElement} */ (document.querySelector('[data-test-summary]'));

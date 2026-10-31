@@ -53,6 +53,7 @@
   /* Layers */
   --z-sidebar: 20;
   --z-topbar: 30;
+  --z-menu: 60;
   --z-toast: 100;
 
   /* Motion (section 39) */

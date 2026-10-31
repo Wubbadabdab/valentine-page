@@ -18,7 +18,7 @@
   <link rel="stylesheet" href="css/components.css">
   <link rel="stylesheet" href="css/motion.css">
   <link rel="stylesheet" href="css/pages.css">
-  <script type="module" src="js/pages/stage-placeholder.js" blocking="render"></script>
+  <script type="module" src="js/pages/quizzes.js" blocking="render"></script>
 </head>
 <body class="app" data-page="quizzes" data-title="Quizzes">
   <a class="skip-link" href="#main">Skip to main content</a>
@@ -33,6 +33,9 @@
             <h1>Quizzes</h1>
             <p class="page-header__description">Create, publish and manage quizzes.</p>
           </div>
+          <div class="page-header__actions">
+            <button type="button" class="btn btn--primary" data-new-quiz hidden><svg viewBox="0 0 24 24" width="18" height="18" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><path d="M12 5v14M5 12h14"/></svg><span class="btn__label">New quiz</span></button>
+          </div>
         </header>
         <div class="stack" role="status" data-page-loading>
           <span class="sr-only">Loading…</span>
@@ -40,20 +43,61 @@
           <div class="skeleton skeleton--line" style="width:70%" aria-hidden="true"></div>
           <div class="skeleton skeleton--line" style="width:52%" aria-hidden="true"></div>
         </div>
-        <!-- TEMPORARY: replaced when this page is built (see README "Build stages") -->
         <div data-page-content hidden>
-          <section class="card stage-note" aria-labelledby="stage-title">
-            <div class="card__header">
-              <h2 id="stage-title">The quiz list arrives in Stage 2</h2>
-              <p class="card__description">Next up in the build.</p>
+          <section class="list-panel" data-quiz-list aria-labelledby="quiz-list-heading">
+            <h2 id="quiz-list-heading" class="sr-only">Quiz list</h2>
+            <div class="list-toolbar">
+              <fieldset class="segmented">
+                <legend class="sr-only">Status</legend>
+                <label class="segmented__option"><input type="radio" name="status" value="" checked><span>All active</span></label>
+                <label class="segmented__option"><input type="radio" name="status" value="draft"><span>Draft</span></label>
+                <label class="segmented__option"><input type="radio" name="status" value="published"><span>Published</span></label>
+                <label class="segmented__option"><input type="radio" name="status" value="archived"><span>Archived</span></label>
+              </fieldset>
+              <div class="list-toolbar__row">
+                <div class="search-field" role="search">
+                  <label class="sr-only" for="quiz-search">Search quizzes</label>
+                  <svg class="search-field__icon" viewBox="0 0 24 24" width="18" height="18" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><circle cx="11" cy="11" r="7"/><path d="m20 20-3.5-3.5"/></svg>
+                  <input class="input search-field__input" id="quiz-search" type="search" placeholder="Search quizzes" autocomplete="off" spellcheck="false" enterkeyhint="search">
+                  <span class="search-field__end">
+                    <span class="spinner search-field__spinner" data-search-spinner hidden></span>
+                    <button type="button" class="search-field__clear" data-search-clear aria-label="Clear search" hidden><svg viewBox="0 0 24 24" width="16" height="16" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><path d="M18 6 6 18M6 6l12 12"/></svg></button>
+                    <kbd class="search-field__kbd" aria-hidden="true" title="Press / to search">/</kbd>
+                  </span>
+                </div>
+                <div class="toolbar-select">
+                  <label class="sr-only" for="availability-filter">Availability</label>
+                  <svg class="toolbar-select__icon" viewBox="0 0 24 24" width="16" height="16" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><rect x="3" y="4" width="18" height="18" rx="2"/><path d="M16 2v4M8 2v4M3 10h18"/></svg>
+                  <select class="select" id="availability-filter" aria-describedby="availability-hint">
+                    <option value="">Any availability</option>
+                    <option value="scheduled">Scheduled</option>
+                    <option value="open">Open</option>
+                    <option value="closed">Closed</option>
+                  </select>
+                  <span class="sr-only" id="availability-hint">Availability applies to published quizzes only.</span>
+                </div>
+                <div class="toolbar-select">
+                  <label class="sr-only" for="quiz-sort">Sort by</label>
+                  <svg class="toolbar-select__icon" viewBox="0 0 24 24" width="16" height="16" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><path d="m7 15 5 5 5-5"/><path d="m7 9 5-5 5 5"/></svg>
+                  <select class="select" id="quiz-sort">
+                    <option value="updatedAt:desc">Sort: Last updated (newest)</option>
+                    <option value="updatedAt:asc">Sort: Last updated (oldest)</option>
+                    <option value="title:asc">Sort: Title A–Z</option>
+                    <option value="title:desc">Sort: Title Z–A</option>
+                    <option value="createdAt:desc">Sort: Date created (newest)</option>
+                    <option value="createdAt:asc">Sort: Date created (oldest)</option>
+                    <option value="attemptCount:desc">Sort: Most attempts</option>
+                    <option value="attemptCount:asc">Sort: Fewest attempts</option>
+                  </select>
+                </div>
+              </div>
             </div>
-            <p>When it's ready, this page will let you:</p>
-            <ul class="stage-note__list">
-              <li>Search, filter and sort every quiz, with pages of 10, 20 or 50</li>
-              <li>Create a new quiz from a title</li>
-              <li>Edit, preview, duplicate, publish, archive or delete from each row (only the actions allowed for that quiz)</li>
-              <li>See each quiz’s status, availability, questions, marks and attempts at a glance</li>
-            </ul>
+            <div class="list-meta">
+              <p class="list-meta__count num" data-list-count></p>
+              <ul class="chips" data-filter-chips aria-label="Active filters"></ul>
+            </div>
+            <div class="list-body" data-list></div>
+            <div class="list-footer" data-pagination></div>
           </section>
         </div>
       </div>

@@ -20,6 +20,10 @@
 @keyframes toast-timer { from { transform: scaleX(1); } to { transform: scaleX(0); } }
 @keyframes vt-out { to { opacity: 0; } }
 @keyframes vt-in { from { opacity: 0; transform: translateY(6px); } }
+@keyframes progress-slide { from { transform: translateX(-100%); } to { transform: translateX(100%); } }
+@keyframes highlight-fade { 0%, 35% { opacity: 1; } 100% { opacity: 0; } }
+@keyframes badge-morph { from { opacity: 0; transform: scale(0.8); } to { opacity: 1; transform: none; } }
+@keyframes chip-in { from { opacity: 0; transform: scale(0.9); } to { opacity: 1; transform: none; } }
 @keyframes theme-reveal {
   from { clip-path: circle(0 at var(--reveal-x, 50%) var(--reveal-y, 50%)); }
   to { clip-path: circle(var(--reveal-r, 150%) at var(--reveal-x, 50%) var(--reveal-y, 50%)); }
@@ -120,6 +124,27 @@
 .toast__timer { animation: toast-timer var(--toast-duration, 5000ms) linear forwards; }
 .toast.is-paused .toast__timer { animation-play-state: paused; }
 
+/* Menus: fade in and grow from the button (transform-origin set in JS) ------- */
+.menu {
+  transition:
+    opacity var(--dur-base) var(--ease-out),
+    transform var(--dur-base) var(--ease-out);
+}
+@starting-style {
+  .menu { opacity: 0; transform: scale(0.96); }
+}
+.menu.is-closing {
+  opacity: 0;
+  transform: scale(0.96);
+  pointer-events: none;
+  transition-duration: calc(var(--dur-base) * 0.7);
+  transition-timing-function: var(--ease-in);
+}
+
+/* Lists: a status that just changed (e.g. Draft -> Published) morphs in */
+.badge--morph { animation: badge-morph var(--dur-slow) var(--ease-spring) both; }
+.chip--enter { animation: chip-in var(--dur-base) var(--ease-spring) both; }
+
 /* Settings choice cards: the radio dot scales up from 0 */
 .choice-card__dot::after { transition: transform var(--dur-fast) var(--ease-spring); }
 
@@ -177,4 +202,5 @@
   .btn:active:not(:disabled) { transform: none; }
   .toast__timer { display: none; }
   .check-draw path { stroke-dashoffset: 0; }
+  .list-panel.is-refreshing .list-body::before { animation: none; transform: none; opacity: 0.6; }
 }

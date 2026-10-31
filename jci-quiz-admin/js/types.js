@@ -93,22 +93,30 @@
  */
 
 /**
- * @typedef {Object} Quiz
+ * A quiz as shown in lists: everything except questions and appearance.
+ * @typedef {Object} QuizSummary
  * @property {string} id
  * @property {string} title
  * @property {string} description
- * @property {string} instructions
  * @property {QuizStatus} status
- * @property {Availability | null} availability   From the backend (server time); null for drafts
+ * @property {Availability | null} availability   From the backend (server time); null unless published
  * @property {QuizSettings} settings
- * @property {Appearance} appearance
- * @property {Question[]} questions
- * @property {number} totalMarks
+ * @property {number} questionCount
+ * @property {number} totalMarks                  From the backend
  * @property {number} attemptCount
  * @property {number} version                     For conflict detection (409)
  * @property {string} createdAt
  * @property {string} updatedAt
  * @property {string | null} publishedAt
+ */
+
+/**
+ * A full quiz (GET /admin/quizzes/{id}).
+ * @typedef {QuizSummary & {
+ *   instructions: string,
+ *   appearance: Appearance,
+ *   questions: Question[]
+ * }} Quiz
  */
 
 /**
